@@ -1,0 +1,4583 @@
+Waiting for VM "Ubuntu amd64" to power on...
+VM "Ubuntu amd64" has been successfully started.
+VM state: poweroff
+VM is powered down; trying to start it.
+Waiting 120 seconds until the VM is up.
+scp -o ConnectTimeout=60 -P 1025 build_z3.sh nightly@localhost:build_z3.sh
+ssh -o ConnectTimeout=60 nightly@localhost -p 1025 chmod +x build_z3.sh
+ssh -o ConnectTimeout=60 nightly@localhost -p 1025 ./build_z3.sh > build_z3.log 2>&1
+scp -o ConnectTimeout=60 -P 1025 nightly@localhost:build_z3.log temp.log
+Already up-to-date.
+From https://github.com/Z3Prover/z3
+   8f36868..25c9341  master     -> public/master
+First, rewinding head to replay your work on top of it...
+Fast-forwarded master to 25c93410b1ecaea4a3cfeeb6ec3ab3b2f2649dce.
+L=8f368682852258295efc385cb16e427386aeacbd
+L=c4e492b7a9466fa832b4e57da97250fd63544970
+C=25c93410b1ecaea4a3cfeeb6ec3ab3b2f2649dce
+C=c4e492b7a9466fa832b4e57da97250fd63544970
+Z3DIR=/home/nightly/z3
+BUILD DATE: 2019-05-29
+Already on 'master'
+Your branch is up-to-date with 'public/master'.
+From https://github.com/z3prover/z3
+ * branch            master     -> FETCH_HEAD
+Already up-to-date.
+opt = -b, arg = build/master/debug
+opt = -d, arg = 
+New component: 'util'
+New component: 'polynomial'
+New component: 'sat'
+New component: 'nlsat'
+New component: 'lp'
+New component: 'hilbert'
+New component: 'simplex'
+New component: 'automata'
+New component: 'interval'
+New component: 'realclosure'
+New component: 'subpaving'
+New component: 'ast'
+New component: 'rewriter'
+New component: 'macros'
+New component: 'normal_forms'
+New component: 'model'
+New component: 'tactic'
+New component: 'substitution'
+New component: 'parser_util'
+New component: 'grobner'
+New component: 'euclid'
+New component: 'proofs'
+New component: 'solver'
+New component: 'cmd_context'
+New component: 'sat_tactic'
+New component: 'smt2parser'
+New component: 'pattern'
+New component: 'core_tactics'
+New component: 'arith_tactics'
+New component: 'nlsat_tactic'
+New component: 'subpaving_tactic'
+New component: 'aig_tactic'
+New component: 'ackermannization'
+New component: 'fpa'
+New component: 'bit_blaster'
+New component: 'smt_params'
+New component: 'proto_model'
+New component: 'smt'
+New component: 'bv_tactics'
+New component: 'fuzzing'
+New component: 'smt_tactic'
+New component: 'sls_tactic'
+New component: 'qe'
+New component: 'sat_solver'
+New component: 'fd_solver'
+New component: 'muz'
+New component: 'dataflow'
+New component: 'transforms'
+New component: 'rel'
+New component: 'spacer'
+New component: 'clp'
+New component: 'tab'
+New component: 'ddnf'
+New component: 'bmc'
+New component: 'fp'
+New component: 'ufbv_tactic'
+New component: 'smtlogic_tactics'
+New component: 'fpa_tactics'
+New component: 'portfolio'
+New component: 'opt'
+New component: 'api'
+New component: 'extra_cmds'
+New component: 'shell'
+New component: 'test'
+New component: 'api_dll'
+New component: 'dotnet'
+New component: 'dotnetcore'
+New component: 'java'
+New component: 'ml'
+New component: 'cpp'
+Python bindings directory was detected.
+New component: 'python'
+New component: 'python_install'
+New component: 'js'
+New component: 'cpp_example'
+New component: 'z3_tptp'
+New component: 'c_example'
+New component: 'maxsat'
+New component: 'dotnet_example'
+New component: 'java_example'
+New component: 'ml_example'
+New component: 'py_example'
+Generating src/util/z3_version.h from src/util/z3_version.h.in
+Generated 'src/util/z3_version.h'
+Generating src/api/dotnet/Properties/AssemblyInfo.cs from src/api/dotnet/Properties/AssemblyInfo.cs.in
+Generated 'src/tactic/tactic_params.hpp'
+Generated 'src/tactic/sls/sls_params.hpp'
+Generated 'src/tactic/smtlogics/qfufbv_tactic_params.hpp'
+Generated 'src/opt/opt_params.hpp'
+Generated 'src/solver/parallel_params.hpp'
+Generated 'src/solver/combined_solver_params.hpp'
+Generated 'src/solver/solver_params.hpp'
+Generated 'src/muz/base/fp_params.hpp'
+Generated 'src/model/model_evaluator_params.hpp'
+Generated 'src/model/model_params.hpp'
+Generated 'src/parsers/util/parser_params.hpp'
+Generated 'src/smt/params/smt_params_helper.hpp'
+Generated 'src/sat/sat_params.hpp'
+Generated 'src/sat/sat_scc_params.hpp'
+Generated 'src/sat/sat_simplifier_params.hpp'
+Generated 'src/sat/sat_asymm_branch_params.hpp'
+Generated 'src/util/lp/lp_params.hpp'
+Generated 'src/math/realclosure/rcf_params.hpp'
+Generated 'src/math/polynomial/algebraic_params.hpp'
+Generated 'src/ast/pp_params.hpp'
+Generated 'src/ast/normal_forms/nnf_params.hpp'
+Generated 'src/ast/rewriter/bool_rewriter_params.hpp'
+Generated 'src/ast/rewriter/array_rewriter_params.hpp'
+Generated 'src/ast/rewriter/bv_rewriter_params.hpp'
+Generated 'src/ast/rewriter/fpa_rewriter_params.hpp'
+Generated 'src/ast/rewriter/poly_rewriter_params.hpp'
+Generated 'src/ast/rewriter/arith_rewriter_params.hpp'
+Generated 'src/ast/rewriter/rewriter_params.hpp'
+Generated 'src/ast/fpa/fpa2bv_rewriter_params.hpp'
+Generated 'src/ast/pattern/pattern_inference_params_helper.hpp'
+Generated 'src/ackermannization/ackermannize_bv_tactic_params.hpp'
+Generated 'src/ackermannization/ackermannization_params.hpp'
+Generated 'src/nlsat/nlsat_params.hpp'
+Generated 'src/ast/pattern/database.h'
+Component api
+Component portfolio
+Component smtlogic_tactics
+Component ackermannization
+Component model
+Component rewriter
+Component ast
+Component util
+Component polynomial
+Component automata
+Component solver
+Component tactic
+Component proofs
+Component sat_solver
+Component core_tactics
+Component macros
+Component normal_forms
+Component pattern
+Component smt2parser
+Component cmd_context
+Component parser_util
+Component aig_tactic
+Component bv_tactics
+Component bit_blaster
+Component arith_tactics
+Component sat
+Component sat_tactic
+Component nlsat_tactic
+Component nlsat
+Component smt_tactic
+Component smt
+Component proto_model
+Component smt_params
+Component substitution
+Component grobner
+Component euclid
+Component simplex
+Component fpa
+Component lp
+Component fp
+Component muz
+Component qe
+Component clp
+Component transforms
+Component hilbert
+Component dataflow
+Component tab
+Component rel
+Component bmc
+Component fd_solver
+Component ddnf
+Component spacer
+Component ufbv_tactic
+Component fpa_tactics
+Component sls_tactic
+Component subpaving_tactic
+Component subpaving
+Component interval
+Component realclosure
+Component opt
+Component extra_cmds
+Component shell
+Generated 'src/shell/install_tactic.cpp'
+Component api
+Component portfolio
+Component smtlogic_tactics
+Component ackermannization
+Component model
+Component rewriter
+Component ast
+Component util
+Component polynomial
+Component automata
+Component solver
+Component tactic
+Component proofs
+Component sat_solver
+Component core_tactics
+Component macros
+Component normal_forms
+Component pattern
+Component smt2parser
+Component cmd_context
+Component parser_util
+Component aig_tactic
+Component bv_tactics
+Component bit_blaster
+Component arith_tactics
+Component sat
+Component sat_tactic
+Component nlsat_tactic
+Component nlsat
+Component smt_tactic
+Component smt
+Component proto_model
+Component smt_params
+Component substitution
+Component grobner
+Component euclid
+Component simplex
+Component fpa
+Component lp
+Component fp
+Component muz
+Component qe
+Component clp
+Component transforms
+Component hilbert
+Component dataflow
+Component tab
+Component rel
+Component bmc
+Component fd_solver
+Component ddnf
+Component spacer
+Component ufbv_tactic
+Component fpa_tactics
+Component sls_tactic
+Component subpaving_tactic
+Component subpaving
+Component interval
+Component realclosure
+Component opt
+Component fuzzing
+Component test
+Generated 'src/test/install_tactic.cpp'
+Component api
+Component portfolio
+Component smtlogic_tactics
+Component ackermannization
+Component model
+Component rewriter
+Component ast
+Component util
+Component polynomial
+Component automata
+Component solver
+Component tactic
+Component proofs
+Component sat_solver
+Component core_tactics
+Component macros
+Component normal_forms
+Component pattern
+Component smt2parser
+Component cmd_context
+Component parser_util
+Component aig_tactic
+Component bv_tactics
+Component bit_blaster
+Component arith_tactics
+Component sat
+Component sat_tactic
+Component nlsat_tactic
+Component nlsat
+Component smt_tactic
+Component smt
+Component proto_model
+Component smt_params
+Component substitution
+Component grobner
+Component euclid
+Component simplex
+Component fpa
+Component lp
+Component fp
+Component muz
+Component qe
+Component clp
+Component transforms
+Component hilbert
+Component dataflow
+Component tab
+Component rel
+Component bmc
+Component fd_solver
+Component ddnf
+Component spacer
+Component ufbv_tactic
+Component fpa_tactics
+Component sls_tactic
+Component subpaving_tactic
+Component subpaving
+Component interval
+Component realclosure
+Component opt
+Component extra_cmds
+Component api_dll
+Generated 'src/api/dll/install_tactic.cpp'
+Generated 'src/shell/mem_initializer.cpp'
+Generated 'src/test/mem_initializer.cpp'
+Generated 'src/api/dll/mem_initializer.cpp'
+Generated 'src/shell/gparams_register_modules.cpp'
+Generated 'src/test/gparams_register_modules.cpp'
+Generated 'src/api/dll/gparams_register_modules.cpp'
+Generated 'src/api/python/z3/z3consts.py
+Generated 'src/api/api_log_macros.h'
+Generated 'src/api/api_log_macros.cpp'
+Generated 'src/api/api_commands.cpp'
+Generated 'src/api/python/z3/z3core.py'
+Listing src/api/python/z3 ...
+Compiling src/api/python/z3/__init__.py ...
+Compiling src/api/python/z3/z3.py ...
+Compiling src/api/python/z3/z3consts.py ...
+Compiling src/api/python/z3/z3core.py ...
+Compiling src/api/python/z3/z3num.py ...
+Compiling src/api/python/z3/z3poly.py ...
+Compiling src/api/python/z3/z3printer.py ...
+Compiling src/api/python/z3/z3rcf.py ...
+Compiling src/api/python/z3/z3types.py ...
+Compiling src/api/python/z3/z3util.py ...
+Generated python bytecode
+Copied 'z3types.py'
+Copied 'z3core.py'
+Copied 'z3consts.py'
+Copied 'z3printer.py'
+Copied 'z3util.py'
+Copied 'z3.py'
+Copied 'z3num.py'
+Copied '__init__.py'
+Copied 'z3rcf.py'
+Copied 'z3poly.py'
+Copied '__init__.pyc'
+Copied 'z3printer.pyc'
+Copied 'z3consts.pyc'
+Copied 'z3rcf.pyc'
+Copied 'z3poly.pyc'
+Copied 'z3.pyc'
+Copied 'z3num.pyc'
+Copied 'z3types.pyc'
+Copied 'z3core.pyc'
+Copied 'z3util.pyc'
+Testing ar...
+Testing g++...
+Testing gcc...
+Testing floating point support...
+Testing OpenMP...
+Host platform:  Linux
+C++ Compiler:   g++
+C Compiler  :   gcc
+Archive Tool:   ar
+Arithmetic:     internal
+OpenMP:         True
+Prefix:         /usr
+64-bit:         True
+FP math:        SSE2-GCC
+Python pkg dir: /usr/lib/python2.7/dist-packages
+Python version: 2.7
+Writing build/master/debug/Makefile
+Copied Z3Py example 'mini_ic3.py' to 'build/master/debug/python'
+Copied Z3Py example 'all_interval_series.py' to 'build/master/debug/python'
+Copied Z3Py example 'visitor.py' to 'build/master/debug/python'
+Copied Z3Py example 'parallel.py' to 'build/master/debug/python'
+Copied Z3Py example 'union_sort.py' to 'build/master/debug/python'
+Copied Z3Py example 'rc2.py' to 'build/master/debug/python'
+Copied Z3Py example 'mini_quip.py' to 'build/master/debug/python'
+Copied Z3Py example 'socrates.py' to 'build/master/debug/python'
+Copied Z3Py example 'example.py' to 'build/master/debug/python'
+Makefile was successfully generated.
+  compilation mode: Debug
+Type 'cd build/master/debug; make' to build Z3
+src/smt/smt_statistics.cpp
+src/util/luby.cpp
+src/util/approx_nat.cpp
+src/util/common_msgs.cpp
+src/api/dll/dll.cpp
+src/util/z3_exception.cpp
+src/util/page.cpp
+src/util/memory_manager.cpp
+src/util/approx_set.cpp
+src/util/timeit.cpp
+src/util/cooperate.cpp
+src/api/api_commands.cpp
+src/util/bit_util.cpp
+src/util/util.cpp
+src/util/timeout.cpp
+src/util/scoped_ctrl_c.cpp
+src/util/scoped_timer.cpp
+src/util/stack.cpp
+src/shell/z3_log_frontend.cpp
+src/api/api_log.cpp
+src/util/hash.cpp
+src/util/mpn.cpp
+src/util/lbool.cpp
+src/util/fixed_bit_vector.cpp
+src/solver/smt_logics.cpp
+src/math/automata/automaton.cpp
+src/util/symbol.cpp
+src/util/small_object_allocator.cpp
+src/util/bit_vector.cpp
+src/util/min_cut.cpp
+src/util/debug.cpp
+src/util/trace.cpp
+src/util/warning.cpp
+src/util/cmd_context_types.cpp
+src/util/region.cpp
+src/util/smt2_util.cpp
+src/util/permutation.cpp
+src/util/prime_generator.cpp
+src/api/api_log_macros.cpp
+src/api/z3_replayer.cpp
+src/util/mpz.cpp
+src/util/statistics.cpp
+src/util/rlimit.cpp
+src/smt/params/dyn_ack_params.cpp
+src/smt/params/theory_bv_params.cpp
+src/smt/params/theory_seq_params.cpp
+src/smt/params/theory_array_params.cpp
+src/smt/params/preprocessor_params.cpp
+src/smt/params/theory_arith_params.cpp
+src/smt/params/theory_str_params.cpp
+src/smt/params/theory_pb_params.cpp
+src/smt/params/qi_params.cpp
+src/ast/pattern/pattern_inference_params.cpp
+src/math/euclid/euclidean_solver.cpp
+src/math/realclosure/mpz_matrix.cpp
+src/math/interval/interval_mpq.cpp
+src/sat/sat_watched.cpp
+src/sat/sat_config.cpp
+src/sat/sat_bdd.cpp
+src/sat/sat_clause_set.cpp
+src/sat/sat_clause_use_list.cpp
+src/sat/sat_clause.cpp
+src/util/mpff.cpp
+src/util/mpq.cpp
+src/util/env_params.cpp
+src/util/mpfx.cpp
+src/util/gparams.cpp
+src/util/mpq_inf.cpp
+src/shell/mem_initializer.cpp
+src/smt/old_interval.cpp
+src/tactic/arith/linear_equation.cpp
+src/math/subpaving/subpaving_mpfx.cpp
+src/math/subpaving/subpaving_hwf.cpp
+src/math/realclosure/realclosure.cpp
+src/util/sexpr.cpp
+src/util/inf_rational.cpp
+src/util/hwf.cpp
+src/util/mpf.cpp
+src/util/inf_int_rational.cpp
+src/util/s_integer.cpp
+src/util/mpbq.cpp
+src/util/rational.cpp
+src/util/params.cpp
+src/api/dll/mem_initializer.cpp
+src/muz/spacer/spacer_matrix.cpp
+src/muz/rel/tbv.cpp
+src/muz/base/bind_variables.cpp
+src/smt/smt_quantifier_stat.cpp
+src/smt/proto_model/value_factory.cpp
+src/smt/params/smt_params.cpp
+src/tactic/arith/bound_propagator.cpp
+src/ast/rewriter/func_decl_replace.cpp
+src/ast/expr_map.cpp
+src/ast/act_cache.cpp
+src/ast/has_free_vars.cpp
+src/ast/for_each_ast.cpp
+src/ast/used_vars.cpp
+src/ast/display_dimacs.cpp
+src/ast/ast_lt.cpp
+src/ast/num_occurs.cpp
+src/ast/special_relations_decl_plugin.cpp
+src/math/subpaving/subpaving_mpf.cpp
+src/math/subpaving/subpaving_mpq.cpp
+src/math/subpaving/subpaving_mpff.cpp
+src/math/subpaving/subpaving.cpp
+src/math/simplex/simplex.cpp
+src/math/hilbert/hilbert_basis.cpp
+src/util/lp/lp_utils.cpp
+src/sat/sat_scc.cpp
+src/sat/dimacs.cpp
+src/sat/sat_drat.cpp
+src/sat/sat_parallel.cpp
+src/sat/sat_elim_eqs.cpp
+src/sat/sat_big.cpp
+In file included from ../../../src/sat/sat_types.h:22:0,
+                 from ../../../src/sat/sat_solver.h:23,
+                 from ../../../src/sat/sat_drat.cpp:22:
+../../../src/sat/sat_drat.cpp: In member function ‘void sat::drat::dump(unsigned int, const sat::literal*, sat::drat::status)’:
+../../../src/sat/sat_drat.cpp:103:45: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+      SASSERT(len + lastd - d < sizeof(buffer));
+                                             ^
+../../../src/util/debug.h:42:28: note: in definition of macro ‘DEBUG_CODE’
+ #define DEBUG_CODE(CODE) { CODE } ((void) 0)
+                            ^
+../../../src/sat/sat_drat.cpp:103:6: note: in expansion of macro ‘SASSERT’
+      SASSERT(len + lastd - d < sizeof(buffer));
+      ^
+src/sat/sat_integrity_checker.cpp
+src/sat/sat_simplifier.cpp
+src/sat/sat_elim_vars.cpp
+src/sat/sat_cleaner.cpp
+src/sat/sat_asymm_branch.cpp
+src/sat/sat_probing.cpp
+src/sat/sat_lookahead.cpp
+src/sat/sat_iff3_finder.cpp
+src/sat/sat_mus.cpp
+src/sat/sat_model_converter.cpp
+src/util/inf_s_integer.cpp
+src/smt/arith_eq_solver.cpp
+src/smt/cost_evaluator.cpp
+src/smt/smt_value_sort.cpp
+src/smt/uses_theory.cpp
+src/ackermannization/ackr_helper.cpp
+src/math/subpaving/tactic/expr2subpaving.cpp
+src/cmd_context/tactic_manager.cpp
+src/parsers/util/simple_parser.cpp
+src/parsers/util/scanner.cpp
+src/parsers/util/cost_parser.cpp
+src/ast/rewriter/mk_extract_proc.cpp
+src/ast/rewriter/datatype_rewriter.cpp
+src/ast/rewriter/distribute_forall.cpp
+src/ast/for_each_expr.cpp
+src/ast/func_decl_dependencies.cpp
+src/ast/expr_functors.cpp
+src/ast/fpa_decl_plugin.cpp
+src/ast/expr_stat.cpp
+src/ast/macro_substitution.cpp
+src/ast/format.cpp
+src/ast/ast_ll_pp.cpp
+src/ast/occurs.cpp
+src/ast/csp_decl_plugin.cpp
+src/ast/ast_util.cpp
+src/ast/reg_decl_plugins.cpp
+src/ast/pp.cpp
+src/math/simplex/model_based_opt.cpp
+src/sat/sat_solver.cpp
+src/sat/sat_unit_walk.cpp
+src/math/polynomial/polynomial_cache.cpp
+src/shell/main.cpp
+src/qe/qe_solve_plugin.cpp
+src/smt/smt_literal.cpp
+src/smt/cached_var_subst.cpp
+src/smt/elim_term_ite.cpp
+src/smt/smt_farkas_util.cpp
+src/smt/fingerprints.cpp
+src/smt/proto_model/numeral_factory.cpp
+src/ast/fpa/bv2fpa_converter.cpp
+src/ast/fpa/fpa2bv_rewriter.cpp
+src/ast/fpa/fpa2bv_converter.cpp
+src/tactic/arith/bv2real_rewriter.cpp
+src/ast/pattern/pattern_inference.cpp
+src/cmd_context/pdecl.cpp
+src/cmd_context/check_logic.cpp
+src/ast/proofs/proof_checker.cpp
+src/ast/proofs/proof_utils.cpp
+src/math/grobner/grobner.cpp
+src/parsers/util/pattern_validation.cpp
+src/tactic/replace_proof_converter.cpp
+src/tactic/equiv_proof_converter.cpp
+src/model/func_interp.cpp
+src/model/model_core.cpp
+src/model/model_pp.cpp
+src/model/model_v2_pp.cpp
+src/ast/normal_forms/defined_names.cpp
+src/ast/normal_forms/pull_quant.cpp
+src/ast/normal_forms/nnf.cpp
+src/ast/normal_forms/name_exprs.cpp
+src/ast/rewriter/hoist_rewriter.cpp
+src/ast/rewriter/push_app_ite.cpp
+src/ast/rewriter/factor_rewriter.cpp
+src/ast/rewriter/label_rewriter.cpp
+src/ast/rewriter/bool_rewriter.cpp
+src/ast/rewriter/arith_rewriter.cpp
+src/ast/rewriter/maximize_ac_sharing.cpp
+src/ast/rewriter/seq_rewriter.cpp
+src/ast/rewriter/pb_rewriter.cpp
+src/ast/rewriter/pb2bv_rewriter.cpp
+src/ast/rewriter/bv_elim.cpp
+src/ast/rewriter/fpa_rewriter.cpp
+src/ast/rewriter/dl_rewriter.cpp
+src/ast/rewriter/enum2bv_rewriter.cpp
+src/ast/rewriter/quant_hoist.cpp
+src/ast/rewriter/inj_axiom.cpp
+src/ast/rewriter/bv_trailing.cpp
+src/ast/rewriter/rewriter.cpp
+src/ast/rewriter/der.cpp
+src/ast/rewriter/expr_safe_replace.cpp
+src/ast/rewriter/array_rewriter.cpp
+src/ast/rewriter/elim_bounds.cpp
+src/ast/rewriter/bv_bounds.cpp
+src/ast/rewriter/ast_counter.cpp
+src/ast/rewriter/var_subst.cpp
+src/ast/rewriter/expr_replacer.cpp
+src/ast/rewriter/factor_equivs.cpp
+src/ast/arith_decl_plugin.cpp
+src/ast/bv_decl_plugin.cpp
+src/ast/shared_occs.cpp
+src/ast/expr2var.cpp
+src/ast/expr2polynomial.cpp
+src/ast/well_sorted.cpp
+src/ast/pb_decl_plugin.cpp
+src/ast/ast_translation.cpp
+src/ast/ast_smt_pp.cpp
+src/ast/static_features.cpp
+src/ast/dl_decl_plugin.cpp
+src/ast/recfun_decl_plugin.cpp
+src/ast/ast_pp_dot.cpp
+src/ast/ast_smt2_pp.cpp
+src/ast/expr_abstract.cpp
+src/ast/datatype_decl_plugin.cpp
+src/ast/seq_decl_plugin.cpp
+src/ast/array_decl_plugin.cpp
+src/ast/decl_collector.cpp
+src/ast/ast.cpp
+src/ast/expr_substitution.cpp
+src/util/lp/lp_settings.cpp
+src/util/lp/binary_heap_priority_queue.cpp
+src/nlsat/nlsat_types.cpp
+src/nlsat/nlsat_clause.cpp
+src/nlsat/nlsat_interval_set.cpp
+src/sat/ba_solver.cpp
+src/sat/sat_local_search.cpp
+src/math/polynomial/rpolynomial.cpp
+src/math/polynomial/polynomial.cpp
+src/math/polynomial/upolynomial.cpp
+src/api/dll/gparams_register_modules.cpp
+src/shell/gparams_register_modules.cpp
+src/muz/spacer/spacer_mev_array.cpp
+src/muz/spacer/spacer_antiunify.cpp
+src/muz/spacer/spacer_mbc.cpp
+src/muz/spacer/spacer_sem_matcher.cpp
+src/muz/rel/doc.cpp
+src/qe/qe_bool_plugin.cpp
+src/qe/qe_arith_plugin.cpp
+src/qe/qe_term_graph.cpp
+src/qe/qe_bv_plugin.cpp
+src/qe/qe_dl_plugin.cpp
+src/qe/nlarith_util.cpp
+src/qe/qe_datatype_plugin.cpp
+src/qe/qe_array_plugin.cpp
+src/qe/qe_arith.cpp
+src/smt/smt_clause.cpp
+src/smt/theory_opt.cpp
+src/smt/expr_context_simplifier.cpp
+src/smt/smt_cg_table.cpp
+src/smt/watch_list.cpp
+src/smt/smt_almost_cg_table.cpp
+src/smt/proto_model/datatype_factory.cpp
+src/smt/proto_model/struct_factory.cpp
+src/smt/proto_model/array_factory.cpp
+src/smt/proto_model/proto_model.cpp
+src/ast/rewriter/bit_blaster/bit_blaster_rewriter.cpp
+src/ast/rewriter/bit_blaster/bit_blaster.cpp
+src/ast/substitution/matcher.cpp
+src/ast/substitution/unifier.cpp
+src/ast/substitution/substitution_tree.cpp
+src/ast/substitution/substitution.cpp
+src/model/model.cpp
+src/model/model_implicant.cpp
+src/model/model_evaluator.cpp
+src/model/model_smt2_pp.cpp
+src/model/model2expr.cpp
+src/ast/rewriter/th_rewriter.cpp
+src/ast/rewriter/bv_rewriter.cpp
+src/ast/rewriter/mk_simplified_app.cpp
+src/ast/ast_pp_util.cpp
+src/ast/ast_printer.cpp
+src/util/lp/indexed_vector.cpp
+src/util/lp/binary_heap_upair_queue.cpp
+src/util/lp/dense_matrix.cpp
+src/math/polynomial/algebraic_numbers.cpp
+src/math/polynomial/sexpr2upolynomial.cpp
+src/math/polynomial/upolynomial_factorization.cpp
+src/opt/pb_sls.cpp
+src/tactic/ufbv/ufbv_rewriter.cpp
+src/muz/spacer/spacer_qe_project.cpp
+src/muz/spacer/spacer_sym_mux.cpp
+src/muz/spacer/spacer_iuc_proof.cpp
+src/muz/spacer/spacer_unsat_core_learner.cpp
+src/muz/base/dl_boogie_proof.cpp
+src/qe/qe_arrays.cpp
+src/qe/qe_datatypes.cpp
+src/qe/qe_mbp.cpp
+src/tactic/bv/bit_blaster_model_converter.cpp
+src/ackermannization/lackr_model_constructor.cpp
+src/ackermannization/ackr_model_converter.cpp
+src/ackermannization/ackermannize_bv_model_converter.cpp
+src/solver/check_sat_result.cpp
+src/tactic/horn_subsume_model_converter.cpp
+src/tactic/model_converter.cpp
+src/tactic/generic_model_converter.cpp
+src/ast/macros/macro_util.cpp
+src/ast/rewriter/bit2int.cpp
+src/nlsat/nlsat_solver.cpp
+src/nlsat/nlsat_explain.cpp
+src/nlsat/nlsat_evaluator.cpp
+src/opt/opt_pareto.cpp
+src/tactic/portfolio/solver2lookahead.cpp
+src/tactic/fpa/fpa2bv_model_converter.cpp
+src/tactic/smtlogics/qfufbv_ackr_model_converter.cpp
+src/muz/spacer/spacer_unsat_core_plugin.cpp
+src/muz/spacer/spacer_proof_utils.cpp
+src/muz/spacer/spacer_farkas_learner.cpp
+src/muz/base/hnf.cpp
+src/qe/qe_mbi.cpp
+src/tactic/bv/bvarray2uf_rewriter.cpp
+src/smt/smt_implied_equalities.cpp
+src/smt/smt_solver.cpp
+src/ackermannization/lackr_model_converter_lazy.cpp
+src/tactic/aig/aig.cpp
+src/tactic/arith/bound_manager.cpp
+src/tactic/arith/pb2bv_model_converter.cpp
+src/tactic/arith/probe_arith.cpp
+src/tactic/arith/bv2int_rewriter.cpp
+src/tactic/core/collect_occs.cpp
+src/sat/tactic/atom2bool_var.cpp
+src/cmd_context/context_params.cpp
+src/solver/mus.cpp
+src/solver/solver.cpp
+src/solver/combined_solver.cpp
+src/solver/solver_na2as.cpp
+src/solver/solver_pool.cpp
+src/tactic/proof_converter.cpp
+src/tactic/dependency_converter.cpp
+src/tactic/goal.cpp
+src/tactic/goal_util.cpp
+src/tactic/probe.cpp
+src/tactic/goal_num_occurs.cpp
+src/tactic/goal_shared_occs.cpp
+src/ast/macros/quasi_macros.cpp
+src/ast/macros/macro_manager.cpp
+src/util/lp/permutation_matrix.cpp
+src/util/lp/matrix.cpp
+src/cmd_context/extra_cmds/dbg_cmds.cpp
+src/cmd_context/extra_cmds/subpaving_cmds.cpp
+src/cmd_context/extra_cmds/polynomial_cmds.cpp
+src/api/api_special_relations.cpp
+src/api/api_pb.cpp
+src/api/api_rcf.cpp
+src/api/api_quant.cpp
+src/api/api_datatype.cpp
+src/api/api_polynomial.cpp
+src/api/api_model.cpp
+src/api/api_algebraic.cpp
+src/api/api_context.cpp
+src/api/api_bv.cpp
+src/api/api_seq.cpp
+src/api/api_ast_vector.cpp
+src/api/api_config_params.cpp
+src/api/api_goal.cpp
+src/api/api_array.cpp
+src/api/api_arith.cpp
+src/api/api_qe.cpp
+src/api/api_fpa.cpp
+src/tactic/portfolio/default_tactic.cpp
+src/tactic/fpa/qffplra_tactic.cpp
+src/tactic/fpa/fpa2bv_tactic.cpp
+src/tactic/smtlogics/qfidl_tactic.cpp
+src/tactic/smtlogics/qfnra_tactic.cpp
+src/tactic/smtlogics/qfauflia_tactic.cpp
+src/tactic/smtlogics/qflia_tactic.cpp
+src/tactic/smtlogics/qflra_tactic.cpp
+src/tactic/smtlogics/nra_tactic.cpp
+src/tactic/smtlogics/quant_tactics.cpp
+src/tactic/smtlogics/qfuf_tactic.cpp
+src/tactic/smtlogics/qfnia_tactic.cpp
+src/tactic/ufbv/ufbv_tactic.cpp
+src/tactic/ufbv/ufbv_rewriter_tactic.cpp
+src/tactic/ufbv/quasi_macros_tactic.cpp
+src/tactic/ufbv/macro_finder_tactic.cpp
+src/muz/spacer/spacer_iuc_solver.cpp
+src/muz/spacer/spacer_prop_solver.cpp
+src/muz/spacer/spacer_manager.cpp
+src/muz/spacer/spacer_legacy_mev.cpp
+src/muz/spacer/spacer_legacy_mbp.cpp
+src/tactic/fd_solver/pb2bv_solver.cpp
+src/tactic/fd_solver/bounded_int2bv_solver.cpp
+src/tactic/fd_solver/fd_solver.cpp
+src/tactic/fd_solver/enum2bv_solver.cpp
+src/sat/sat_solver/inc_sat_solver.cpp
+src/qe/qe_sat_tactic.cpp
+src/qe/qsat.cpp
+src/qe/qe_cmd.cpp
+src/qe/nlqsat.cpp
+src/qe/qe_lite.cpp
+src/qe/qe_tactic.cpp
+src/tactic/sls/sls_tactic.cpp
+src/tactic/sls/sls_engine.cpp
+src/smt/tactic/smt_tactic.cpp
+src/smt/tactic/ctx_solver_simplify_tactic.cpp
+src/tactic/bv/bv_bound_chk_tactic.cpp
+src/tactic/bv/bv_bounds_tactic.cpp
+src/tactic/bv/bvarray2uf_tactic.cpp
+src/tactic/bv/bv1_blaster_tactic.cpp
+src/tactic/bv/dt2bv_tactic.cpp
+src/tactic/bv/elim_small_bv_tactic.cpp
+src/tactic/bv/bit_blaster_tactic.cpp
+src/tactic/bv/max_bv_sharing_tactic.cpp
+src/tactic/bv/bv_size_reduction_tactic.cpp
+src/smt/smt2_extra_cmds.cpp
+src/ackermannization/ackr_bound_probe.cpp
+src/ackermannization/lackr.cpp
+src/tactic/aig/aig_tactic.cpp
+src/math/subpaving/tactic/subpaving_tactic.cpp
+src/nlsat/tactic/qfnra_nlsat_tactic.cpp
+src/nlsat/tactic/goal2nlsat.cpp
+src/nlsat/tactic/nlsat_tactic.cpp
+src/tactic/arith/degree_shift_tactic.cpp
+src/tactic/arith/purify_arith_tactic.cpp
+src/tactic/arith/lia2pb_tactic.cpp
+src/tactic/arith/recover_01_tactic.cpp
+src/tactic/arith/card2bv_tactic.cpp
+src/tactic/arith/add_bounds_tactic.cpp
+src/tactic/arith/arith_bounds_tactic.cpp
+src/tactic/arith/factor_tactic.cpp
+src/tactic/arith/propagate_ineqs_tactic.cpp
+src/tactic/arith/eq2bv_tactic.cpp
+src/tactic/arith/fix_dl_var_tactic.cpp
+src/tactic/arith/normalize_bounds_tactic.cpp
+src/tactic/arith/fm_tactic.cpp
+src/tactic/arith/pb2bv_tactic.cpp
+src/tactic/arith/lia2card_tactic.cpp
+src/tactic/arith/diff_neq_tactic.cpp
+src/tactic/arith/nla2bv_tactic.cpp
+src/tactic/core/reduce_args_tactic.cpp
+src/tactic/core/pb_preprocess_tactic.cpp
+src/tactic/core/elim_uncnstr_tactic.cpp
+src/tactic/core/der_tactic.cpp
+src/tactic/core/propagate_values_tactic.cpp
+src/tactic/core/solve_eqs_tactic.cpp
+src/tactic/core/collect_statistics_tactic.cpp
+src/tactic/core/elim_term_ite_tactic.cpp
+src/tactic/core/cofactor_term_ite_tactic.cpp
+src/tactic/core/split_clause_tactic.cpp
+src/tactic/core/nnf_tactic.cpp
+src/tactic/core/symmetry_reduce_tactic.cpp
+src/tactic/core/reduce_invertible_tactic.cpp
+src/tactic/core/simplify_tactic.cpp
+src/tactic/core/blast_term_ite_tactic.cpp
+src/tactic/core/ctx_simplify_tactic.cpp
+src/tactic/core/dom_simplify_tactic.cpp
+src/tactic/core/cofactor_elim_term_ite.cpp
+src/tactic/core/tseitin_cnf_tactic.cpp
+src/tactic/core/distribute_forall_tactic.cpp
+src/tactic/core/injectivity_tactic.cpp
+src/tactic/core/occf_tactic.cpp
+src/tactic/core/special_relations_tactic.cpp
+src/ast/pattern/expr_pattern_match.cpp
+src/parsers/smt2/marshal.cpp
+src/sat/tactic/sat_tactic.cpp
+src/sat/tactic/goal2sat.cpp
+src/cmd_context/parametric_cmd.cpp
+src/cmd_context/tactic_cmds.cpp
+src/cmd_context/basic_cmds.cpp
+src/cmd_context/cmd_context.cpp
+src/cmd_context/echo_tactic.cpp
+src/cmd_context/cmd_context_to_goal.cpp
+src/cmd_context/cmd_util.cpp
+src/cmd_context/eval_cmd.cpp
+src/cmd_context/simplify_cmd.cpp
+src/solver/tactic2solver.cpp
+src/solver/parallel_tactic.cpp
+src/solver/solver2tactic.cpp
+src/tactic/sine_filter.cpp
+src/tactic/tactical.cpp
+src/tactic/tactic.cpp
+src/ast/macros/macro_finder.cpp
+src/util/lp/eta_matrix.cpp
+src/util/lp/scaler.cpp
+../../../src/tactic/tactic.cpp: In function ‘lbool check_sat(tactic&, goal_ref&, model_ref&, labels_vec&, proof_ref&, expr_dependency_ref&, std::string&)’:
+../../../src/tactic/tactic.cpp:157:10: warning: unused variable ‘proofs_enabled’ [-Wunused-variable]
+     bool proofs_enabled = g->proofs_enabled();
+          ^
+src/shell/dimacs_frontend.cpp
+src/api/api_ast_map.cpp
+src/api/api_params.cpp
+src/api/api_numeral.cpp
+src/api/api_ast.cpp
+src/api/api_parsers.cpp
+src/api/api_stats.cpp
+src/api/api_solver.cpp
+src/api/api_tactic.cpp
+src/tactic/portfolio/smt_strategic_solver.cpp
+src/tactic/fpa/qffp_tactic.cpp
+src/tactic/smtlogics/qfaufbv_tactic.cpp
+src/tactic/smtlogics/qfufbv_tactic.cpp
+src/tactic/smtlogics/qfbv_tactic.cpp
+src/muz/spacer/spacer_util.cpp
+src/muz/spacer/spacer_json.cpp
+src/tactic/sls/bvsls_opt_engine.cpp
+src/smt/asserted_formulas.cpp
+src/ackermannization/ackermannize_bv_tactic.cpp
+../../../src/smt/asserted_formulas.cpp: In member function ‘void asserted_formulas::commit(unsigned int)’:
+../../../src/smt/asserted_formulas.cpp:438:10: warning: variable ‘new_sub’ set but not used [-Wunused-but-set-variable]
+     bool new_sub = false;
+          ^
+src/parsers/smt2/smt2scanner.cpp
+src/parsers/smt2/smt2parser.cpp
+src/api/dll/install_tactic.cpp
+src/shell/install_tactic.cpp
+src/muz/spacer/spacer_callback.cpp
+src/qe/qe.cpp
+src/smt/tactic/unit_subsumption_tactic.cpp
+src/smt/smt_model_finder.cpp
+src/smt/smt_lookahead.cpp
+src/smt/smt_relevancy.cpp
+src/smt/smt_consequences.cpp
+src/smt/smt_model_generator.cpp
+src/smt/smt_context_stat.cpp
+src/smt/smt_quantifier.cpp
+src/smt/theory_dummy.cpp
+src/smt/arith_eq_adapter.cpp
+src/smt/theory_wmaxsat.cpp
+src/smt/smt_quick_checker.cpp
+src/smt/smt_theory.cpp
+src/smt/theory_datatype.cpp
+src/smt/smt_kernel.cpp
+src/smt/theory_dl.cpp
+src/smt/smt_internalizer.cpp
+src/smt/mam.cpp
+src/smt/smt_context_inv.cpp
+src/smt/smt_model_checker.cpp
+src/smt/smt_justification.cpp
+src/smt/qi_queue.cpp
+src/smt/theory_array.cpp
+src/smt/theory_bv.cpp
+src/smt/theory_array_base.cpp
+src/smt/smt_for_each_relevant_expr.cpp
+src/smt/theory_pb.cpp
+src/smt/smt_case_split_queue.cpp
+src/smt/smt_checker.cpp
+src/smt/theory_array_full.cpp
+src/smt/smt_enode.cpp
+src/smt/smt_context.cpp
+src/smt/smt_context_pp.cpp
+src/smt/theory_fpa.cpp
+src/smt/dyn_ack.cpp
+src/smt/smt_conflict_resolution.cpp
+src/util/lp/row_eta_matrix.cpp
+src/util/lp/square_sparse_matrix.cpp
+src/util/lp/square_dense_submatrix.cpp
+src/muz/fp/datalog_parser.cpp
+src/muz/ddnf/ddnf.cpp
+src/muz/clp/clp_context.cpp
+src/muz/spacer/spacer_quant_generalizer.cpp
+src/muz/spacer/spacer_generalizers.cpp
+src/muz/spacer/spacer_pdr.cpp
+src/muz/spacer/spacer_sat_answer.cpp
+src/muz/transforms/dl_mk_backwards.cpp
+src/muz/transforms/dl_mk_loop_counter.cpp
+src/muz/transforms/dl_mk_magic_sets.cpp
+src/muz/transforms/dl_mk_magic_symbolic.cpp
+src/muz/transforms/dl_mk_bit_blast.cpp
+src/muz/transforms/dl_mk_filter_rules.cpp
+src/muz/transforms/dl_mk_scale.cpp
+src/muz/transforms/dl_mk_karr_invariants.cpp
+src/muz/transforms/dl_mk_coi_filter.cpp
+src/muz/transforms/dl_mk_quantifier_abstraction.cpp
+src/muz/transforms/dl_mk_array_eq_rewrite.cpp
+src/muz/transforms/dl_mk_separate_negated_tails.cpp
+src/muz/transforms/dl_mk_unbound_compressor.cpp
+src/muz/transforms/dl_mk_array_instantiation.cpp
+src/muz/transforms/dl_mk_quantifier_instantiation.cpp
+src/muz/transforms/dl_mk_elim_term_ite.cpp
+src/muz/dataflow/dataflow.cpp
+src/muz/base/rule_properties.cpp
+src/muz/base/dl_util.cpp
+src/muz/base/dl_rule_set.cpp
+src/muz/base/dl_costs.cpp
+src/muz/base/dl_rule.cpp
+src/muz/base/dl_context.cpp
+src/muz/base/dl_rule_transformer.cpp
+src/muz/base/dl_rule_subsumption_index.cpp
+src/smt/theory_utvpi.cpp
+src/smt/theory_recfun.cpp
+src/smt/theory_diff_logic.cpp
+src/smt/theory_special_relations.cpp
+src/smt/theory_jobscheduler.cpp
+src/util/lp/lu.cpp
+src/opt/maxlex.cpp
+src/opt/optsmt.cpp
+src/opt/opt_parse.cpp
+src/opt/opt_context.cpp
+src/opt/sortmax.cpp
+src/opt/wmax.cpp
+src/opt/maxres.cpp
+src/muz/fp/horn_tactic.cpp
+src/muz/tab/tab_context.cpp
+src/muz/spacer/spacer_context.cpp
+src/muz/spacer/spacer_legacy_frames.cpp
+src/muz/rel/dl_external_relation.cpp
+src/muz/rel/dl_sparse_table.cpp
+src/muz/transforms/dl_mk_array_blast.cpp
+src/muz/transforms/dl_mk_subsumption_checker.cpp
+src/muz/transforms/dl_mk_interp_tail_simplifier.cpp
+src/muz/transforms/dl_mk_rule_inliner.cpp
+src/muz/transforms/dl_mk_coalesce.cpp
+src/muz/transforms/dl_transforms.cpp
+src/muz/transforms/dl_mk_unfold.cpp
+src/muz/transforms/dl_mk_slice.cpp
+src/smt/theory_array_bapa.cpp
+src/smt/smt_arith_value.cpp
+src/smt/smt_setup.cpp
+src/util/lp/core_solver_pretty_printer.cpp
+src/util/lp/lp_core_solver_base.cpp
+src/shell/opt_frontend.cpp
+src/api/api_datalog.cpp
+src/api/api_opt.cpp
+src/opt/maxsmt.cpp
+src/opt/opt_cmds.cpp
+src/opt/opt_solver.cpp
+src/muz/fp/dl_register_engine.cpp
+src/muz/bmc/dl_bmc_engine.cpp
+src/muz/spacer/spacer_dl_interface.cpp
+src/muz/rel/dl_table_relation.cpp
+src/muz/rel/dl_mk_similarity_compressor.cpp
+src/muz/rel/dl_mk_simple_joins.cpp
+src/muz/rel/dl_interval_relation.cpp
+src/muz/rel/udoc_relation.cpp
+src/muz/rel/dl_sieve_relation.cpp
+src/muz/rel/dl_lazy_table.cpp
+src/muz/rel/dl_product_relation.cpp
+src/muz/rel/dl_table.cpp
+src/muz/rel/dl_base.cpp
+src/muz/rel/dl_check_table.cpp
+src/muz/rel/dl_instruction.cpp
+src/muz/rel/aig_exporter.cpp
+src/muz/rel/check_relation.cpp
+src/muz/rel/karr_relation.cpp
+src/muz/transforms/dl_mk_synchronize.cpp
+src/smt/theory_arith.cpp
+src/smt/theory_seq.cpp
+src/smt/theory_str.cpp
+src/smt/theory_dense_diff_logic.cpp
+src/util/lp/lp_solver.cpp
+src/util/lp/lp_dual_core_solver.cpp
+src/shell/smtlib_frontend.cpp
+src/muz/fp/dl_cmds.cpp
+src/muz/rel/dl_relation_manager.cpp
+src/muz/rel/dl_mk_explanations.cpp
+src/muz/rel/dl_bound_relation.cpp
+src/muz/rel/dl_finite_product_relation.cpp
+src/muz/rel/dl_compiler.cpp
+src/smt/theory_lra.cpp
+src/util/lp/lp_dual_simplex.cpp
+src/util/lp/lp_primal_core_solver.cpp
+src/util/lp/nra_solver.cpp
+src/util/lp/static_matrix.cpp
+src/util/lp/lar_solver.cpp
+src/util/lp/int_solver.cpp
+src/util/lp/lar_core_solver.cpp
+src/util/lp/gomory.cpp
+src/util/lp/lp_bound_propagator.cpp
+src/shell/datalog_frontend.cpp
+src/muz/rel/rel_context.cpp
+src/util/lp/lp_primal_simplex.cpp
+src/util/lp/random_updater.cpp
+src/shell/lp_frontend.cpp
+g++  -o z3  shell/dimacs_frontend.o shell/mem_initializer.o shell/gparams_register_modules.o shell/install_tactic.o shell/lp_frontend.o shell/datalog_frontend.o shell/smtlib_frontend.o shell/opt_frontend.o shell/z3_log_frontend.o shell/main.o cmd_context/extra_cmds/extra_cmds.a api/api.a opt/opt.a tactic/portfolio/portfolio.a tactic/fpa/fpa_tactics.a tactic/smtlogics/smtlogic_tactics.a tactic/ufbv/ufbv_tactic.a muz/fp/fp.a muz/bmc/bmc.a muz/ddnf/ddnf.a muz/tab/tab.a muz/clp/clp.a muz/spacer/spacer.a muz/rel/rel.a muz/transforms/transforms.a muz/dataflow/dataflow.a muz/base/muz.a tactic/fd_solver/fd_solver.a sat/sat_solver/sat_solver.a qe/qe.a tactic/sls/sls_tactic.a smt/tactic/smt_tactic.a tactic/bv/bv_tactics.a smt/smt.a smt/proto_model/proto_model.a smt/params/smt_params.a ast/rewriter/bit_blaster/bit_blaster.a ast/fpa/fpa.a ackermannization/ackermannization.a tactic/aig/aig_tactic.a math/subpaving/tactic/subpaving_tactic.a nlsat/tactic/nlsat_tactic.a tactic/arith/arith_tactics.a tactic/core/core_tactics.a ast/pattern/pattern.a parsers/smt2/smt2parser.a sat/tactic/sat_tactic.a cmd_context/cmd_context.a solver/solver.a ast/proofs/proofs.a math/euclid/euclid.a math/grobner/grobner.a parsers/util/parser_util.a ast/substitution/substitution.a tactic/tactic.a model/model.a ast/normal_forms/normal_forms.a ast/macros/macros.a ast/rewriter/rewriter.a ast/ast.a math/subpaving/subpaving.a math/realclosure/realclosure.a math/interval/interval.a math/automata/automata.a math/simplex/simplex.a math/hilbert/hilbert.a util/lp/lp.a nlsat/nlsat.a sat/sat.a math/polynomial/polynomial.a util/util.a -lpthread  -fopenmp
+g++ -o libz3.so -shared api/dll/mem_initializer.o api/dll/gparams_register_modules.o api/dll/install_tactic.o api/dll/dll.o api/api_ast_map.o api/api_params.o api/api_log_macros.o api/api_numeral.o api/api_ast.o api/api_parsers.o api/api_stats.o api/api_solver.o api/api_tactic.o api/api_special_relations.o api/api_pb.o api/api_rcf.o api/api_quant.o api/api_datatype.o api/api_datalog.o api/api_polynomial.o api/api_model.o api/api_algebraic.o api/api_context.o api/z3_replayer.o api/api_bv.o api/api_seq.o api/api_ast_vector.o api/api_config_params.o api/api_goal.o api/api_opt.o api/api_log.o api/api_array.o api/api_arith.o api/api_qe.o api/api_commands.o api/api_fpa.o cmd_context/extra_cmds/extra_cmds.a opt/opt.a tactic/portfolio/portfolio.a tactic/fpa/fpa_tactics.a tactic/smtlogics/smtlogic_tactics.a tactic/ufbv/ufbv_tactic.a muz/fp/fp.a muz/bmc/bmc.a muz/ddnf/ddnf.a muz/tab/tab.a muz/clp/clp.a muz/spacer/spacer.a muz/rel/rel.a muz/transforms/transforms.a muz/dataflow/dataflow.a muz/base/muz.a tactic/fd_solver/fd_solver.a sat/sat_solver/sat_solver.a qe/qe.a tactic/sls/sls_tactic.a smt/tactic/smt_tactic.a tactic/bv/bv_tactics.a smt/smt.a smt/proto_model/proto_model.a smt/params/smt_params.a ast/rewriter/bit_blaster/bit_blaster.a ast/fpa/fpa.a ackermannization/ackermannization.a tactic/aig/aig_tactic.a math/subpaving/tactic/subpaving_tactic.a nlsat/tactic/nlsat_tactic.a tactic/arith/arith_tactics.a tactic/core/core_tactics.a ast/pattern/pattern.a parsers/smt2/smt2parser.a sat/tactic/sat_tactic.a cmd_context/cmd_context.a solver/solver.a ast/proofs/proofs.a math/euclid/euclid.a math/grobner/grobner.a parsers/util/parser_util.a ast/substitution/substitution.a tactic/tactic.a model/model.a ast/normal_forms/normal_forms.a ast/macros/macros.a ast/rewriter/rewriter.a ast/ast.a math/subpaving/subpaving.a math/realclosure/realclosure.a math/interval/interval.a math/automata/automata.a math/simplex/simplex.a math/hilbert/hilbert.a util/lp/lp.a nlsat/nlsat.a sat/sat.a math/polynomial/polynomial.a util/util.a -lpthread  -fopenmp -Wl,-soname,libz3.so
+ln -f -s ../libz3.so python
+Z3 was successfully built.
+Z3Py scripts can already be executed in the 'build/master/debug/python' directory.
+Z3Py scripts stored in arbitrary directories can be executed if the 'build/master/debug/python' directory is added to the PYTHONPATH environment variable and the 'build/master/debug' directory is added to the LD_LIBRARY_PATH environment variable.
+Use the following command to install Z3 at prefix /usr.
+    sudo make install
+Content of build/master/debug:
+Testing docstrings in /home/nightly/z3/build/master/debug/python
+Testing z3test.py z3
+Testing z3test.py z3num
+Testing benchmarks at regressions/smt2-debug using /home/nightly/z3/build/master/debug/z3
+Testing regressions/smt2-debug/poly4.smt2
+Testing regressions/smt2-debug/poly8.smt2
+Testing regressions/smt2-debug/poly3.smt2
+Testing regressions/smt2-debug/t128.smt2
+Testing regressions/smt2-debug/t129.smt2
+Testing regressions/smt2-debug/poly6.smt2
+Testing regressions/smt2-debug/t127.smt2
+Testing regressions/smt2-debug/poly9.smt2
+Testing regressions/smt2-debug/status.smt2
+Testing regressions/smt2-debug/poly7.smt2
+Testing regressions/smt2-debug/poly1.smt2
+Testing regressions/smt2-debug/tseitin.smt2
+Testing regressions/smt2-debug/poly5.smt2
+Testing regressions/smt2-debug/poly2.smt2
+Testing regressions/smt2-debug/t126.smt2
+Testing benchmarks at regressions/smt2 using /home/nightly/z3/build/master/debug/z3
+Testing regressions/smt2/sub.smt2
+Testing regressions/smt2/fp-roundToIntegral-4.smt2
+Testing regressions/smt2/nl28.smt2
+Testing regressions/smt2/fp-rem-6.smt2
+Testing regressions/smt2/fp-to_ubv-23.smt2
+Testing regressions/smt2/fp-to_fp_unsigned-2.smt2
+Testing regressions/smt2/nl13.smt2
+Testing regressions/smt2/fp-to_fp-2.smt2
+Testing regressions/smt2/fp-to_fp_unsigned-6.smt2
+Testing regressions/smt2/fp-to_sbv-14.smt2
+Testing regressions/smt2/fp-rem-2.smt2
+Testing regressions/smt2/fp-fma-8.smt2
+Testing regressions/smt2/fp-conversions-17.smt2
+Testing regressions/smt2/fp-fma-12.smt2
+Testing regressions/smt2/fp-sqrt-7.smt2
+Testing regressions/smt2/nl35.smt2
+Testing regressions/smt2/t112.smt2
+Testing regressions/smt2/nl14.smt2
+Testing regressions/smt2/fp-conversions-37.smt2
+Testing regressions/smt2/fp-array-1.smt2
+Testing regressions/smt2/fp-operations.smt2
+Testing regressions/smt2/dt_ayrat_3.smt2
+Testing regressions/smt2/t178.smt2
+Testing regressions/smt2/fp-to_fp_float-1.smt2
+Testing regressions/smt2/t133.smt2
+Testing regressions/smt2/fp-to_ubv-21.smt2
+Testing regressions/smt2/fp-to_ubv-28.smt2
+Testing regressions/smt2/power-sqrt-unsafe.smt2
+Testing regressions/smt2/fp-to_ubv-25.smt2
+Testing regressions/smt2/pat2.smt2
+Testing regressions/smt2/fp-to_ubv-10.smt2
+Testing regressions/smt2/fp-fma-14.smt2
+Testing regressions/smt2/nl58.smt2
+Testing regressions/smt2/z3.41.smt2
+Testing regressions/smt2/fp-eq-1.smt2
+Testing regressions/smt2/pat3.smt2
+Testing regressions/smt2/t131.smt2
+Testing regressions/smt2/bvcore.smt2
+Testing regressions/smt2/issue-1678.smt2
+Testing regressions/smt2/fp-conversions-22.smt2
+Testing regressions/smt2/fp-to_ubv-11.smt2
+Testing regressions/smt2/fp-mul-1.smt2
+Testing regressions/smt2/t158.smt2
+Testing regressions/smt2/fp-div-3.smt2
+Testing regressions/smt2/fp-to_ubv-5.smt2
+Testing regressions/smt2/fp-uf-1.smt2
+Testing regressions/smt2/t101.smt2
+Testing regressions/smt2/t14.smt2
+Testing regressions/smt2/fp-fma-7.smt2
+Testing regressions/smt2/fp-to_sbv-13.smt2
+Testing regressions/smt2/fp-to_fp_unsigned-8.smt2
+Testing regressions/smt2/fp-to_ubv-4.smt2
+Testing regressions/smt2/fp-datatype_with_float-3.smt2
+Testing regressions/smt2/fp-add-sub.smt2
+Testing regressions/smt2/bad_patterns.smt2
+Testing regressions/smt2/t145.smt2
+Testing regressions/smt2/cosine3.smt2
+Testing regressions/smt2/abs.smt2
+Testing regressions/smt2/fp-conversions-25.smt2
+Testing regressions/smt2/fp-to_fp_unsigned-12.smt2
+Testing regressions/smt2/nl33.smt2
+Testing regressions/smt2/fp-to_real-1.smt2
+Testing regressions/smt2/fp-to_sbv-15.smt2
+Testing regressions/smt2/cosine2.smt2
+Testing regressions/smt2/t130.smt2
+Testing regressions/smt2/fp-to_ubv-9.smt2
+Testing regressions/smt2/t216.smt2
+Testing regressions/smt2/fp-to_sbv-8.smt2
+Testing regressions/smt2/segfaults2_minimal.smt2
+Testing regressions/smt2/fp-conversions-7.smt2
+Testing regressions/smt2/fp-datatype_with_float-4.smt2
+Testing regressions/smt2/fp-conversions-4.smt2
+Testing regressions/smt2/cosine4.smt2
+Testing regressions/smt2/nl29.smt2
+Testing regressions/smt2/string5.smt2
+Testing regressions/smt2/coercions.smt2
+Testing regressions/smt2/blinking_query2.smt2
+Testing regressions/smt2/fp-to_ubv-17.smt2
+Testing regressions/smt2/fp-rem-3.smt2
+Testing regressions/smt2/sqrt-bug.smt2
+Testing regressions/smt2/fp-sqrt-8.smt2
+Testing regressions/smt2/t11.smt2
+Testing regressions/smt2/z3.2.smt2
+Testing regressions/smt2/issue-1196.smt2
+Testing regressions/smt2/fp-model_evaluator_6.smt2
+Testing regressions/smt2/sine5.smt2
+Testing regressions/smt2/fp-conversions-34.smt2
+Testing regressions/smt2/o7.smt2
+Testing regressions/smt2/fp-to_fp_simplifier.smt2
+Testing regressions/smt2/fp-to_fp_unsigned-13.smt2
+Testing regressions/smt2/fp-to_sbv-9.smt2
+Testing regressions/smt2/macro-finder-cores.smt2
+Testing regressions/smt2/t169.smt2
+Testing regressions/smt2/chain.smt2
+Testing regressions/smt2/z3.27.smt2
+Testing regressions/smt2/fp-rem-13-2.smt2
+Testing regressions/smt2/fp-rem-10.smt2
+Testing regressions/smt2/t192.smt2
+Testing regressions/smt2/fp-fma-16.smt2
+Testing regressions/smt2/issue-1224.smt2
+Testing regressions/smt2/cosine7.smt2
+Testing regressions/smt2/nl10.smt2
+Testing regressions/smt2/nl46.smt2
+Testing regressions/smt2/string-eval.smt2
+Testing regressions/smt2/qffp-quant.smt2
+Testing regressions/smt2/t143.smt2
+Testing regressions/smt2/nl1.smt2
+Testing regressions/smt2/fp-conversions-2.smt2
+Testing regressions/smt2/nl31.smt2
+Testing regressions/smt2/invertible-tactic.smt2
+Testing regressions/smt2/intervalUpDivide.smt2
+Testing regressions/smt2/dt2bv.smt2
+Testing regressions/smt2/t154.smt2
+Testing regressions/smt2/fp-min-zero-zero-2.smt2
+Testing regressions/smt2/nl24.smt2
+Testing regressions/smt2/t195.smt2
+Testing regressions/smt2/fp-conversions-23.smt2
+Testing regressions/smt2/fp-to_ubv-30.smt2
+Testing regressions/smt2/issue-1694.smt2
+Testing regressions/smt2/issue-1458.smt2
+Testing regressions/smt2/nl11.smt2
+Testing regressions/smt2/fp-to_sbv-10.smt2
+Testing regressions/smt2/nl37.smt2
+Testing regressions/smt2/fp-to_fp-12.smt2
+Testing regressions/smt2/fp-to_fp_unsigned-4.smt2
+Testing regressions/smt2/fp-fma-15.smt2
+Testing regressions/smt2/fp-conversions-33.smt2
+Testing regressions/smt2/mul.smt2
+Testing regressions/smt2/fp-rem-8.smt2
+Testing regressions/smt2/issue-1725.smt2
+Testing regressions/smt2/z3.29.smt2
+Testing regressions/smt2/t139.smt2
+Testing regressions/smt2/fp-to_sbv-2.smt2
+Testing regressions/smt2/fp-to_fp_unsigned-11.smt2
+Testing regressions/smt2/memset.smt2
+Testing regressions/smt2/segfault2.smt2
+Testing regressions/smt2/nl57.smt2
+Testing regressions/smt2/nl52.smt2
+Testing regressions/smt2/fp-nan.smt2
+Testing regressions/smt2/t1.smt2
+Testing regressions/smt2/string-itos.smt2
+Testing regressions/smt2/nl26.smt2
+Testing regressions/smt2/fp-model_evaluator_8.smt2
+Testing regressions/smt2/issue-1683.smt2
+Testing regressions/smt2/trig-intersection.smt2
+Testing regressions/smt2/t172.smt2
+Testing regressions/smt2/fp-conversions-11.smt2
+Testing regressions/smt2/fp-min-zero-zero-5.smt2
+Testing regressions/smt2/pat1.smt2
+Testing regressions/smt2/fp-quantifiers-2.smt2
+Testing regressions/smt2/epsilon.smt2
+Testing regressions/smt2/fp-model_evaluator_7.smt2
+Testing regressions/smt2/fp-to_ubv-20.smt2
+Testing regressions/smt2/fp-to_fp-8.smt2
+Testing regressions/smt2/fp-to_fp-6.smt2
+Testing regressions/smt2/arith_bug2.smt2
+Testing regressions/smt2/fp-conversions-18.smt2
+Testing regressions/smt2/fp-to_ubv-1.smt2
+Testing regressions/smt2/fp-sqrt-5.smt2
+Testing regressions/smt2/t113.smt2
+Testing regressions/smt2/fp-conversions-12.smt2
+Testing regressions/smt2/issue-1658.smt2
+Testing regressions/smt2/issue-1846.smt2
+Testing regressions/smt2/fp-model_evaluator_1.smt2
+Testing regressions/smt2/fp-array-2.smt2
+Testing regressions/smt2/fp-array-6.smt2
+Testing regressions/smt2/fp-min-zero-zero-4.smt2
+Testing regressions/smt2/t201.smt2
+Testing regressions/smt2/fp-array-5.smt2
+Testing regressions/smt2/t182.smt2
+Testing regressions/smt2/t102.smt2
+Testing regressions/smt2/fp-conversions-31.smt2
+Testing regressions/smt2/t103.smt2
+Testing regressions/smt2/tan3.smt2
+Testing regressions/smt2/fp-quantifiers-1.smt2
+Testing regressions/smt2/fp-fma-3.smt2
+Testing regressions/smt2/z3.1.smt2
+Testing regressions/smt2/t173.smt2
+Testing regressions/smt2/t146.smt2
+Testing regressions/smt2/issue-1092.smt2
+Testing regressions/smt2/fp-to_ubv-14.smt2
+Testing regressions/smt2/nl44.smt2
+Testing regressions/smt2/t206.smt2
+Testing regressions/smt2/cosine5.smt2
+Testing regressions/smt2/z3.30.smt2
+Testing regressions/smt2/t151.smt2
+Testing regressions/smt2/fp-array-3.smt2
+Testing regressions/smt2/nira.smt2
+Testing regressions/smt2/dejan_bug.smt2
+Testing regressions/smt2/nl16.smt2
+Testing regressions/smt2/t9.smt2
+Testing regressions/smt2/mev_array.smt2
+Testing regressions/smt2/issue-1366.smt2
+Testing regressions/smt2/fp-to_ubv-6.smt2
+Testing regressions/smt2/string4.smt2
+Testing regressions/smt2/t198.smt2
+Testing regressions/smt2/o4.smt2
+Testing regressions/smt2/z3.36.smt2
+Testing regressions/smt2/fp-mul_is_commutative.smt2
+Testing regressions/smt2/fp-to_fp_float-2.smt2
+Testing regressions/smt2/core2.smt2
+Testing regressions/smt2/fp-fma-4.smt2
+Testing regressions/smt2/fp-conversions-36.smt2
+Testing regressions/smt2/fp-roundToIntegral-7.smt2
+Testing regressions/smt2/nl9.smt2
+Testing regressions/smt2/t180.smt2
+Testing regressions/smt2/fp-rem-13-4.smt2
+Testing regressions/smt2/alloy.smt2
+Testing regressions/smt2/fp-max-zero-zero-1.smt2
+Testing regressions/smt2/fp-max-zero-zero-3.smt2
+Testing regressions/smt2/issue-1538.smt2
+Testing regressions/smt2/atan.smt2
+Testing regressions/smt2/fp-uf-5.smt2
+Testing regressions/smt2/nl7.smt2
+Testing regressions/smt2/fp-fma-18.smt2
+Testing regressions/smt2/fp-feature-check-1.smt2
+Testing regressions/smt2/fp-to_ubv-8.smt2
+Testing regressions/smt2/fp-rem-1.smt2
+Testing regressions/smt2/fp-model_evaluator_5.smt2
+Testing regressions/smt2/fp-conversions-13.smt2
+Testing regressions/smt2/fp-mul-3.smt2
+Testing regressions/smt2/t8.smt2
+Testing regressions/smt2/fp-to_fp-10.smt2
+Testing regressions/smt2/fp-roundToIntegral-2.smt2
+Testing regressions/smt2/fp-to_ubv-18.smt2
+Testing regressions/smt2/t213.smt2
+Testing regressions/smt2/fp-to_ubv-27.smt2
+Testing regressions/smt2/z3.53.smt2
+Testing regressions/smt2/t137.smt2
+Testing regressions/smt2/acos.smt2
+Testing regressions/smt2/t136.smt2
+Testing regressions/smt2/fp-rounding_mode-1.smt2
+Testing regressions/smt2/z3.37.smt2
+Testing regressions/smt2/fp-to_fp_real-2.smt2
+Testing regressions/smt2/t150.smt2
+Testing regressions/smt2/fp-lt-gt.smt2
+Testing regressions/smt2/fp-fma-20.smt2
+Testing regressions/smt2/fp-fma-17.smt2
+Testing regressions/smt2/t176.smt2
+Testing regressions/smt2/z3.17.smt2
+Testing regressions/smt2/t194.smt2
+Testing regressions/smt2/fp-to_sbv-4.smt2
+Testing regressions/smt2/t200.smt2
+Testing regressions/smt2/fp-sqrt-6.smt2
+Testing regressions/smt2/nl8.smt2
+Testing regressions/smt2/const_array_bug.smt2
+Testing regressions/smt2/string-literals.smt2
+Testing regressions/smt2/t168.smt2
+Testing regressions/smt2/fp-to_fp_unsigned-1.smt2
+Testing regressions/smt2/nl34.smt2
+Testing regressions/smt2/nl39.smt2
+Testing regressions/smt2/strategy-default.smt2
+Testing regressions/smt2/nl48.smt2
+Testing regressions/smt2/nl40.smt2
+Testing regressions/smt2/fp-to_ubv-26.smt2
+Testing regressions/smt2/z3name_bug.smt2
+Testing regressions/smt2/fp-max-zero-zero-2.smt2
+Testing regressions/smt2/z3.39.smt2
+Testing regressions/smt2/nl51.smt2
+Testing regressions/smt2/consequences.smt2
+Testing regressions/smt2/small-bv-quant-1.smt2
+Testing regressions/smt2/purify_arith.smt2
+Testing regressions/smt2/fp-sqrt-1.smt2
+Testing regressions/smt2/fp-conversions-5.smt2
+Testing regressions/smt2/t122.smt2
+Testing regressions/smt2/t189.smt2
+Testing regressions/smt2/dt_ayrat_2.smt2
+Testing regressions/smt2/fp-rounding_mode-2.smt2
+Testing regressions/smt2/t170.smt2
+Testing regressions/smt2/t184.smt2
+Testing regressions/smt2/fp-predicates.smt2
+Testing regressions/smt2/nl17.smt2
+Testing regressions/smt2/fp-rem-5.smt2
+Testing regressions/smt2/z3.14.smt2
+Testing regressions/smt2/t134.smt2
+Testing regressions/smt2/fp-to_ubv-22.smt2
+Testing regressions/smt2/issue-1851.smt2
+Testing regressions/smt2/issue-1699.smt2
+Testing regressions/smt2/fp-to_fp-9.smt2
+Testing regressions/smt2/fp-to_sbv-16.smt2
+Testing regressions/smt2/div.smt2
+Testing regressions/smt2/fp-fma-5.smt2
+Testing regressions/smt2/fp-model_evaluator_3.smt2
+Testing regressions/smt2/sine4.smt2
+Testing regressions/smt2/strategy-par-or-1.smt2
+Testing regressions/smt2/fp-to_fp-1.smt2
+Testing regressions/smt2/fp-conversions-20.smt2
+Testing regressions/smt2/nl56.smt2
+Testing regressions/smt2/dt_ayrat_4.smt2
+Testing regressions/smt2/fp-uf-6.smt2
+Testing regressions/smt2/nl2.smt2
+Testing regressions/smt2/z3.34.smt2
+Testing regressions/smt2/string14.smt2
+Testing regressions/smt2/intervalDownDivide.smt2
+Testing regressions/smt2/o3.smt2
+Testing regressions/smt2/fp-model_evaluator_4.smt2
+Testing regressions/smt2/t109.smt2
+Testing regressions/smt2/nl19.smt2
+Testing regressions/smt2/nl22.smt2
+Testing regressions/smt2/z3.4.smt2
+Testing regressions/smt2/fp-to_fp_real-1.smt2
+Testing regressions/smt2/fp-rem-13.smt2
+Testing regressions/smt2/t144.smt2
+Testing regressions/smt2/fp-datatype_with_float-1.smt2
+Testing regressions/smt2/fp-sqrt-4.smt2
+Testing regressions/smt2/fp-fma-10.smt2
+Testing regressions/smt2/fp-rem-14.smt2
+Testing regressions/smt2/issue-1681.smt2
+Testing regressions/smt2/issue-1645.smt2
+Testing regressions/smt2/z3.38.smt2
+Testing regressions/smt2/z3.16.smt2
+Testing regressions/smt2/z3.52.smt2
+Testing regressions/smt2/z3.25.smt2
+Testing regressions/smt2/fp-conversions-39.smt2
+Testing regressions/smt2/t16.smt2
+Testing regressions/smt2/fp-to_ubv-2.smt2
+Testing regressions/smt2/fp-conversions-21.smt2
+Testing regressions/smt2/t197.smt2
+Testing regressions/smt2/z3.15.smt2
+Testing regressions/smt2/fp-conversions-27.smt2
+Testing regressions/smt2/issue-1608.smt2
+Testing regressions/smt2/fp-fma-19.smt2
+Testing regressions/smt2/t207.smt2
+Testing regressions/smt2/t185.smt2
+Testing regressions/smt2/fp-conversions-14.smt2
+Testing regressions/smt2/issue-1816.smt2
+Testing regressions/smt2/fp-rem-11.smt2
+Testing regressions/smt2/arith_bug.smt2
+Testing regressions/smt2/t123.smt2
+Testing regressions/smt2/o1.smt2
+Testing regressions/smt2/fp-to_fp_unsigned-5.smt2
+Testing regressions/smt2/eq.smt2
+Testing regressions/smt2/nl4.smt2
+Testing regressions/smt2/t117.smt2
+Testing regressions/smt2/t191.smt2
+Testing regressions/smt2/fp-to_sbv-11.smt2
+Testing regressions/smt2/string-concat.smt2
+Testing regressions/smt2/fp-min-zero-zero-1.smt2
+Testing regressions/smt2/fp-rem-tests-single-non-partial.smt2
+Testing regressions/smt2/nl53.smt2
+Testing regressions/smt2/mbqi_bug.smt2
+Testing regressions/smt2/lia1.smt2
+Testing regressions/smt2/asin.smt2
+Testing regressions/smt2/lia2.smt2
+Testing regressions/smt2/nl30.smt2
+Testing regressions/smt2/fp-to_fp_unsigned-7.smt2
+Testing regressions/smt2/fp-eq-2.smt2
+Testing regressions/smt2/t132.smt2
+Testing regressions/smt2/sine.smt2
+Testing regressions/smt2/fp-to_ubv-16.smt2
+Testing regressions/smt2/tan2.smt2
+Testing regressions/smt2/attr_bug.smt2
+Testing regressions/smt2/nl55.smt2
+Testing regressions/smt2/t124.smt2
+Testing regressions/smt2/strategy-par-or-2.smt2
+Testing regressions/smt2/tan.smt2
+Testing regressions/smt2/t193.smt2
+Testing regressions/smt2/fp-model_evaluator_2.smt2
+Testing regressions/smt2/fp-pzero.smt2
+Testing regressions/smt2/nl45.smt2
+Testing regressions/smt2/fp-conversions-42.smt2
+Testing regressions/smt2/fp-to_fp_unsigned-10.smt2
+Testing regressions/smt2/qfbv-quant.smt2
+Testing regressions/smt2/nl36.smt2
+Testing regressions/smt2/string9.smt2
+Testing regressions/smt2/core.smt2
+Testing regressions/smt2/fp-rem-4.smt2
+Testing regressions/smt2/issue-1718.smt2
+Testing regressions/smt2/fp-to_ubv-7.smt2
+Testing regressions/smt2/fp-conversions-35.smt2
+Testing regressions/smt2/string6.smt2
+Testing regressions/smt2/fp-min-zero-zero-3.smt2
+Testing regressions/smt2/t114.smt2
+Testing regressions/smt2/issue-628.smt2
+Testing regressions/smt2/fp-rounding_mode-3.smt2
+Testing regressions/smt2/fp-conversions-30.smt2
+Testing regressions/smt2/issue-1733.smt2
+Testing regressions/smt2/0xff.smt2
+Testing regressions/smt2/fp-rem-15.smt2
+Testing regressions/smt2/fp-to_sbv-3.smt2
+Testing regressions/smt2/t219.smt2
+Testing regressions/smt2/nl6.smt2
+Testing regressions/smt2/fp-rem-17.smt2
+Testing regressions/smt2/t181.smt2
+Testing regressions/smt2/re.smt2
+Testing regressions/smt2/fp-to_sbv-5.smt2
+Testing regressions/smt2/t135.smt2
+Testing regressions/smt2/fp-array-4.smt2
+Testing regressions/smt2/fp-add-1.smt2
+Testing regressions/smt2/fp-sorts-1.smt2
+Testing regressions/smt2/fp-div-4.smt2
+Testing regressions/smt2/t212.smt2
+Testing regressions/smt2/fp-to_sbv-6.smt2
+Testing regressions/smt2/fp-to_ubv-15.smt2
+Testing regressions/smt2/sine7.smt2
+Testing regressions/smt2/ho.smt2
+Testing regressions/smt2/issue-1677.smt2
+Testing regressions/smt2/mut_rec4sdk_output1.smt2
+Testing regressions/smt2/fp-conversions-28.smt2
+Testing regressions/smt2/fp-to_ubv-12.smt2
+Testing regressions/smt2/t125.smt2
+Testing regressions/smt2/t196.smt2
+Testing regressions/smt2/fp-fma-6.smt2
+Testing regressions/smt2/t155.smt2
+Testing regressions/smt2/fp-ninf.smt2
+Testing regressions/smt2/fp-rem-13-1.smt2
+Testing regressions/smt2/string7.smt2
+Testing regressions/smt2/fp-div-2.smt2
+Testing regressions/smt2/fp-fma-13.smt2
+Testing regressions/smt2/fp-conversions-3.smt2
+Testing regressions/smt2/nl49.smt2
+Testing regressions/smt2/z3.12.smt2
+Testing regressions/smt2/fp-fma-2.smt2
+Testing regressions/smt2/fp-to_ubv-31.smt2
+Testing regressions/smt2/fp-uf-8.smt2
+Testing regressions/smt2/rec.smt2
+Testing regressions/smt2/t217.smt2
+Testing regressions/smt2/o5.smt2
+Testing regressions/smt2/t208.smt2
+Testing regressions/smt2/fp-to_fp-3.smt2
+Testing regressions/smt2/nl47.smt2
+Testing regressions/smt2/issue-963.smt2
+Testing regressions/smt2/fp-conversions-41.smt2
+Testing regressions/smt2/fp-uf-7.smt2
+Testing regressions/smt2/t211.smt2
+Testing regressions/smt2/z3.20.smt2
+Testing regressions/smt2/b1.smt2
+Testing regressions/smt2/bv0.smt2
+Testing regressions/smt2/fp-rem-16.smt2
+Testing regressions/smt2/t214.smt2
+Testing regressions/smt2/fp-conversions-15.smt2
+Testing regressions/smt2/fp-nzero.smt2
+Testing regressions/smt2/fp-array-7.smt2
+Testing regressions/smt2/fp-conversions-38.smt2
+Testing regressions/smt2/t183.smt2
+Testing regressions/smt2/z3.5.smt2
+Testing regressions/smt2/dt_ayrat_1.smt2
+Testing regressions/smt2/bad_set_logic.smt2
+Testing regressions/smt2/fp-to_fp-11.smt2
+Testing regressions/smt2/sine9.smt2
+Testing regressions/smt2/nl15.smt2
+Testing regressions/smt2/nl38.smt2
+Testing regressions/smt2/fp-fma-9.smt2
+Testing regressions/smt2/trig-quadrants.smt2
+Testing regressions/smt2/nl3.smt2
+Testing regressions/smt2/t199.smt2
+Testing regressions/smt2/power-zero-safe.smt2
+Testing regressions/smt2/fp-fp-1.smt2
+Testing regressions/smt2/fp-conversions-9.smt2
+Testing regressions/smt2/fp-to_ubv-3.smt2
+Testing regressions/smt2/issue-790.smt2
+Testing regressions/smt2/fp-to_ubv-24.smt2
+Testing regressions/smt2/fp-to_sbv-12.smt2
+Testing regressions/smt2/nl41.smt2
+Testing regressions/smt2/token3.smt2
+Testing regressions/smt2/root-pre.smt2
+Testing regressions/smt2/t190.smt2
+Testing regressions/smt2/t119.smt2
+Testing regressions/smt2/fp-to_fp-signed-1.smt2
+Testing regressions/smt2/fp-roundToIntegral-8.smt2
+Testing regressions/smt2/fp-rem-tests-double-partial.smt2
+Testing regressions/smt2/fp-to_ubv-13.smt2
+Testing regressions/smt2/z3.6.smt2
+Testing regressions/smt2/nl43.smt2
+Testing regressions/smt2/t209.smt2
+Testing regressions/smt2/fp-to_fp-5.smt2
+Testing regressions/smt2/nl18.smt2
+Testing regressions/smt2/fp-rem-7.smt2
+Testing regressions/smt2/fp-roundToIntegral-3.smt2
+Testing regressions/smt2/t171.smt2
+Testing regressions/smt2/fp-mul-2.smt2
+Testing regressions/smt2/fp-rem-9.smt2
+Testing regressions/smt2/t138.smt2
+Testing regressions/smt2/z3.40.smt2
+Testing regressions/smt2/fp-div-1.smt2
+Testing regressions/smt2/fp-conversions-16.smt2
+Testing regressions/smt2/fp-to_fp_float-3.smt2
+Testing regressions/smt2/t115.smt2
+Testing regressions/smt2/fp-to_ubv-29.smt2
+Testing regressions/smt2/fp-abs-2.smt2
+Testing regressions/smt2/nl12.smt2
+Testing regressions/smt2/issue-1729.smt2
+Testing regressions/smt2/nl50.smt2
+Testing regressions/smt2/nl23.smt2
+Testing regressions/smt2/fp-to_fp-7.smt2
+Testing regressions/smt2/fp-abs-1.smt2
+Testing regressions/smt2/incsat.smt2
+Testing regressions/smt2/trig-bounds.smt2
+Testing regressions/smt2/fp-uf-4.smt2
+Testing regressions/smt2/t175.smt2
+Testing regressions/smt2/nl59.smt2
+Testing regressions/smt2/fp-to_fp_unsigned-3.smt2
+Testing regressions/smt2/nl21.smt2
+Testing regressions/smt2/fp-le-ge.smt2
+Testing regressions/smt2/issue-1566.smt2
+Testing regressions/smt2/nl25.smt2
+Testing regressions/smt2/blinking_query.smt2
+Testing regressions/smt2/issue-1655.smt2
+Testing regressions/smt2/bvsmod.smt2
+Testing regressions/smt2/t148.smt2
+Testing regressions/smt2/fp-uf-9.smt2
+Testing regressions/smt2/z3.31.smt2
+Testing regressions/smt2/nl54.smt2
+Testing regressions/smt2/string3.smt2
+Testing regressions/smt2/string8.smt2
+Testing regressions/smt2/z3.26.smt2
+Testing regressions/smt2/fp-conversions-32.smt2
+Testing regressions/smt2/fp-sqrt-9.smt2
+Testing regressions/smt2/model_compact_bug.smt2
+Testing regressions/smt2/fp-conversions-24.smt2
+Testing regressions/smt2/array.smt2
+Testing regressions/smt2/string13.smt2
+Testing regressions/smt2/z3.43.smt2
+Testing regressions/smt2/nl5.smt2
+Testing regressions/smt2/with.smt2
+Testing regressions/smt2/fp-conversions-8.smt2
+Testing regressions/smt2/string-simplify.smt2
+Testing regressions/smt2/fp-conversions-40.smt2
+Testing regressions/smt2/fp-conversions-26.smt2
+Testing regressions/smt2/fp-to_ieee_bv-1.smt2
+Testing regressions/smt2/issue-1662.smt2
+Testing regressions/smt2/fp-fma-1.smt2
+Testing regressions/smt2/issue-1841.smt2
+Testing regressions/smt2/pb.smt2
+Testing regressions/smt2/t205.smt2
+Testing regressions/smt2/t121.smt2
+Testing regressions/smt2/string1.smt2
+Testing regressions/smt2/nl27.smt2
+Testing regressions/smt2/strategy-par-or-3.smt2
+Testing regressions/smt2/unsatcore.smt2
+Testing regressions/smt2/crash.smt2
+Testing regressions/smt2/sine3.smt2
+Testing regressions/smt2/o2.smt2
+Testing regressions/smt2/fp-rem-13-3.smt2
+Testing regressions/smt2/fp-conversions-29.smt2
+Testing regressions/smt2/fp-template.smt2
+Testing regressions/smt2/issue-1218.smt2
+Testing regressions/smt2/fp-to_ieee_bv-2.smt2
+Testing regressions/smt2/sine2.smt2
+Testing regressions/smt2/fp-rem-12.smt2
+Testing regressions/smt2/fp-roundToIntegral-1.smt2
+Testing regressions/smt2/fp-roundToIntegral-6.smt2
+Testing regressions/smt2/cosine6.smt2
+Testing regressions/smt2/sine6.smt2
+Testing regressions/smt2/fp-conversions-10.smt2
+Testing regressions/smt2/cosine.smt2
+Testing regressions/smt2/fp-roundToIntegral-5.smt2
+Testing regressions/smt2/fp-rem-tests-double-non-partial.smt2
+Testing regressions/smt2/string11.smt2
+Testing regressions/smt2/nl20.smt2
+Testing regressions/smt2/fp-to_fp-4.smt2
+Testing regressions/smt2/fp-conversions-1.smt2
+Testing regressions/smt2/issue-1086.smt2
+Testing regressions/smt2/fp-to_ubv-19.smt2
+Testing regressions/smt2/t111.smt2
+Testing regressions/smt2/fp-conversions-6.smt2
+Testing regressions/smt2/t215.smt2
+Testing regressions/smt2/fp-datatype_with_float-2.smt2
+Testing regressions/smt2/sine8.smt2
+Testing regressions/smt2/arith_bug3.smt2
+Testing regressions/smt2/fp-neg.smt2
+Testing regressions/smt2/o6.smt2
+Testing regressions/smt2/string12.smt2
+Testing regressions/smt2/fp-pinf.smt2
+Testing regressions/smt2/error.smt2
+Testing regressions/smt2/trig-spherical.smt2
+Testing regressions/smt2/t104.smt2
+Testing regressions/smt2/fp-uf-3.smt2
+Testing regressions/smt2/t177.smt2
+Testing regressions/smt2/fp-to_sbv-7.smt2
+Testing regressions/smt2/fp-uf-2.smt2
+Testing regressions/smt2/fp-conversions-19.smt2
+Testing regressions/smt2/fp-to_sbv-1.smt2
+Testing regressions/smt2/fp-fma-11.smt2
+Testing regressions/smt2/t160.smt2
+Testing regressions/smt2/nl32.smt2
+Testing regressions/smt2/z3.28.smt2
+Testing regressions/smt2/issue-1665.smt2
+Testing regressions/smt2/string2.smt2
+Testing regressions/smt2/t174.smt2
+Testing regressions/smt2/t210.smt2
+Testing regressions/smt2/nl-simp.smt2
+Testing regressions/smt2/fp-to_fp_unsigned-9.smt2
+Testing regressions/smt2/fp-sub-1.smt2
+Testing regressions/smt2/fp-sqrt-3.smt2
+Testing regressions/smt2/string-ops.smt2
+Testing python scripts at regressions/python using /home/nightly/z3/build/master/debug
+Testing regreAlready on 'master'
+Your branch is up-to-date with 'public/master'.
+From https://github.com/z3prover/z3
+ * branch            master     -> FETCH_HEAD
+Already up-to-date.
+ssions/python/ac1.py
+Testing regressions/python/arith.4.py
+Testing regressions/python/ac6.py
+Testing regressions/python/ac5.py
+Testing regressions/python/arith.5.py
+Testing regressions/python/bug.2.py
+Testing regressions/python/fp1.py
+Testing regressions/python/arith.1.py
+Testing regressions/python/ac3.py
+Testing regressions/python/sorts.py
+Testing regressions/python/ac2.py
+Testing regressions/python/bug.3.py
+Testing regressions/python/bug.1.py
+Testing regressions/python/arith.2.py
+Testing regressions/python/solver.1.py
+Testing regressions/python/ac4.py
+Testing regressions/python/arith.3.py
+Testing regressions/python/nonlinear.py
+opt = -b, arg = build/master/release
+New component: 'util'
+New component: 'polynomial'
+New component: 'sat'
+New component: 'nlsat'
+New component: 'lp'
+New component: 'hilbert'
+New component: 'simplex'
+New component: 'automata'
+New component: 'interval'
+New component: 'realclosure'
+New component: 'subpaving'
+New component: 'ast'
+New component: 'rewriter'
+New component: 'macros'
+New component: 'normal_forms'
+New component: 'model'
+New component: 'tactic'
+New component: 'substitution'
+New component: 'parser_util'
+New component: 'grobner'
+New component: 'euclid'
+New component: 'proofs'
+New component: 'solver'
+New component: 'cmd_context'
+New component: 'sat_tactic'
+New component: 'smt2parser'
+New component: 'pattern'
+New component: 'core_tactics'
+New component: 'arith_tactics'
+New component: 'nlsat_tactic'
+New component: 'subpaving_tactic'
+New component: 'aig_tactic'
+New component: 'ackermannization'
+New component: 'fpa'
+New component: 'bit_blaster'
+New component: 'smt_params'
+New component: 'proto_model'
+New component: 'smt'
+New component: 'bv_tactics'
+New component: 'fuzzing'
+New component: 'smt_tactic'
+New component: 'sls_tactic'
+New component: 'qe'
+New component: 'sat_solver'
+New component: 'fd_solver'
+New component: 'muz'
+New component: 'dataflow'
+New component: 'transforms'
+New component: 'rel'
+New component: 'spacer'
+New component: 'clp'
+New component: 'tab'
+New component: 'ddnf'
+New component: 'bmc'
+New component: 'fp'
+New component: 'ufbv_tactic'
+New component: 'smtlogic_tactics'
+New component: 'fpa_tactics'
+New component: 'portfolio'
+New component: 'opt'
+New component: 'api'
+New component: 'extra_cmds'
+New component: 'shell'
+New component: 'test'
+New component: 'api_dll'
+New component: 'dotnet'
+New component: 'dotnetcore'
+New component: 'java'
+New component: 'ml'
+New component: 'cpp'
+Python bindings directory was detected.
+New component: 'python'
+New component: 'python_install'
+New component: 'js'
+New component: 'cpp_example'
+New component: 'z3_tptp'
+New component: 'c_example'
+New component: 'maxsat'
+New component: 'dotnet_example'
+New component: 'java_example'
+New component: 'ml_example'
+New component: 'py_example'
+Generating src/util/z3_version.h from src/util/z3_version.h.in
+Generated 'src/util/z3_version.h'
+Generating src/api/dotnet/Properties/AssemblyInfo.cs from src/api/dotnet/Properties/AssemblyInfo.cs.in
+Generated 'src/tactic/tactic_params.hpp'
+Generated 'src/tactic/sls/sls_params.hpp'
+Generated 'src/tactic/smtlogics/qfufbv_tactic_params.hpp'
+Generated 'src/opt/opt_params.hpp'
+Generated 'src/solver/parallel_params.hpp'
+Generated 'src/solver/combined_solver_params.hpp'
+Generated 'src/solver/solver_params.hpp'
+Generated 'src/muz/base/fp_params.hpp'
+Generated 'src/model/model_evaluator_params.hpp'
+Generated 'src/model/model_params.hpp'
+Generated 'src/parsers/util/parser_params.hpp'
+Generated 'src/smt/params/smt_params_helper.hpp'
+Generated 'src/sat/sat_params.hpp'
+Generated 'src/sat/sat_scc_params.hpp'
+Generated 'src/sat/sat_simplifier_params.hpp'
+Generated 'src/sat/sat_asymm_branch_params.hpp'
+Generated 'src/util/lp/lp_params.hpp'
+Generated 'src/math/realclosure/rcf_params.hpp'
+Generated 'src/math/polynomial/algebraic_params.hpp'
+Generated 'src/ast/pp_params.hpp'
+Generated 'src/ast/normal_forms/nnf_params.hpp'
+Generated 'src/ast/rewriter/bool_rewriter_params.hpp'
+Generated 'src/ast/rewriter/array_rewriter_params.hpp'
+Generated 'src/ast/rewriter/bv_rewriter_params.hpp'
+Generated 'src/ast/rewriter/fpa_rewriter_params.hpp'
+Generated 'src/ast/rewriter/poly_rewriter_params.hpp'
+Generated 'src/ast/rewriter/arith_rewriter_params.hpp'
+Generated 'src/ast/rewriter/rewriter_params.hpp'
+Generated 'src/ast/fpa/fpa2bv_rewriter_params.hpp'
+Generated 'src/ast/pattern/pattern_inference_params_helper.hpp'
+Generated 'src/ackermannization/ackermannize_bv_tactic_params.hpp'
+Generated 'src/ackermannization/ackermannization_params.hpp'
+Generated 'src/nlsat/nlsat_params.hpp'
+Generated 'src/ast/pattern/database.h'
+Component api
+Component portfolio
+Component smtlogic_tactics
+Component ackermannization
+Component model
+Component rewriter
+Component ast
+Component util
+Component polynomial
+Component automata
+Component solver
+Component tactic
+Component proofs
+Component sat_solver
+Component core_tactics
+Component macros
+Component normal_forms
+Component pattern
+Component smt2parser
+Component cmd_context
+Component parser_util
+Component aig_tactic
+Component bv_tactics
+Component bit_blaster
+Component arith_tactics
+Component sat
+Component sat_tactic
+Component nlsat_tactic
+Component nlsat
+Component smt_tactic
+Component smt
+Component proto_model
+Component smt_params
+Component substitution
+Component grobner
+Component euclid
+Component simplex
+Component fpa
+Component lp
+Component fp
+Component muz
+Component qe
+Component clp
+Component transforms
+Component hilbert
+Component dataflow
+Component tab
+Component rel
+Component bmc
+Component fd_solver
+Component ddnf
+Component spacer
+Component ufbv_tactic
+Component fpa_tactics
+Component sls_tactic
+Component subpaving_tactic
+Component subpaving
+Component interval
+Component realclosure
+Component opt
+Component extra_cmds
+Component shell
+Generated 'src/shell/install_tactic.cpp'
+Component api
+Component portfolio
+Component smtlogic_tactics
+Component ackermannization
+Component model
+Component rewriter
+Component ast
+Component util
+Component polynomial
+Component automata
+Component solver
+Component tactic
+Component proofs
+Component sat_solver
+Component core_tactics
+Component macros
+Component normal_forms
+Component pattern
+Component smt2parser
+Component cmd_context
+Component parser_util
+Component aig_tactic
+Component bv_tactics
+Component bit_blaster
+Component arith_tactics
+Component sat
+Component sat_tactic
+Component nlsat_tactic
+Component nlsat
+Component smt_tactic
+Component smt
+Component proto_model
+Component smt_params
+Component substitution
+Component grobner
+Component euclid
+Component simplex
+Component fpa
+Component lp
+Component fp
+Component muz
+Component qe
+Component clp
+Component transforms
+Component hilbert
+Component dataflow
+Component tab
+Component rel
+Component bmc
+Component fd_solver
+Component ddnf
+Component spacer
+Component ufbv_tactic
+Component fpa_tactics
+Component sls_tactic
+Component subpaving_tactic
+Component subpaving
+Component interval
+Component realclosure
+Component opt
+Component fuzzing
+Component test
+Generated 'src/test/install_tactic.cpp'
+Component api
+Component portfolio
+Component smtlogic_tactics
+Component ackermannization
+Component model
+Component rewriter
+Component ast
+Component util
+Component polynomial
+Component automata
+Component solver
+Component tactic
+Component proofs
+Component sat_solver
+Component core_tactics
+Component macros
+Component normal_forms
+Component pattern
+Component smt2parser
+Component cmd_context
+Component parser_util
+Component aig_tactic
+Component bv_tactics
+Component bit_blaster
+Component arith_tactics
+Component sat
+Component sat_tactic
+Component nlsat_tactic
+Component nlsat
+Component smt_tactic
+Component smt
+Component proto_model
+Component smt_params
+Component substitution
+Component grobner
+Component euclid
+Component simplex
+Component fpa
+Component lp
+Component fp
+Component muz
+Component qe
+Component clp
+Component transforms
+Component hilbert
+Component dataflow
+Component tab
+Component rel
+Component bmc
+Component fd_solver
+Component ddnf
+Component spacer
+Component ufbv_tactic
+Component fpa_tactics
+Component sls_tactic
+Component subpaving_tactic
+Component subpaving
+Component interval
+Component realclosure
+Component opt
+Component extra_cmds
+Component api_dll
+Generated 'src/api/dll/install_tactic.cpp'
+Generated 'src/shell/mem_initializer.cpp'
+Generated 'src/test/mem_initializer.cpp'
+Generated 'src/api/dll/mem_initializer.cpp'
+Generated 'src/shell/gparams_register_modules.cpp'
+Generated 'src/test/gparams_register_modules.cpp'
+Generated 'src/api/dll/gparams_register_modules.cpp'
+Generated 'src/api/python/z3/z3consts.py
+Generated 'src/api/api_log_macros.h'
+Generated 'src/api/api_log_macros.cpp'
+Generated 'src/api/api_commands.cpp'
+Generated 'src/api/python/z3/z3core.py'
+Listing src/api/python/z3 ...
+Compiling src/api/python/z3/__init__.py ...
+Compiling src/api/python/z3/z3.py ...
+Compiling src/api/python/z3/z3consts.py ...
+Compiling src/api/python/z3/z3core.py ...
+Compiling src/api/python/z3/z3num.py ...
+Compiling src/api/python/z3/z3poly.py ...
+Compiling src/api/python/z3/z3printer.py ...
+Compiling src/api/python/z3/z3rcf.py ...
+Compiling src/api/python/z3/z3types.py ...
+Compiling src/api/python/z3/z3util.py ...
+Generated python bytecode
+Copied 'z3types.py'
+Copied 'z3core.py'
+Copied 'z3consts.py'
+Copied 'z3printer.py'
+Copied 'z3util.py'
+Copied 'z3.py'
+Copied 'z3num.py'
+Copied '__init__.py'
+Copied 'z3rcf.py'
+Copied 'z3poly.py'
+Copied '__init__.pyc'
+Copied 'z3printer.pyc'
+Copied 'z3consts.pyc'
+Copied 'z3rcf.pyc'
+Copied 'z3poly.pyc'
+Copied 'z3.pyc'
+Copied 'z3num.pyc'
+Copied 'z3types.pyc'
+Copied 'z3core.pyc'
+Copied 'z3util.pyc'
+Testing ar...
+Testing g++...
+Testing gcc...
+Testing floating point support...
+Testing OpenMP...
+Host platform:  Linux
+C++ Compiler:   g++
+C Compiler  :   gcc
+Archive Tool:   ar
+Arithmetic:     internal
+OpenMP:         True
+Prefix:         /usr
+64-bit:         True
+FP math:        SSE2-GCC
+Python pkg dir: /usr/lib/python2.7/dist-packages
+Python version: 2.7
+Writing build/master/release/Makefile
+Copied Z3Py example 'mini_ic3.py' to 'build/master/release/python'
+Copied Z3Py example 'all_interval_series.py' to 'build/master/release/python'
+Copied Z3Py example 'visitor.py' to 'build/master/release/python'
+Copied Z3Py example 'parallel.py' to 'build/master/release/python'
+Copied Z3Py example 'union_sort.py' to 'build/master/release/python'
+Copied Z3Py example 'rc2.py' to 'build/master/release/python'
+Copied Z3Py example 'mini_quip.py' to 'build/master/release/python'
+Copied Z3Py example 'socrates.py' to 'build/master/release/python'
+Copied Z3Py example 'example.py' to 'build/master/release/python'
+Makefile was successfully generated.
+  compilation mode: Release
+Type 'cd build/master/release; make' to build Z3
+src/smt/smt_statistics.cpp
+src/util/luby.cpp
+src/util/approx_nat.cpp
+src/util/common_msgs.cpp
+src/api/dll/dll.cpp
+src/util/z3_exception.cpp
+src/util/page.cpp
+src/util/memory_manager.cpp
+src/util/approx_set.cpp
+src/util/timeit.cpp
+src/util/cooperate.cpp
+src/api/api_commands.cpp
+src/util/bit_util.cpp
+src/util/util.cpp
+src/util/timeout.cpp
+src/util/scoped_ctrl_c.cpp
+src/util/scoped_timer.cpp
+src/util/stack.cpp
+src/shell/z3_log_frontend.cpp
+src/api/api_log.cpp
+src/util/hash.cpp
+src/util/mpn.cpp
+src/util/lbool.cpp
+src/util/fixed_bit_vector.cpp
+src/solver/smt_logics.cpp
+src/math/automata/automaton.cpp
+src/util/symbol.cpp
+src/util/small_object_allocator.cpp
+src/util/bit_vector.cpp
+src/util/min_cut.cpp
+src/util/debug.cpp
+src/util/trace.cpp
+src/util/warning.cpp
+src/util/cmd_context_types.cpp
+src/util/region.cpp
+src/util/smt2_util.cpp
+src/util/permutation.cpp
+src/util/prime_generator.cpp
+src/api/api_log_macros.cpp
+src/api/z3_replayer.cpp
+src/util/mpz.cpp
+src/util/statistics.cpp
+src/util/rlimit.cpp
+src/smt/params/dyn_ack_params.cpp
+src/smt/params/theory_bv_params.cpp
+src/smt/params/theory_seq_params.cpp
+src/smt/params/theory_array_params.cpp
+src/smt/params/preprocessor_params.cpp
+src/smt/params/theory_arith_params.cpp
+src/smt/params/theory_str_params.cpp
+src/smt/params/theory_pb_params.cpp
+src/smt/params/qi_params.cpp
+src/ast/pattern/pattern_inference_params.cpp
+src/math/euclid/euclidean_solver.cpp
+src/math/realclosure/mpz_matrix.cpp
+src/math/interval/interval_mpq.cpp
+src/sat/sat_watched.cpp
+src/sat/sat_config.cpp
+src/sat/sat_bdd.cpp
+src/sat/sat_clause_set.cpp
+src/sat/sat_clause_use_list.cpp
+src/sat/sat_clause.cpp
+src/util/mpff.cpp
+src/util/mpq.cpp
+src/util/env_params.cpp
+src/util/mpfx.cpp
+src/util/gparams.cpp
+src/util/mpq_inf.cpp
+src/shell/mem_initializer.cpp
+src/smt/old_interval.cpp
+src/tactic/arith/linear_equation.cpp
+src/math/subpaving/subpaving_mpfx.cpp
+src/math/subpaving/subpaving_hwf.cpp
+src/math/realclosure/realclosure.cpp
+src/util/sexpr.cpp
+src/util/inf_rational.cpp
+src/util/hwf.cpp
+src/util/mpf.cpp
+src/util/inf_int_rational.cpp
+src/util/s_integer.cpp
+src/util/mpbq.cpp
+src/util/rational.cpp
+src/util/params.cpp
+src/api/dll/mem_initializer.cpp
+src/muz/spacer/spacer_matrix.cpp
+src/muz/rel/tbv.cpp
+src/muz/base/bind_variables.cpp
+src/smt/smt_quantifier_stat.cpp
+src/smt/proto_model/value_factory.cpp
+src/smt/params/smt_params.cpp
+src/tactic/arith/bound_propagator.cpp
+src/ast/rewriter/func_decl_replace.cpp
+src/ast/expr_map.cpp
+src/ast/act_cache.cpp
+src/ast/has_free_vars.cpp
+src/ast/for_each_ast.cpp
+src/ast/used_vars.cpp
+src/ast/display_dimacs.cpp
+src/ast/ast_lt.cpp
+src/ast/num_occurs.cpp
+src/ast/special_relations_decl_plugin.cpp
+src/math/subpaving/subpaving_mpf.cpp
+src/math/subpaving/subpaving_mpq.cpp
+src/math/subpaving/subpaving_mpff.cpp
+src/math/subpaving/subpaving.cpp
+src/math/simplex/simplex.cpp
+src/math/hilbert/hilbert_basis.cpp
+src/util/lp/lp_utils.cpp
+src/sat/sat_scc.cpp
+src/sat/dimacs.cpp
+src/sat/sat_drat.cpp
+src/sat/sat_parallel.cpp
+src/sat/sat_elim_eqs.cpp
+src/sat/sat_big.cpp
+src/sat/sat_integrity_checker.cpp
+src/sat/sat_simplifier.cpp
+src/sat/sat_elim_vars.cpp
+src/sat/sat_cleaner.cpp
+src/sat/sat_asymm_branch.cpp
+src/sat/sat_probing.cpp
+src/sat/sat_lookahead.cpp
+src/sat/sat_iff3_finder.cpp
+src/sat/sat_mus.cpp
+src/sat/sat_model_converter.cpp
+src/util/inf_s_integer.cpp
+src/smt/arith_eq_solver.cpp
+src/smt/cost_evaluator.cpp
+src/smt/smt_value_sort.cpp
+src/smt/uses_theory.cpp
+src/ackermannization/ackr_helper.cpp
+src/math/subpaving/tactic/expr2subpaving.cpp
+src/cmd_context/tactic_manager.cpp
+src/parsers/util/simple_parser.cpp
+src/parsers/util/scanner.cpp
+src/parsers/util/cost_parser.cpp
+src/ast/rewriter/mk_extract_proc.cpp
+src/ast/rewriter/datatype_rewriter.cpp
+src/ast/rewriter/distribute_forall.cpp
+src/ast/for_each_expr.cpp
+src/ast/func_decl_dependencies.cpp
+src/ast/expr_functors.cpp
+src/ast/fpa_decl_plugin.cpp
+src/ast/expr_stat.cpp
+src/ast/macro_substitution.cpp
+src/ast/format.cpp
+src/ast/ast_ll_pp.cpp
+src/ast/occurs.cpp
+src/ast/csp_decl_plugin.cpp
+src/ast/ast_util.cpp
+src/ast/reg_decl_plugins.cpp
+src/ast/pp.cpp
+src/math/simplex/model_based_opt.cpp
+src/sat/sat_solver.cpp
+src/sat/sat_unit_walk.cpp
+src/math/polynomial/polynomial_cache.cpp
+src/shell/main.cpp
+src/qe/qe_solve_plugin.cpp
+src/smt/smt_literal.cpp
+src/smt/cached_var_subst.cpp
+src/smt/elim_term_ite.cpp
+src/smt/smt_farkas_util.cpp
+src/smt/fingerprints.cpp
+src/smt/proto_model/numeral_factory.cpp
+src/ast/fpa/bv2fpa_converter.cpp
+src/ast/fpa/fpa2bv_rewriter.cpp
+src/ast/fpa/fpa2bv_converter.cpp
+src/tactic/arith/bv2real_rewriter.cpp
+src/ast/pattern/pattern_inference.cpp
+src/cmd_context/pdecl.cpp
+src/cmd_context/check_logic.cpp
+src/ast/proofs/proof_checker.cpp
+src/ast/proofs/proof_utils.cpp
+src/math/grobner/grobner.cpp
+src/parsers/util/pattern_validation.cpp
+src/tactic/replace_proof_converter.cpp
+src/tactic/equiv_proof_converter.cpp
+src/model/func_interp.cpp
+src/model/model_core.cpp
+src/model/model_pp.cpp
+src/model/model_v2_pp.cpp
+src/ast/normal_forms/defined_names.cpp
+src/ast/normal_forms/pull_quant.cpp
+src/ast/normal_forms/nnf.cpp
+src/ast/normal_forms/name_exprs.cpp
+src/ast/rewriter/hoist_rewriter.cpp
+src/ast/rewriter/push_app_ite.cpp
+src/ast/rewriter/factor_rewriter.cpp
+src/ast/rewriter/label_rewriter.cpp
+src/ast/rewriter/bool_rewriter.cpp
+src/ast/rewriter/arith_rewriter.cpp
+src/ast/rewriter/maximize_ac_sharing.cpp
+src/ast/rewriter/seq_rewriter.cpp
+src/ast/rewriter/pb_rewriter.cpp
+src/ast/rewriter/pb2bv_rewriter.cpp
+src/ast/rewriter/bv_elim.cpp
+src/ast/rewriter/fpa_rewriter.cpp
+src/ast/rewriter/dl_rewriter.cpp
+src/ast/rewriter/enum2bv_rewriter.cpp
+src/ast/rewriter/quant_hoist.cpp
+src/ast/rewriter/inj_axiom.cpp
+src/ast/rewriter/bv_trailing.cpp
+src/ast/rewriter/rewriter.cpp
+src/ast/rewriter/der.cpp
+src/ast/rewriter/expr_safe_replace.cpp
+src/ast/rewriter/array_rewriter.cpp
+src/ast/rewriter/elim_bounds.cpp
+src/ast/rewriter/bv_bounds.cpp
+src/ast/rewriter/ast_counter.cpp
+src/ast/rewriter/var_subst.cpp
+src/ast/rewriter/expr_replacer.cpp
+src/ast/rewriter/factor_equivs.cpp
+src/ast/arith_decl_plugin.cpp
+src/ast/bv_decl_plugin.cpp
+src/ast/shared_occs.cpp
+src/ast/expr2var.cpp
+src/ast/expr2polynomial.cpp
+src/ast/well_sorted.cpp
+src/ast/pb_decl_plugin.cpp
+src/ast/ast_translation.cpp
+src/ast/ast_smt_pp.cpp
+src/ast/static_features.cpp
+src/ast/dl_decl_plugin.cpp
+src/ast/recfun_decl_plugin.cpp
+src/ast/ast_pp_dot.cpp
+src/ast/ast_smt2_pp.cpp
+src/ast/expr_abstract.cpp
+src/ast/datatype_decl_plugin.cpp
+src/ast/seq_decl_plugin.cpp
+src/ast/array_decl_plugin.cpp
+src/ast/decl_collector.cpp
+src/ast/ast.cpp
+src/ast/expr_substitution.cpp
+src/util/lp/lp_settings.cpp
+src/util/lp/binary_heap_priority_queue.cpp
+src/nlsat/nlsat_types.cpp
+src/nlsat/nlsat_clause.cpp
+src/nlsat/nlsat_interval_set.cpp
+src/sat/ba_solver.cpp
+src/sat/sat_local_search.cpp
+src/math/polynomial/rpolynomial.cpp
+src/math/polynomial/polynomial.cpp
+src/math/polynomial/upolynomial.cpp
+src/api/dll/gparams_register_modules.cpp
+src/shell/gparams_register_modules.cpp
+src/muz/spacer/spacer_mev_array.cpp
+src/muz/spacer/spacer_antiunify.cpp
+src/muz/spacer/spacer_mbc.cpp
+src/muz/spacer/spacer_sem_matcher.cpp
+src/muz/rel/doc.cpp
+src/qe/qe_bool_plugin.cpp
+src/qe/qe_arith_plugin.cpp
+src/qe/qe_term_graph.cpp
+src/qe/qe_bv_plugin.cpp
+src/qe/qe_dl_plugin.cpp
+src/qe/nlarith_util.cpp
+src/qe/qe_datatype_plugin.cpp
+src/qe/qe_array_plugin.cpp
+src/qe/qe_arith.cpp
+src/smt/smt_clause.cpp
+src/smt/theory_opt.cpp
+src/smt/expr_context_simplifier.cpp
+src/smt/smt_cg_table.cpp
+src/smt/watch_list.cpp
+src/smt/smt_almost_cg_table.cpp
+src/smt/proto_model/datatype_factory.cpp
+src/smt/proto_model/struct_factory.cpp
+src/smt/proto_model/array_factory.cpp
+src/smt/proto_model/proto_model.cpp
+src/ast/rewriter/bit_blaster/bit_blaster_rewriter.cpp
+src/ast/rewriter/bit_blaster/bit_blaster.cpp
+src/ast/substitution/matcher.cpp
+src/ast/substitution/unifier.cpp
+src/ast/substitution/substitution_tree.cpp
+src/ast/substitution/substitution.cpp
+src/model/model.cpp
+src/model/model_implicant.cpp
+src/model/model_evaluator.cpp
+src/model/model_smt2_pp.cpp
+src/model/model2expr.cpp
+src/ast/rewriter/th_rewriter.cpp
+src/ast/rewriter/bv_rewriter.cpp
+src/ast/rewriter/mk_simplified_app.cpp
+src/ast/ast_pp_util.cpp
+src/ast/ast_printer.cpp
+src/util/lp/indexed_vector.cpp
+src/util/lp/binary_heap_upair_queue.cpp
+src/util/lp/dense_matrix.cpp
+src/math/polynomial/algebraic_numbers.cpp
+src/math/polynomial/sexpr2upolynomial.cpp
+src/math/polynomial/upolynomial_factorization.cpp
+src/opt/pb_sls.cpp
+src/tactic/ufbv/ufbv_rewriter.cpp
+src/muz/spacer/spacer_qe_project.cpp
+src/muz/spacer/spacer_sym_mux.cpp
+src/muz/spacer/spacer_iuc_proof.cpp
+src/muz/spacer/spacer_unsat_core_learner.cpp
+src/muz/base/dl_boogie_proof.cpp
+src/qe/qe_arrays.cpp
+src/qe/qe_datatypes.cpp
+src/qe/qe_mbp.cpp
+src/tactic/bv/bit_blaster_model_converter.cpp
+src/ackermannization/lackr_model_constructor.cpp
+src/ackermannization/ackr_model_converter.cpp
+src/ackermannization/ackermannize_bv_model_converter.cpp
+src/solver/check_sat_result.cpp
+src/tactic/horn_subsume_model_converter.cpp
+src/tactic/model_converter.cpp
+src/tactic/generic_model_converter.cpp
+src/ast/macros/macro_util.cpp
+src/ast/rewriter/bit2int.cpp
+src/nlsat/nlsat_solver.cpp
+src/nlsat/nlsat_explain.cpp
+src/nlsat/nlsat_evaluator.cpp
+src/opt/opt_pareto.cpp
+src/tactic/portfolio/solver2lookahead.cpp
+src/tactic/fpa/fpa2bv_model_converter.cpp
+src/tactic/smtlogics/qfufbv_ackr_model_converter.cpp
+src/muz/spacer/spacer_unsat_core_plugin.cpp
+src/muz/spacer/spacer_proof_utils.cpp
+src/muz/spacer/spacer_farkas_learner.cpp
+src/muz/base/hnf.cpp
+src/qe/qe_mbi.cpp
+src/tactic/bv/bvarray2uf_rewriter.cpp
+src/smt/smt_implied_equalities.cpp
+src/smt/smt_solver.cpp
+src/ackermannization/lackr_model_converter_lazy.cpp
+src/tactic/aig/aig.cpp
+src/tactic/arith/bound_manager.cpp
+src/tactic/arith/pb2bv_model_converter.cpp
+src/tactic/arith/probe_arith.cpp
+src/tactic/arith/bv2int_rewriter.cpp
+src/tactic/core/collect_occs.cpp
+src/sat/tactic/atom2bool_var.cpp
+src/cmd_context/context_params.cpp
+src/solver/mus.cpp
+src/solver/solver.cpp
+src/solver/combined_solver.cpp
+src/solver/solver_na2as.cpp
+src/solver/solver_pool.cpp
+src/tactic/proof_converter.cpp
+src/tactic/dependency_converter.cpp
+src/tactic/goal.cpp
+src/tactic/goal_util.cpp
+src/tactic/probe.cpp
+src/tactic/goal_num_occurs.cpp
+src/tactic/goal_shared_occs.cpp
+src/ast/macros/quasi_macros.cpp
+src/ast/macros/macro_manager.cpp
+src/util/lp/permutation_matrix.cpp
+src/util/lp/matrix.cpp
+src/cmd_context/extra_cmds/dbg_cmds.cpp
+src/cmd_context/extra_cmds/subpaving_cmds.cpp
+src/cmd_context/extra_cmds/polynomial_cmds.cpp
+src/api/api_special_relations.cpp
+src/api/api_pb.cpp
+src/api/api_rcf.cpp
+src/api/api_quant.cpp
+src/api/api_datatype.cpp
+src/api/api_polynomial.cpp
+src/api/api_model.cpp
+src/api/api_algebraic.cpp
+src/api/api_context.cpp
+src/api/api_bv.cpp
+src/api/api_seq.cpp
+src/api/api_ast_vector.cpp
+src/api/api_config_params.cpp
+src/api/api_goal.cpp
+src/api/api_array.cpp
+src/api/api_arith.cpp
+src/api/api_qe.cpp
+src/api/api_fpa.cpp
+src/tactic/portfolio/default_tactic.cpp
+src/tactic/fpa/qffplra_tactic.cpp
+src/tactic/fpa/fpa2bv_tactic.cpp
+src/tactic/smtlogics/qfidl_tactic.cpp
+src/tactic/smtlogics/qfnra_tactic.cpp
+src/tactic/smtlogics/qfauflia_tactic.cpp
+src/tactic/smtlogics/qflia_tactic.cpp
+src/tactic/smtlogics/qflra_tactic.cpp
+src/tactic/smtlogics/nra_tactic.cpp
+src/tactic/smtlogics/quant_tactics.cpp
+src/tactic/smtlogics/qfuf_tactic.cpp
+src/tactic/smtlogics/qfnia_tactic.cpp
+src/tactic/ufbv/ufbv_tactic.cpp
+src/tactic/ufbv/ufbv_rewriter_tactic.cpp
+src/tactic/ufbv/quasi_macros_tactic.cpp
+src/tactic/ufbv/macro_finder_tactic.cpp
+src/muz/spacer/spacer_iuc_solver.cpp
+src/muz/spacer/spacer_prop_solver.cpp
+src/muz/spacer/spacer_manager.cpp
+src/muz/spacer/spacer_legacy_mev.cpp
+src/muz/spacer/spacer_legacy_mbp.cpp
+src/tactic/fd_solver/pb2bv_solver.cpp
+src/tactic/fd_solver/bounded_int2bv_solver.cpp
+src/tactic/fd_solver/fd_solver.cpp
+src/tactic/fd_solver/enum2bv_solver.cpp
+src/sat/sat_solver/inc_sat_solver.cpp
+src/qe/qe_sat_tactic.cpp
+src/qe/qsat.cpp
+src/qe/qe_cmd.cpp
+src/qe/nlqsat.cpp
+src/qe/qe_lite.cpp
+src/qe/qe_tactic.cpp
+src/tactic/sls/sls_tactic.cpp
+src/tactic/sls/sls_engine.cpp
+src/smt/tactic/smt_tactic.cpp
+src/smt/tactic/ctx_solver_simplify_tactic.cpp
+src/tactic/bv/bv_bound_chk_tactic.cpp
+src/tactic/bv/bv_bounds_tactic.cpp
+src/tactic/bv/bvarray2uf_tactic.cpp
+src/tactic/bv/bv1_blaster_tactic.cpp
+src/tactic/bv/dt2bv_tactic.cpp
+src/tactic/bv/elim_small_bv_tactic.cpp
+src/tactic/bv/bit_blaster_tactic.cpp
+src/tactic/bv/max_bv_sharing_tactic.cpp
+src/tactic/bv/bv_size_reduction_tactic.cpp
+src/smt/smt2_extra_cmds.cpp
+src/ackermannization/ackr_bound_probe.cpp
+src/ackermannization/lackr.cpp
+src/tactic/aig/aig_tactic.cpp
+src/math/subpaving/tactic/subpaving_tactic.cpp
+src/nlsat/tactic/qfnra_nlsat_tactic.cpp
+src/nlsat/tactic/goal2nlsat.cpp
+src/nlsat/tactic/nlsat_tactic.cpp
+src/tactic/arith/degree_shift_tactic.cpp
+src/tactic/arith/purify_arith_tactic.cpp
+src/tactic/arith/lia2pb_tactic.cpp
+src/tactic/arith/recover_01_tactic.cpp
+src/tactic/arith/card2bv_tactic.cpp
+src/tactic/arith/add_bounds_tactic.cpp
+src/tactic/arith/arith_bounds_tactic.cpp
+src/tactic/arith/factor_tactic.cpp
+src/tactic/arith/propagate_ineqs_tactic.cpp
+src/tactic/arith/eq2bv_tactic.cpp
+src/tactic/arith/fix_dl_var_tactic.cpp
+src/tactic/arith/normalize_bounds_tactic.cpp
+src/tactic/arith/fm_tactic.cpp
+src/tactic/arith/pb2bv_tactic.cpp
+src/tactic/arith/lia2card_tactic.cpp
+src/tactic/arith/diff_neq_tactic.cpp
+src/tactic/arith/nla2bv_tactic.cpp
+src/tactic/core/reduce_args_tactic.cpp
+src/tactic/core/pb_preprocess_tactic.cpp
+src/tactic/core/elim_uncnstr_tactic.cpp
+src/tactic/core/der_tactic.cpp
+src/tactic/core/propagate_values_tactic.cpp
+src/tactic/core/solve_eqs_tactic.cpp
+src/tactic/core/collect_statistics_tactic.cpp
+src/tactic/core/elim_term_ite_tactic.cpp
+src/tactic/core/cofactor_term_ite_tactic.cpp
+src/tactic/core/split_clause_tactic.cpp
+src/tactic/core/nnf_tactic.cpp
+src/tactic/core/symmetry_reduce_tactic.cpp
+src/tactic/core/reduce_invertible_tactic.cpp
+src/tactic/core/simplify_tactic.cpp
+src/tactic/core/blast_term_ite_tactic.cpp
+src/tactic/core/ctx_simplify_tactic.cpp
+src/tactic/core/dom_simplify_tactic.cpp
+src/tactic/core/cofactor_elim_term_ite.cpp
+src/tactic/core/tseitin_cnf_tactic.cpp
+src/tactic/core/distribute_forall_tactic.cpp
+src/tactic/core/injectivity_tactic.cpp
+src/tactic/core/occf_tactic.cpp
+src/tactic/core/special_relations_tactic.cpp
+src/ast/pattern/expr_pattern_match.cpp
+src/parsers/smt2/marshal.cpp
+src/sat/tactic/sat_tactic.cpp
+src/sat/tactic/goal2sat.cpp
+src/cmd_context/parametric_cmd.cpp
+src/cmd_context/tactic_cmds.cpp
+src/cmd_context/basic_cmds.cpp
+src/cmd_context/cmd_context.cpp
+src/cmd_context/echo_tactic.cpp
+src/cmd_context/cmd_context_to_goal.cpp
+src/cmd_context/cmd_util.cpp
+src/cmd_context/eval_cmd.cpp
+src/cmd_context/simplify_cmd.cpp
+src/solver/tactic2solver.cpp
+src/solver/parallel_tactic.cpp
+src/solver/solver2tactic.cpp
+src/tactic/sine_filter.cpp
+src/tactic/tactical.cpp
+src/tactic/tactic.cpp
+src/ast/macros/macro_finder.cpp
+src/util/lp/eta_matrix.cpp
+src/util/lp/scaler.cpp
+src/shell/dimacs_frontend.cpp
+src/api/api_ast_map.cpp
+src/api/api_params.cpp
+src/api/api_numeral.cpp
+src/api/api_ast.cpp
+src/api/api_parsers.cpp
+src/api/api_stats.cpp
+src/api/api_solver.cpp
+src/api/api_tactic.cpp
+src/tactic/portfolio/smt_strategic_solver.cpp
+src/tactic/fpa/qffp_tactic.cpp
+src/tactic/smtlogics/qfaufbv_tactic.cpp
+src/tactic/smtlogics/qfufbv_tactic.cpp
+src/tactic/smtlogics/qfbv_tactic.cpp
+src/muz/spacer/spacer_util.cpp
+src/muz/spacer/spacer_json.cpp
+src/tactic/sls/bvsls_opt_engine.cpp
+src/smt/asserted_formulas.cpp
+src/ackermannization/ackermannize_bv_tactic.cpp
+src/parsers/smt2/smt2scanner.cpp
+src/parsers/smt2/smt2parser.cpp
+src/api/dll/install_tactic.cpp
+src/shell/install_tactic.cpp
+src/muz/spacer/spacer_callback.cpp
+src/qe/qe.cpp
+src/smt/tactic/unit_subsumption_tactic.cpp
+src/smt/smt_model_finder.cpp
+src/smt/smt_lookahead.cpp
+src/smt/smt_relevancy.cpp
+src/smt/smt_consequences.cpp
+src/smt/smt_model_generator.cpp
+src/smt/smt_context_stat.cpp
+src/smt/smt_quantifier.cpp
+src/smt/theory_dummy.cpp
+src/smt/arith_eq_adapter.cpp
+src/smt/theory_wmaxsat.cpp
+src/smt/smt_quick_checker.cpp
+src/smt/smt_theory.cpp
+src/smt/theory_datatype.cpp
+src/smt/smt_kernel.cpp
+src/smt/theory_dl.cpp
+src/smt/smt_internalizer.cpp
+src/smt/mam.cpp
+src/smt/smt_context_inv.cpp
+src/smt/smt_model_checker.cpp
+src/smt/smt_justification.cpp
+src/smt/qi_queue.cpp
+src/smt/theory_array.cpp
+src/smt/theory_bv.cpp
+src/smt/theory_array_base.cpp
+src/smt/smt_for_each_relevant_expr.cpp
+src/smt/theory_pb.cpp
+src/smt/smt_case_split_queue.cpp
+src/smt/smt_checker.cpp
+src/smt/theory_array_full.cpp
+src/smt/smt_enode.cpp
+src/smt/smt_context.cpp
+src/smt/smt_context_pp.cpp
+src/smt/theory_fpa.cpp
+src/smt/dyn_ack.cpp
+src/smt/smt_conflict_resolution.cpp
+src/util/lp/row_eta_matrix.cpp
+src/util/lp/square_sparse_matrix.cpp
+src/util/lp/square_dense_submatrix.cpp
+src/muz/fp/datalog_parser.cpp
+src/muz/ddnf/ddnf.cpp
+src/muz/clp/clp_context.cpp
+src/muz/spacer/spacer_quant_generalizer.cpp
+src/muz/spacer/spacer_generalizers.cpp
+src/muz/spacer/spacer_pdr.cpp
+src/muz/spacer/spacer_sat_answer.cpp
+src/muz/transforms/dl_mk_backwards.cpp
+src/muz/transforms/dl_mk_loop_counter.cpp
+src/muz/transforms/dl_mk_magic_sets.cpp
+src/muz/transforms/dl_mk_magic_symbolic.cpp
+src/muz/transforms/dl_mk_bit_blast.cpp
+src/muz/transforms/dl_mk_filter_rules.cpp
+src/muz/transforms/dl_mk_scale.cpp
+src/muz/transforms/dl_mk_karr_invariants.cpp
+src/muz/transforms/dl_mk_coi_filter.cpp
+src/muz/transforms/dl_mk_quantifier_abstraction.cpp
+src/muz/transforms/dl_mk_array_eq_rewrite.cpp
+src/muz/transforms/dl_mk_separate_negated_tails.cpp
+src/muz/transforms/dl_mk_unbound_compressor.cpp
+src/muz/transforms/dl_mk_array_instantiation.cpp
+src/muz/transforms/dl_mk_quantifier_instantiation.cpp
+src/muz/transforms/dl_mk_elim_term_ite.cpp
+src/muz/dataflow/dataflow.cpp
+src/muz/base/rule_properties.cpp
+src/muz/base/dl_util.cpp
+src/muz/base/dl_rule_set.cpp
+src/muz/base/dl_costs.cpp
+src/muz/base/dl_rule.cpp
+src/muz/base/dl_context.cpp
+src/muz/base/dl_rule_transformer.cpp
+src/muz/base/dl_rule_subsumption_index.cpp
+src/smt/theory_utvpi.cpp
+src/smt/theory_recfun.cpp
+src/smt/theory_diff_logic.cpp
+src/smt/theory_special_relations.cpp
+src/smt/theory_jobscheduler.cpp
+src/util/lp/lu.cpp
+src/opt/maxlex.cpp
+src/opt/optsmt.cpp
+src/opt/opt_parse.cpp
+src/opt/opt_context.cpp
+src/opt/sortmax.cpp
+src/opt/wmax.cpp
+src/opt/maxres.cpp
+src/muz/fp/horn_tactic.cpp
+src/muz/tab/tab_context.cpp
+src/muz/spacer/spacer_context.cpp
+src/muz/spacer/spacer_legacy_frames.cpp
+src/muz/rel/dl_external_relation.cpp
+src/muz/rel/dl_sparse_table.cpp
+src/muz/transforms/dl_mk_array_blast.cpp
+src/muz/transforms/dl_mk_subsumption_checker.cpp
+src/muz/transforms/dl_mk_interp_tail_simplifier.cpp
+src/muz/transforms/dl_mk_rule_inliner.cpp
+src/muz/transforms/dl_mk_coalesce.cpp
+src/muz/transforms/dl_transforms.cpp
+src/muz/transforms/dl_mk_unfold.cpp
+src/muz/transforms/dl_mk_slice.cpp
+src/smt/theory_array_bapa.cpp
+src/smt/smt_arith_value.cpp
+src/smt/smt_setup.cpp
+src/util/lp/core_solver_pretty_printer.cpp
+src/util/lp/lp_core_solver_base.cpp
+src/shell/opt_frontend.cpp
+src/api/api_datalog.cpp
+src/api/api_opt.cpp
+src/opt/maxsmt.cpp
+src/opt/opt_cmds.cpp
+src/opt/opt_solver.cpp
+src/muz/fp/dl_register_engine.cpp
+src/muz/bmc/dl_bmc_engine.cpp
+src/muz/spacer/spacer_dl_interface.cpp
+src/muz/rel/dl_table_relation.cpp
+src/muz/rel/dl_mk_similarity_compressor.cpp
+src/muz/rel/dl_mk_simple_joins.cpp
+src/muz/rel/dl_interval_relation.cpp
+src/muz/rel/udoc_relation.cpp
+src/muz/rel/dl_sieve_relation.cpp
+src/muz/rel/dl_lazy_table.cpp
+src/muz/rel/dl_product_relation.cpp
+src/muz/rel/dl_table.cpp
+src/muz/rel/dl_base.cpp
+src/muz/rel/dl_check_table.cpp
+src/muz/rel/dl_instruction.cpp
+src/muz/rel/aig_exporter.cpp
+src/muz/rel/check_relation.cpp
+src/muz/rel/karr_relation.cpp
+src/muz/transforms/dl_mk_synchronize.cpp
+src/smt/theory_arith.cpp
+src/smt/theory_seq.cpp
+src/smt/theory_str.cpp
+src/smt/theory_dense_diff_logic.cpp
+src/util/lp/lp_solver.cpp
+src/util/lp/lp_dual_core_solver.cpp
+src/shell/smtlib_frontend.cpp
+src/muz/fp/dl_cmds.cpp
+src/muz/rel/dl_relation_manager.cpp
+src/muz/rel/dl_mk_explanations.cpp
+src/muz/rel/dl_bound_relation.cpp
+src/muz/rel/dl_finite_product_relation.cpp
+src/muz/rel/dl_compiler.cpp
+src/smt/theory_lra.cpp
+src/util/lp/lp_dual_simplex.cpp
+src/util/lp/lp_primal_core_solver.cpp
+src/util/lp/nra_solver.cpp
+src/util/lp/static_matrix.cpp
+src/util/lp/lar_solver.cpp
+src/util/lp/int_solver.cpp
+src/util/lp/lar_core_solver.cpp
+src/util/lp/gomory.cpp
+src/util/lp/lp_bound_propagator.cpp
+src/shell/datalog_frontend.cpp
+src/muz/rel/rel_context.cpp
+src/util/lp/lp_primal_simplex.cpp
+src/util/lp/random_updater.cpp
+src/shell/lp_frontend.cpp
+g++ -o libz3.so -shared api/dll/mem_initializer.o api/dll/gparams_register_modules.o api/dll/install_tactic.o api/dll/dll.o api/api_ast_map.o api/api_params.o api/api_log_macros.o api/api_numeral.o api/api_ast.o api/api_parsers.o api/api_stats.o api/api_solver.o api/api_tactic.o api/api_special_relations.o api/api_pb.o api/api_rcf.o api/api_quant.o api/api_datatype.o api/api_datalog.o api/api_polynomial.o api/api_model.o api/api_algebraic.o api/api_context.o api/z3_replayer.o api/api_bv.o api/api_seq.o api/api_ast_vector.o api/api_config_params.o api/api_goal.o api/api_opt.o api/api_log.o api/api_array.o api/api_arith.o api/api_qe.o api/api_commands.o api/api_fpa.o cmd_context/extra_cmds/extra_cmds.a opt/opt.a tactic/portfolio/portfolio.a tactic/fpa/fpa_tactics.a tactic/smtlogics/smtlogic_tactics.a tactic/ufbv/ufbv_tactic.a muz/fp/fp.a muz/bmc/bmc.a muz/ddnf/ddnf.a muz/tab/tab.a muz/clp/clp.a muz/spacer/spacer.a muz/rel/rel.a muz/transforms/transforms.a muz/dataflow/dataflow.a muz/base/muz.a tactic/fd_solver/fd_solver.a sat/sat_solver/sat_solver.a qe/qe.a tactic/sls/sls_tactic.a smt/tactic/smt_tactic.a tactic/bv/bv_tactics.a smt/smt.a smt/proto_model/proto_model.a smt/params/smt_params.a ast/rewriter/bit_blaster/bit_blaster.a ast/fpa/fpa.a ackermannization/ackermannization.a tactic/aig/aig_tactic.a math/subpaving/tactic/subpaving_tactic.a nlsat/tactic/nlsat_tactic.a tactic/arith/arith_tactics.a tactic/core/core_tactics.a ast/pattern/pattern.a parsers/smt2/smt2parser.a sat/tactic/sat_tactic.a cmd_context/cmd_context.a solver/solver.a ast/proofs/proofs.a math/euclid/euclid.a math/grobner/grobner.a parsers/util/parser_util.a ast/substitution/substitution.a tactic/tactic.a model/model.a ast/normal_forms/normal_forms.a ast/macros/macros.a ast/rewriter/rewriter.a ast/ast.a math/subpaving/subpaving.a math/realclosure/realclosure.a math/interval/interval.a math/automata/automata.a math/simplex/simplex.a math/hilbert/hilbert.a util/lp/lp.a nlsat/nlsat.a sat/sat.a math/polynomial/polynomial.a util/util.a -lpthread  -fopenmp -Wl,-soname,libz3.so
+g++  -o z3  shell/dimacs_frontend.o shell/mem_initializer.o shell/gparams_register_modules.o shell/install_tactic.o shell/lp_frontend.o shell/datalog_frontend.o shell/smtlib_frontend.o shell/opt_frontend.o shell/z3_log_frontend.o shell/main.o cmd_context/extra_cmds/extra_cmds.a api/api.a opt/opt.a tactic/portfolio/portfolio.a tactic/fpa/fpa_tactics.a tactic/smtlogics/smtlogic_tactics.a tactic/ufbv/ufbv_tactic.a muz/fp/fp.a muz/bmc/bmc.a muz/ddnf/ddnf.a muz/tab/tab.a muz/clp/clp.a muz/spacer/spacer.a muz/rel/rel.a muz/transforms/transforms.a muz/dataflow/dataflow.a muz/base/muz.a tactic/fd_solver/fd_solver.a sat/sat_solver/sat_solver.a qe/qe.a tactic/sls/sls_tactic.a smt/tactic/smt_tactic.a tactic/bv/bv_tactics.a smt/smt.a smt/proto_model/proto_model.a smt/params/smt_params.a ast/rewriter/bit_blaster/bit_blaster.a ast/fpa/fpa.a ackermannization/ackermannization.a tactic/aig/aig_tactic.a math/subpaving/tactic/subpaving_tactic.a nlsat/tactic/nlsat_tactic.a tactic/arith/arith_tactics.a tactic/core/core_tactics.a ast/pattern/pattern.a parsers/smt2/smt2parser.a sat/tactic/sat_tactic.a cmd_context/cmd_context.a solver/solver.a ast/proofs/proofs.a math/euclid/euclid.a math/grobner/grobner.a parsers/util/parser_util.a ast/substitution/substitution.a tactic/tactic.a model/model.a ast/normal_forms/normal_forms.a ast/macros/macros.a ast/rewriter/rewriter.a ast/ast.a math/subpaving/subpaving.a math/realclosure/realclosure.a math/interval/interval.a math/automata/automata.a math/simplex/simplex.a math/hilbert/hilbert.a util/lp/lp.a nlsat/nlsat.a sat/sat.a math/polynomial/polynomial.a util/util.a -lpthread  -fopenmp
+ln -f -s ../libz3.so python
+Z3 was successfully built.
+Z3Py scripts can already be executed in the 'build/master/release/python' directory.
+Z3Py scripts stored in arbitrary directories can be executed if the 'build/master/release/python' directory is added to the PYTHONPATH environment variable and the 'build/master/release' directory is added to the LD_LIBRARY_PATH environment variable.
+Use the following command to install Z3 at prefix /usr.
+    sudo make install
+Content of build/master/release:
+Testing docstrings in /home/nightly/z3/build/master/release/python
+Testing z3test.py z3
+Testing z3test.py z3num
+Testing benchmarks at regressions/smt2 using /home/nightly/z3/build/master/release/z3
+Testing regressions/smt2/sub.smt2
+Testing regressions/smt2/fp-roundToIntegral-4.smt2
+Testing regressions/smt2/nl28.smt2
+Testing regressions/smt2/fp-rem-6.smt2
+Testing regressions/smt2/fp-to_ubv-23.smt2
+Testing regressions/smt2/fp-to_fp_unsigned-2.smt2
+Testing regressions/smt2/nl13.smt2
+Testing regressions/smt2/fp-to_fp-2.smt2
+Testing regressions/smt2/fp-to_fp_unsigned-6.smt2
+Testing regressions/smt2/fp-to_sbv-14.smt2
+Testing regressions/smt2/fp-rem-2.smt2
+Testing regressions/smt2/fp-fma-8.smt2
+Testing regressions/smt2/fp-conversions-17.smt2
+Testing regressions/smt2/fp-fma-12.smt2
+Testing regressions/smt2/fp-sqrt-7.smt2
+Testing regressions/smt2/nl35.smt2
+Testing regressions/smt2/t112.smt2
+Testing regressions/smt2/nl14.smt2
+Testing regressions/smt2/fp-conversions-37.smt2
+Testing regressions/smt2/fp-array-1.smt2
+Testing regressions/smt2/fp-operations.smt2
+Testing regressions/smt2/dt_ayrat_3.smt2
+Testing regressions/smt2/t178.smt2
+Testing regressions/smt2/fp-to_fp_float-1.smt2
+Testing regressions/smt2/t133.smt2
+Testing regressions/smt2/fp-to_ubv-21.smt2
+Testing regressions/smt2/fp-to_ubv-28.smt2
+Testing regressions/smt2/power-sqrt-unsafe.smt2
+Testing regressions/smt2/fp-to_ubv-25.smt2
+Testing regressions/smt2/pat2.smt2
+Testing regressions/smt2/fp-to_ubv-10.smt2
+Testing regressions/smt2/fp-fma-14.smt2
+Testing regressions/smt2/nl58.smt2
+Testing regressions/smt2/z3.41.smt2
+Testing regressions/smt2/fp-eq-1.smt2
+Testing regressions/smt2/pat3.smt2
+Testing regressions/smt2/t131.smt2
+Testing regressions/smt2/bvcore.smt2
+Testing regressions/smt2/issue-1678.smt2
+Testing regressions/smt2/fp-conversions-22.smt2
+Testing regressions/smt2/fp-to_ubv-11.smt2
+Testing regressions/smt2/fp-mul-1.smt2
+Testing regressions/smt2/t158.smt2
+Testing regressions/smt2/fp-div-3.smt2
+Testing regressions/smt2/fp-to_ubv-5.smt2
+Testing regressions/smt2/fp-uf-1.smt2
+Testing regressions/smt2/t101.smt2
+Testing regressions/smt2/t14.smt2
+Testing regressions/smt2/fp-fma-7.smt2
+Testing regressions/smt2/fp-to_sbv-13.smt2
+Testing regressions/smt2/fp-to_fp_unsigned-8.smt2
+Testing regressions/smt2/fp-to_ubv-4.smt2
+Testing regressions/smt2/fp-datatype_with_float-3.smt2
+Testing regressions/smt2/fp-add-sub.smt2
+Testing regressions/smt2/bad_patterns.smt2
+Testing regressions/smt2/t145.smt2
+Testing regressions/smt2/cosine3.smt2
+Testing regressions/smt2/abs.smt2
+Testing regressions/smt2/fp-conversions-25.smt2
+Testing regressions/smt2/fp-to_fp_unsigned-12.smt2
+Testing regressions/smt2/nl33.smt2
+Testing regressions/smt2/fp-to_real-1.smt2
+Testing regressions/smt2/fp-to_sbv-15.smt2
+Testing regressions/smt2/cosine2.smt2
+Testing regressions/smt2/t130.smt2
+Testing regressions/smt2/fp-to_ubv-9.smt2
+Testing regressions/smt2/t216.smt2
+Testing regressions/smt2/fp-to_sbv-8.smt2
+Testing regressions/smt2/segfaults2_minimal.smt2
+Testing regressions/smt2/fp-conversions-7.smt2
+Testing regressions/smt2/fp-datatype_with_float-4.smt2
+Testing regressions/smt2/fp-conversions-4.smt2
+Testing regressions/smt2/cosine4.smt2
+Testing regressions/smt2/nl29.smt2
+Testing regressions/smt2/string5.smt2
+Testing regressions/smt2/coercions.smt2
+Testing regressions/smt2/blinking_query2.smt2
+Testing regressions/smt2/fp-to_ubv-17.smt2
+Testing regressions/smt2/fp-rem-3.smt2
+Testing regressions/smt2/sqrt-bug.smt2
+Testing regressions/smt2/fp-sqrt-8.smt2
+Testing regressions/smt2/t11.smt2
+Testing regressions/smt2/z3.2.smt2
+Testing regressions/smt2/issue-1196.smt2
+Testing regressions/smt2/fp-model_evaluator_6.smt2
+Testing regressions/smt2/sine5.smt2
+Testing regressions/smt2/fp-conversions-34.smt2
+Testing regressions/smt2/o7.smt2
+Testing regressions/smt2/fp-to_fp_simplifier.smt2
+Testing regressions/smt2/fp-to_fp_unsigned-13.smt2
+Testing regressions/smt2/fp-to_sbv-9.smt2
+Testing regressions/smt2/macro-finder-cores.smt2
+Testing regressions/smt2/t169.smt2
+Testing regressions/smt2/chain.smt2
+Testing regressions/smt2/z3.27.smt2
+Testing regressions/smt2/fp-rem-13-2.smt2
+Testing regressions/smt2/fp-rem-10.smt2
+Testing regressions/smt2/t192.smt2
+Testing regressions/smt2/fp-fma-16.smt2
+Testing regressions/smt2/issue-1224.smt2
+Testing regressions/smt2/cosine7.smt2
+Testing regressions/smt2/nl10.smt2
+Testing regressions/smt2/nl46.smt2
+Testing regressions/smt2/string-eval.smt2
+Testing regressions/smt2/qffp-quant.smt2
+Testing regressions/smt2/t143.smt2
+Testing regressions/smt2/nl1.smt2
+Testing regressions/smt2/fp-conversions-2.smt2
+Testing regressions/smt2/nl31.smt2
+Testing regressions/smt2/invertible-tactic.smt2
+Testing regressions/smt2/intervalUpDivide.smt2
+Testing regressions/smt2/dt2bv.smt2
+Testing regressions/smt2/t154.smt2
+Testing regressions/smt2/fp-min-zero-zero-2.smt2
+Testing regressions/smt2/nl24.smt2
+Testing regressions/smt2/t195.smt2
+Testing regressions/smt2/fp-conversions-23.smt2
+Testing regressions/smt2/fp-to_ubv-30.smt2
+Testing regressions/smt2/issue-1694.smt2
+Testing regressions/smt2/issue-1458.smt2
+Testing regressions/smt2/nl11.smt2
+Testing regressions/smt2/fp-to_sbv-10.smt2
+Testing regressions/smt2/nl37.smt2
+Testing regressions/smt2/fp-to_fp-12.smt2
+Testing regressions/smt2/fp-to_fp_unsigned-4.smt2
+Testing regressions/smt2/fp-fma-15.smt2
+Testing regressions/smt2/fp-conversions-33.smt2
+Testing regressions/smt2/mul.smt2
+Testing regressions/smt2/fp-rem-8.smt2
+Testing regressions/smt2/issue-1725.smt2
+Testing regressions/smt2/z3.29.smt2
+Testing regressions/smt2/t139.smt2
+Testing regressions/smt2/fp-to_sbv-2.smt2
+Testing regressions/smt2/fp-to_fp_unsigned-11.smt2
+Testing regressions/smt2/memset.smt2
+Testing regressions/smt2/segfault2.smt2
+Testing regressions/smt2/nl57.smt2
+Testing regressions/smt2/nl52.smt2
+Testing regressions/smt2/fp-nan.smt2
+Testing regressions/smt2/t1.smt2
+Testing regressions/smt2/string-itos.smt2
+Testing regressions/smt2/nl26.smt2
+Testing regressions/smt2/fp-model_evaluator_8.smt2
+Testing regressions/smt2/issue-1683.smt2
+Testing regressions/smt2/trig-intersection.smt2
+Testing regressions/smt2/t172.smt2
+Testing regressions/smt2/fp-conversions-11.smt2
+Testing regressions/smt2/fp-min-zero-zero-5.smt2
+Testing regressions/smt2/pat1.smt2
+Testing regressions/smt2/fp-quantifiers-2.smt2
+Testing regressions/smt2/epsilon.smt2
+Testing regressions/smt2/fp-model_evaluator_7.smt2
+Testing regressions/smt2/fp-to_ubv-20.smt2
+Testing regressions/smt2/fp-to_fp-8.smt2
+Testing regressions/smt2/fp-to_fp-6.smt2
+Testing regressions/smt2/arith_bug2.smt2
+Testing regressions/smt2/fp-conversions-18.smt2
+Testing regressions/smt2/fp-to_ubv-1.smt2
+Testing regressions/smt2/fp-sqrt-5.smt2
+Testing regressions/smt2/t113.smt2
+Testing regressions/smt2/fp-conversions-12.smt2
+Testing regressions/smt2/issue-1658.smt2
+Testing regressions/smt2/issue-1846.smt2
+Testing regressions/smt2/fp-model_evaluator_1.smt2
+Testing regressions/smt2/fp-array-2.smt2
+Testing regressions/smt2/fp-array-6.smt2
+Testing regressions/smt2/fp-min-zero-zero-4.smt2
+Testing regressions/smt2/t201.smt2
+Testing regressions/smt2/fp-array-5.smt2
+Testing regressions/smt2/t182.smt2
+Testing regressions/smt2/t102.smt2
+Testing regressions/smt2/fp-conversions-31.smt2
+Testing regressions/smt2/t103.smt2
+Testing regressions/smt2/tan3.smt2
+Testing regressions/smt2/fp-quantifiers-1.smt2
+Testing regressions/smt2/fp-fma-3.smt2
+Testing regressions/smt2/z3.1.smt2
+Testing regressions/smt2/t173.smt2
+Testing regressions/smt2/t146.smt2
+Testing regressions/smt2/issue-1092.smt2
+Testing regressions/smt2/fp-to_ubv-14.smt2
+Testing regressions/smt2/nl44.smt2
+Testing regressions/smt2/t206.smt2
+Testing regressions/smt2/cosine5.smt2
+Testing regressions/smt2/z3.30.smt2
+Testing regressions/smt2/t151.smt2
+Testing regressions/smt2/fp-array-3.smt2
+Testing regressions/smt2/nira.smt2
+Testing regressions/smt2/dejan_bug.smt2
+Testing regressions/smt2/nl16.smt2
+Testing regressions/smt2/t9.smt2
+Testing regressions/smt2/mev_array.smt2
+Testing regressions/smt2/issue-1366.smt2
+Testing regressions/smt2/fp-to_ubv-6.smt2
+Testing regressions/smt2/string4.smt2
+Testing regressions/smt2/t198.smt2
+Testing regressions/smt2/o4.smt2
+Testing regressions/smt2/z3.36.smt2
+Testing regressions/smt2/fp-mul_is_commutative.smt2
+Testing regressions/smt2/fp-to_fp_float-2.smt2
+Testing regressions/smt2/core2.smt2
+Testing regressions/smt2/fp-fma-4.smt2
+Testing regressions/smt2/fp-conversions-36.smt2
+Testing regressions/smt2/fp-roundToIntegral-7.smt2
+Testing regressions/smt2/nl9.smt2
+Testing regressions/smt2/t180.smt2
+Testing regressions/smt2/fp-rem-13-4.smt2
+Testing regressions/smt2/alloy.smt2
+Testing regressions/smt2/fp-max-zero-zero-1.smt2
+Testing regressions/smt2/fp-max-zero-zero-3.smt2
+Testing regressions/smt2/issue-1538.smt2
+Testing regressions/smt2/atan.smt2
+Testing regressions/smt2/fp-uf-5.smt2
+Testing regressions/smt2/nl7.smt2
+Testing regressions/smt2/fp-fma-18.smt2
+Testing regressions/smt2/fp-feature-check-1.smt2
+Testing regressions/smt2/fp-to_ubv-8.smt2
+Testing regressions/smt2/fp-rem-1.smt2
+Testing regressions/smt2/fp-model_evaluator_5.smt2
+Testing regressions/smt2/fp-conversions-13.smt2
+Testing regressions/smt2/fp-mul-3.smt2
+Testing regressions/smt2/t8.smt2
+Testing regressions/smt2/fp-to_fp-10.smt2
+Testing regressions/smt2/fp-roundToIntegral-2.smt2
+Testing regressions/smt2/fp-to_ubv-18.smt2
+Testing regressions/smt2/t213.smt2
+Testing regressions/smt2/fp-to_ubv-27.smt2
+Testing regressions/smt2/z3.53.smt2
+Testing regressions/smt2/t137.smt2
+Testing regressions/smt2/acos.smt2
+Testing regressions/smt2/t136.smt2
+Testing regressions/smt2/fp-rounding_mode-1.smt2
+Testing regressions/smt2/z3.37.smt2
+Testing regressions/smt2/fp-to_fp_real-2.smt2
+Testing regressions/smt2/t150.smt2
+Testing regressions/smt2/fp-lt-gt.smt2
+Testing regressions/smt2/fp-fma-20.smt2
+Testing regressions/smt2/fp-fma-17.smt2
+Testing regressions/smt2/t176.smt2
+Testing regressions/smt2/z3.17.smt2
+Testing regressions/smt2/t194.smt2
+Testing regressions/smt2/fp-to_sbv-4.smt2
+Testing regressions/smt2/t200.smt2
+Testing regressions/smt2/fp-sqrt-6.smt2
+Testing regressions/smt2/nl8.smt2
+Testing regressions/smt2/const_array_bug.smt2
+Testing regressions/smt2/string-literals.smt2
+Testing regressions/smt2/t168.smt2
+Testing regressions/smt2/fp-to_fp_unsigned-1.smt2
+Testing regressions/smt2/nl34.smt2
+Testing regressions/smt2/nl39.smt2
+Testing regressions/smt2/strategy-default.smt2
+Testing regressions/smt2/nl48.smt2
+Testing regressions/smt2/nl40.smt2
+Testing regressions/smt2/fp-to_ubv-26.smt2
+Testing regressions/smt2/z3name_bug.smt2
+Testing regressions/smt2/fp-max-zero-zero-2.smt2
+Testing regressions/smt2/z3.39.smt2
+Testing regressions/smt2/nl51.smt2
+Testing regressions/smt2/consequences.smt2
+Testing regressions/smt2/small-bv-quant-1.smt2
+Testing regressions/smt2/purify_arith.smt2
+Testing regressions/smt2/fp-sqrt-1.smt2
+Testing regressions/smt2/fp-conversions-5.smt2
+Testing regressions/smt2/t122.smt2
+Testing regressions/smt2/t189.smt2
+Testing regressions/smt2/dt_ayrat_2.smt2
+Testing regressions/smt2/fp-rounding_mode-2.smt2
+Testing regressions/smt2/t170.smt2
+Testing regressions/smt2/t184.smt2
+Testing regressions/smt2/fp-predicates.smt2
+Testing regressions/smt2/nl17.smt2
+Testing regressions/smt2/fp-rem-5.smt2
+Testing regressions/smt2/z3.14.smt2
+Testing regressions/smt2/t134.smt2
+Testing regressions/smt2/fp-to_ubv-22.smt2
+Testing regressions/smt2/issue-1851.smt2
+Testing regressions/smt2/issue-1699.smt2
+Testing regressions/smt2/fp-to_fp-9.smt2
+Testing regressions/smt2/fp-to_sbv-16.smt2
+Testing regressions/smt2/div.smt2
+Testing regressions/smt2/fp-fma-5.smt2
+Testing regressions/smt2/fp-model_evaluator_3.smt2
+Testing regressions/smt2/sine4.smt2
+Testing regressions/smt2/strategy-par-or-1.smt2
+Testing regressions/smt2/fp-to_fp-1.smt2
+Testing regressions/smt2/fp-conversions-20.smt2
+Testing regressions/smt2/nl56.smt2
+Testing regressions/smt2/dt_ayrat_4.smt2
+Testing regressions/smt2/fp-uf-6.smt2
+Testing regressions/smt2/nl2.smt2
+Testing regressions/smt2/z3.34.smt2
+Testing regressions/smt2/string14.smt2
+Testing regressions/smt2/intervalDownDivide.smt2
+Testing regressions/smt2/o3.smt2
+Testing regressions/smt2/fp-model_evaluator_4.smt2
+Testing regressions/smt2/t109.smt2
+Testing regressions/smt2/nl19.smt2
+Testing regressions/smt2/nl22.smt2
+Testing regressions/smt2/z3.4.smt2
+Testing regressions/smt2/fp-to_fp_real-1.smt2
+Testing regressions/smt2/fp-rem-13.smt2
+Testing regressions/smt2/t144.smt2
+Testing regressions/smt2/fp-datatype_with_float-1.smt2
+Testing regressions/smt2/fp-sqrt-4.smt2
+Testing regressions/smt2/fp-fma-10.smt2
+Testing regressions/smt2/fp-rem-14.smt2
+Testing regressions/smt2/issue-1681.smt2
+Testing regressions/smt2/issue-1645.smt2
+Testing regressions/smt2/z3.38.smt2
+Testing regressions/smt2/z3.16.smt2
+Testing regressions/smt2/z3.52.smt2
+Testing regressions/smt2/z3.25.smt2
+Testing regressions/smt2/fp-conversions-39.smt2
+Testing regressions/smt2/t16.smt2
+Testing regressions/smt2/fp-to_ubv-2.smt2
+Testing regressions/smt2/fp-conversions-21.smt2
+Testing regressions/smt2/t197.smt2
+Testing regressions/smt2/z3.15.smt2
+Testing regressions/smt2/fp-conversions-27.smt2
+Testing regressions/smt2/issue-1608.smt2
+Testing regressions/smt2/fp-fma-19.smt2
+Testing regressions/smt2/t207.smt2
+Testing regressions/smt2/t185.smt2
+Testing regressions/smt2/fp-conversions-14.smt2
+Testing regressions/smt2/issue-1816.smt2
+Testing regressions/smt2/fp-rem-11.smt2
+Testing regressions/smt2/arith_bug.smt2
+Testing regressions/smt2/t123.smt2
+Testing regressions/smt2/o1.smt2
+Testing regressions/smt2/fp-to_fp_unsigned-5.smt2
+Testing regressions/smt2/eq.smt2
+Testing regressions/smt2/nl4.smt2
+Testing regressions/smt2/t117.smt2
+Testing regressions/smt2/t191.smt2
+Testing regressions/smt2/fp-to_sbv-11.smt2
+Testing regressions/smt2/string-concat.smt2
+Testing regressions/smt2/fp-min-zero-zero-1.smt2
+Testing regressions/smt2/fp-rem-tests-single-non-partial.smt2
+Testing regressions/smt2/nl53.smt2
+Testing regressions/smt2/mbqi_bug.smt2
+Testing regressions/smt2/lia1.smt2
+Testing regressions/smt2/asin.smt2
+Testing regressions/smt2/lia2.smt2
+Testing regressions/smt2/nl30.smt2
+Testing regressions/smt2/fp-to_fp_unsigned-7.smt2
+Testing regressions/smt2/fp-eq-2.smt2
+Testing regressions/smt2/t132.smt2
+Testing regressions/smt2/sine.smt2
+Testing regressions/smt2/fp-to_ubv-16.smt2
+Testing regressions/smt2/tan2.smt2
+Testing regressions/smt2/attr_bug.smt2
+Testing regressions/smt2/nl55.smt2
+Testing regressions/smt2/t124.smt2
+Testing regressions/smt2/strategy-par-or-2.smt2
+Testing regressions/smt2/tan.smt2
+Testing regressions/smt2/t193.smt2
+Testing regressions/smt2/fp-model_evaluator_2.smt2
+Testing regressions/smt2/fp-pzero.smt2
+Testing regressions/smt2/nl45.smt2
+Testing regressions/smt2/fp-conversions-42.smt2
+Testing regressions/smt2/fp-to_fp_unsigned-10.smt2
+Testing regressions/smt2/qfbv-quant.smt2
+Testing regressions/smt2/nl36.smt2
+Testing regressions/smt2/string9.smt2
+Testing regressions/smt2/core.smt2
+Testing regressions/smt2/fp-rem-4.smt2
+Testing regressions/smt2/issue-1718.smt2
+Testing regressions/smt2/fp-to_ubv-7.smt2
+Testing regressions/smt2/fp-conversions-35.smt2
+Testing regressions/smt2/string6.smt2
+Testing regressions/smt2/fp-min-zero-zero-3.smt2
+Testing regressions/smt2/t114.smt2
+Testing regressions/smt2/issue-628.smt2
+Testing regressions/smt2/fp-rounding_mode-3.smt2
+Testing regressions/smt2/fp-conversions-30.smt2
+Testing regressions/smt2/issue-1733.smt2
+Testing regressions/smt2/0xff.smt2
+Testing regressions/smt2/fp-rem-15.smt2
+Testing regressions/smt2/fp-to_sbv-3.smt2
+Testing regressions/smt2/t219.smt2
+Testing regressions/smt2/nl6.smt2
+Testing regressions/smt2/fp-rem-17.smt2
+Testing regressions/smt2/t181.smt2
+Testing regressions/smt2/re.smt2
+Testing regressions/smt2/fp-to_sbv-5.smt2
+Testing regressions/smt2/t135.smt2
+Testing regressions/smt2/fp-array-4.smt2
+Testing regressions/smt2/fp-add-1.smt2
+Testing regressions/smt2/fp-sorts-1.smt2
+Testing regressions/smt2/fp-div-4.smt2
+Testing regressions/smt2/t212.smt2
+Testing regressions/smt2/fp-to_sbv-6.smt2
+Testing regressions/smt2/fp-to_ubv-15.smt2
+Testing regressions/smt2/sine7.smt2
+Testing regressions/smt2/ho.smt2
+Testing regressions/smt2/issue-1677.smt2
+Testing regressions/smt2/mut_rec4sdk_output1.smt2
+Testing regressions/smt2/fp-conversions-28.smt2
+Testing regressions/smt2/fp-to_ubv-12.smt2
+Testing regressions/smt2/t125.smt2
+Testing regressions/smt2/t196.smt2
+Testing regressions/smt2/fp-fma-6.smt2
+Testing regressions/smt2/t155.smt2
+Testing regressions/smt2/fp-ninf.smt2
+Testing regressions/smt2/fp-rem-13-1.smt2
+Testing regressions/smt2/string7.smt2
+Testing regressions/smt2/fp-div-2.smt2
+Testing regressions/smt2/fp-fma-13.smt2
+Testing regressions/smt2/fp-conversions-3.smt2
+Testing regressions/smt2/nl49.smt2
+Testing regressions/smt2/z3.12.smt2
+Testing regressions/smt2/fp-fma-2.smt2
+Testing regressions/smt2/fp-to_ubv-31.smt2
+Testing regressions/smt2/fp-uf-8.smt2
+Testing regressions/smt2/rec.smt2
+Testing regressions/smt2/t217.smt2
+Testing regressions/smt2/o5.smt2
+Testing regressions/smt2/t208.smt2
+Testing regressions/smt2/fp-to_fp-3.smt2
+Testing regressions/smt2/nl47.smt2
+Testing regressions/smt2/issue-963.smt2
+Testing regressions/smt2/fp-conversions-41.smt2
+Testing regressions/smt2/fp-uf-7.smt2
+Testing regressions/smt2/t211.smt2
+Testing regressions/smt2/z3.20.smt2
+Testing regressions/smt2/b1.smt2
+Testing regressions/smt2/bv0.smt2
+Testing regressions/smt2/fp-rem-16.smt2
+Testing regressions/smt2/t214.smt2
+Testing regressions/smt2/fp-conversions-15.smt2
+Testing regressions/smt2/fp-nzero.smt2
+Testing regressions/smt2/fp-array-7.smt2
+Testing regressions/smt2/fp-conversions-38.smt2
+Testing regressions/smt2/t183.smt2
+Testing regressions/smt2/z3.5.smt2
+Testing regressions/smt2/dt_ayrat_1.smt2
+Testing regressions/smt2/bad_set_logic.smt2
+Testing regressions/smt2/fp-to_fp-11.smt2
+Testing regressions/smt2/sine9.smt2
+Testing regressions/smt2/nl15.smt2
+Testing regressions/smt2/nl38.smt2
+Testing regressions/smt2/fp-fma-9.smt2
+Testing regressions/smt2/trig-quadrants.smt2
+Testing regressions/smt2/nl3.smt2
+Testing regressions/smt2/t199.smt2
+Testing regressions/smt2/power-zero-safe.smt2
+Testing regressions/smt2/fp-fp-1.smt2
+Testing regressions/smt2/fp-conversions-9.smt2
+Testing regressions/smt2/fp-to_ubv-3.smt2
+Testing regressions/smt2/issue-790.smt2
+Testing regressions/smt2/fp-to_ubv-24.smt2
+Testing regressions/smt2/fp-to_sbv-12.smt2
+Testing regressions/smt2/nl41.smt2
+Testing regressions/smt2/token3.smt2
+Testing regressions/smt2/root-pre.smt2
+Testing regressions/smt2/t190.smt2
+Testing regressions/smt2/t119.smt2
+Testing regressions/smt2/fp-to_fp-signed-1.smt2
+Testing regressions/smt2/fp-roundToIntegral-8.smt2
+Testing regressions/smt2/fp-rem-tests-double-partial.smt2
+Testing regressions/smt2/fp-to_ubv-13.smt2
+Testing regressions/smt2/z3.6.smt2
+Testing regressions/smt2/nl43.smt2
+Testing regressions/smt2/t209.smt2
+Testing regressions/smt2/fp-to_fp-5.smt2
+Testing regressions/smt2/nl18.smt2
+Testing regressions/smt2/fp-rem-7.smt2
+Testing regressions/smt2/fp-roundToIntegral-3.smt2
+Testing regressions/smt2/t171.smt2
+Testing regressions/smt2/fp-mul-2.smt2
+Testing regressions/smt2/fp-rem-9.smt2
+Testing regressions/smt2/t138.smt2
+Testing regressions/smt2/z3.40.smt2
+Testing regressions/smt2/fp-div-1.smt2
+Testing regressions/smt2/fp-conversions-16.smt2
+Testing regressions/smt2/fp-to_fp_float-3.smt2
+Testing regressions/smt2/t115.smt2
+Testing regressions/smt2/fp-to_ubv-29.smt2
+Testing regressions/smt2/fp-abs-2.smt2
+Testing regressions/smt2/nl12.smt2
+Testing regressions/smt2/issue-1729.smt2
+Testing regressions/smt2/nl50.smt2
+Testing regressions/smt2/nl23.smt2
+Testing regressions/smt2/fp-to_fp-7.smt2
+Testing regressions/smt2/fp-abs-1.smt2
+Testing regressions/smt2/incsat.smt2
+Testing regressions/smt2/trig-bounds.smt2
+Testing regressions/smt2/fp-uf-4.smt2
+Testing regressions/smt2/t175.smt2
+Testing regressions/smt2/nl59.smt2
+Testing regressions/smt2/fp-to_fp_unsigned-3.smt2
+Testing regressions/smt2/nl21.smt2
+Testing regressions/smt2/fp-le-ge.smt2
+Testing regressions/smt2/issue-1566.smt2
+Testing regressions/smt2/nl25.smt2
+Testing regressions/smt2/blinking_query.smt2
+Testing regressions/smt2/issue-1655.smt2
+Testing regressions/smt2/bvsmod.smt2
+Testing regressions/smt2/t148.smt2
+Testing regressions/smt2/fp-uf-9.smt2
+Testing regressions/smt2/z3.31.smt2
+Testing regressions/smt2/nl54.smt2
+Testing regressions/smt2/string3.smt2
+Testing regressions/smt2/string8.smt2
+Testing regressions/smt2/z3.26.smt2
+Testing regressions/smt2/fp-conversions-32.smt2
+Testing regressions/smt2/fp-sqrt-9.smt2
+Testing regressions/smt2/model_compact_bug.smt2
+Testing regressions/smt2/fp-conversions-24.smt2
+Testing regressions/smt2/array.smt2
+Testing regressions/smt2/string13.smt2
+Testing regressions/smt2/z3.43.smt2
+Testing regressions/smt2/nl5.smt2
+Testing regressions/smt2/with.smt2
+Testing regressions/smt2/fp-conversions-8.smt2
+Testing regressions/smt2/string-simplify.smt2
+Testing regressions/smt2/fp-conversions-40.smt2
+Testing regressions/smt2/fp-conversions-26.smt2
+Testing regressions/smt2/fp-to_ieee_bv-1.smt2
+Testing regressions/smt2/issue-1662.smt2
+Testing regressions/smt2/fp-fma-1.smt2
+Testing regressions/smt2/issue-1841.smt2
+Testing regressions/smt2/pb.smt2
+Testing regressions/smt2/t205.smt2
+Testing regressions/smt2/t121.smt2
+Testing regressions/smt2/string1.smt2
+Testing regressions/smt2/nl27.smt2
+Testing regressions/smt2/strategy-par-or-3.smt2
+Testing regressions/smt2/unsatcore.smt2
+Testing regressions/smt2/crash.smt2
+Testing regressions/smt2/sine3.smt2
+Testing regressions/smt2/o2.smt2
+Testing regressions/smt2/fp-rem-13-3.smt2
+Testing regressions/smt2/fp-conversions-29.smt2
+Testing regressions/smt2/fp-template.smt2
+Testing regressions/smt2/issue-1218.smt2
+Testing regressions/smt2/fp-to_ieee_bv-2.smt2
+Testing regressions/smt2/sine2.smt2
+Testing regressions/smt2/fp-rem-12.smt2
+Testing regressions/smt2/fp-roundToIntegral-1.smt2
+Testing regressions/smt2/fp-roundToIntegral-6.smt2
+Testing regressions/smt2/cosine6.smt2
+Testing regressions/smt2/sine6.smt2
+Testing regressions/smt2/fp-conversions-10.smt2
+Testing regressions/smt2/cosine.smt2
+Testing regressions/smt2/fp-roundToIntegral-5.smt2
+Testing regressions/smt2/fp-rem-tests-double-non-partial.smt2
+Testing regressions/smt2/string11.smt2
+Testing regressions/smt2/nl20.smt2
+Testing regressions/smt2/fp-to_fp-4.smt2
+Testing regressions/smt2/fp-conversions-1.smt2
+Testing regressions/smt2/issue-1086.smt2
+Testing regressions/smt2/fp-to_ubv-19.smt2
+Testing regressions/smt2/t111.smt2
+Testing regressions/smt2/fp-conversions-6.smt2
+Testing regressions/smt2/t215.smt2
+Testing regressions/smt2/fp-datatype_with_float-2.smt2
+Testing regressions/smt2/sine8.smt2
+Testing regressions/smt2/arith_bug3.smt2
+Testing regressions/smt2/fp-neg.smt2
+Testing regressions/smt2/o6.smt2
+Testing regressions/smt2/string12.smt2
+Testing regressions/smt2/fp-pinf.smt2
+Testing regressions/smt2/error.smt2
+Testing regressions/smt2/trig-spherical.smt2
+Testing regressions/smt2/t104.smt2
+Testing regressions/smt2/fp-uf-3.smt2
+Testing regressions/smt2/t177.smt2
+Testing regressions/smt2/fp-to_sbv-7.smt2
+Testing regressions/smt2/fp-uf-2.smt2
+Testing regressions/smt2/fp-conversions-19.smt2
+Testing regressions/smt2/fp-to_sbv-1.smt2
+Testing regressions/smt2/fp-fma-11.smt2
+Testing regressions/smt2/t160.smt2
+Testing regressions/smt2/nl32.smt2
+Testing regressions/smt2/z3.28.smt2
+Testing regressions/smt2/issue-1665.smt2
+Testing regressions/smt2/string2.smt2
+Testing regressions/smt2/t174.smt2
+Testing regressions/smt2/t210.smt2
+Testing regressions/smt2/nl-simp.smt2
+Testing regressions/smt2/fp-to_fp_unsigned-9.smt2
+Testing regressions/smt2/fp-sub-1.smt2
+Testing regressions/smt2/fp-sqrt-3.smt2
+Testing regressions/smt2/string-ops.smt2
+Testing python scripts at regressions/python using /home/nightly/z3/build/master/release
+Testing regressions/python/ac1.py
+Testing regressions/python/arith.4.py
+Testing regressions/python/ac6.py
+Testing regressions/python/ac5.py
+Testing regressions/python/arith.5.py
+Testing regressions/python/bug.2.py
+Testing regressions/python/fp1.py
+Testing regressions/python/arith.1.py
+Testing regressions/python/ac3.py
+Testing regressions/python/sorts.py
+Testing regressions/python/ac2.py
+Testing regressions/python/bug.3.py
+Testing regressions/python/bug.1.py
+Testing regressions/python/arith.2.py
+Testing regressions/python/solver.1.py
+Testing regressions/python/ac4.py
+Testing regressions/python/arith.3.py
+Testing regressions/python/nonlinear.py
+opt = -b, arg = build-dist
+opt = --staticlib, arg = 
+opt = --dotnet, arg = 
+opt = --dotnet-key, arg = /home/nightly/secret/z3.snk
+opt = --java, arg = 
+opt = --githash, arg = 25c93410b1ec
+opt = --git-describe, arg = 
+opt = --python, arg = 
+New component: 'util'
+New component: 'polynomial'
+New component: 'sat'
+New component: 'nlsat'
+New component: 'lp'
+New component: 'hilbert'
+New component: 'simplex'
+New component: 'automata'
+New component: 'interval'
+New component: 'realclosure'
+New component: 'subpaving'
+New component: 'ast'
+New component: 'rewriter'
+New component: 'macros'
+New component: 'normal_forms'
+New component: 'model'
+New component: 'tactic'
+New component: 'substitution'
+New component: 'parser_util'
+New component: 'grobner'
+New component: 'euclid'
+New component: 'proofs'
+New component: 'solver'
+New component: 'cmd_context'
+New component: 'sat_tactic'
+New component: 'smt2parser'
+New component: 'pattern'
+New component: 'core_tactics'
+New component: 'arith_tactics'
+New component: 'nlsat_tactic'
+New component: 'subpaving_tactic'
+New component: 'aig_tactic'
+New component: 'ackermannization'
+New component: 'fpa'
+New component: 'bit_blaster'
+New component: 'smt_params'
+New component: 'proto_model'
+New component: 'smt'
+New component: 'bv_tactics'
+New component: 'fuzzing'
+New component: 'smt_tactic'
+New component: 'sls_tactic'
+New component: 'qe'
+New component: 'sat_solver'
+New component: 'fd_solver'
+New component: 'muz'
+New component: 'dataflow'
+New component: 'transforms'
+New component: 'rel'
+New component: 'spacer'
+New component: 'clp'
+New component: 'tab'
+New component: 'ddnf'
+New component: 'bmc'
+New component: 'fp'
+New component: 'ufbv_tactic'
+New component: 'smtlogic_tactics'
+New component: 'fpa_tactics'
+New component: 'portfolio'
+New component: 'opt'
+New component: 'api'
+New component: 'extra_cmds'
+New component: 'shell'
+New component: 'test'
+New component: 'api_dll'
+New component: 'dotnet'
+New component: 'dotnetcore'
+New component: 'java'
+New component: 'ml'
+New component: 'cpp'
+Python bindings directory was detected.
+New component: 'python'
+New component: 'python_install'
+New component: 'js'
+New component: 'cpp_example'
+New component: 'z3_tptp'
+New component: 'c_example'
+New component: 'maxsat'
+New component: 'dotnet_example'
+New component: 'java_example'
+New component: 'ml_example'
+New component: 'py_example'
+Generating src/util/z3_version.h from src/util/z3_version.h.in
+Generated 'src/util/z3_version.h'
+Generating src/api/dotnet/Properties/AssemblyInfo.cs from src/api/dotnet/Properties/AssemblyInfo.cs.in
+Generated 'src/tactic/tactic_params.hpp'
+Generated 'src/tactic/sls/sls_params.hpp'
+Generated 'src/tactic/smtlogics/qfufbv_tactic_params.hpp'
+Generated 'src/opt/opt_params.hpp'
+Generated 'src/solver/parallel_params.hpp'
+Generated 'src/solver/combined_solver_params.hpp'
+Generated 'src/solver/solver_params.hpp'
+Generated 'src/muz/base/fp_params.hpp'
+Generated 'src/model/model_evaluator_params.hpp'
+Generated 'src/model/model_params.hpp'
+Generated 'src/parsers/util/parser_params.hpp'
+Generated 'src/smt/params/smt_params_helper.hpp'
+Generated 'src/sat/sat_params.hpp'
+Generated 'src/sat/sat_scc_params.hpp'
+Generated 'src/sat/sat_simplifier_params.hpp'
+Generated 'src/sat/sat_asymm_branch_params.hpp'
+Generated 'src/util/lp/lp_params.hpp'
+Generated 'src/math/realclosure/rcf_params.hpp'
+Generated 'src/math/polynomial/algebraic_params.hpp'
+Generated 'src/ast/pp_params.hpp'
+Generated 'src/ast/normal_forms/nnf_params.hpp'
+Generated 'src/ast/rewriter/bool_rewriter_params.hpp'
+Generated 'src/ast/rewriter/array_rewriter_params.hpp'
+Generated 'src/ast/rewriter/bv_rewriter_params.hpp'
+Generated 'src/ast/rewriter/fpa_rewriter_params.hpp'
+Generated 'src/ast/rewriter/poly_rewriter_params.hpp'
+Generated 'src/ast/rewriter/arith_rewriter_params.hpp'
+Generated 'src/ast/rewriter/rewriter_params.hpp'
+Generated 'src/ast/fpa/fpa2bv_rewriter_params.hpp'
+Generated 'src/ast/pattern/pattern_inference_params_helper.hpp'
+Generated 'src/ackermannization/ackermannize_bv_tactic_params.hpp'
+Generated 'src/ackermannization/ackermannization_params.hpp'
+Generated 'src/nlsat/nlsat_params.hpp'
+Generated 'src/ast/pattern/database.h'
+Component api
+Component portfolio
+Component smtlogic_tactics
+Component ackermannization
+Component model
+Component rewriter
+Component ast
+Component util
+Component polynomial
+Component automata
+Component solver
+Component tactic
+Component proofs
+Component sat_solver
+Component core_tactics
+Component macros
+Component normal_forms
+Component pattern
+Component smt2parser
+Component cmd_context
+Component parser_util
+Component aig_tactic
+Component bv_tactics
+Component bit_blaster
+Component arith_tactics
+Component sat
+Component sat_tactic
+Component nlsat_tactic
+Component nlsat
+Component smt_tactic
+Component smt
+Component proto_model
+Component smt_params
+Component substitution
+Component grobner
+Component euclid
+Component simplex
+Component fpa
+Component lp
+Component fp
+Component muz
+Component qe
+Component clp
+Component transforms
+Component hilbert
+Component dataflow
+Component tab
+Component rel
+Component bmc
+Component fd_solver
+Component ddnf
+Component spacer
+Component ufbv_tactic
+Component fpa_tactics
+Component sls_tactic
+Component subpaving_tactic
+Component subpaving
+Component interval
+Component realclosure
+Component opt
+Component extra_cmds
+Component shell
+Generated 'src/shell/install_tactic.cpp'
+Component api
+Component portfolio
+Component smtlogic_tactics
+Component ackermannization
+Component model
+Component rewriter
+Component ast
+Component util
+Component polynomial
+Component automata
+Component solver
+Component tactic
+Component proofs
+Component sat_solver
+Component core_tactics
+Component macros
+Component normal_forms
+Component pattern
+Component smt2parser
+Component cmd_context
+Component parser_util
+Component aig_tactic
+Component bv_tactics
+Component bit_blaster
+Component arith_tactics
+Component sat
+Component sat_tactic
+Component nlsat_tactic
+Component nlsat
+Component smt_tactic
+Component smt
+Component proto_model
+Component smt_params
+Component substitution
+Component grobner
+Component euclid
+Component simplex
+Component fpa
+Component lp
+Component fp
+Component muz
+Component qe
+Component clp
+Component transforms
+Component hilbert
+Component dataflow
+Component tab
+Component rel
+Component bmc
+Component fd_solver
+Component ddnf
+Component spacer
+Component ufbv_tactic
+Component fpa_tactics
+Component sls_tactic
+Component subpaving_tactic
+Component subpaving
+Component interval
+Component realclosure
+Component opt
+Component fuzzing
+Component test
+Generated 'src/test/install_tactic.cpp'
+Component api
+Component portfolio
+Component smtlogic_tactics
+Component ackermannization
+Component model
+Component rewriter
+Component ast
+Component util
+Component polynomial
+Component automata
+Component solver
+Component tactic
+Component proofs
+Component sat_solver
+Component core_tactics
+Component macros
+Component normal_forms
+Component pattern
+Component smt2parser
+Component cmd_context
+Component parser_util
+Component aig_tactic
+Component bv_tactics
+Component bit_blaster
+Component arith_tactics
+Component sat
+Component sat_tactic
+Component nlsat_tactic
+Component nlsat
+Component smt_tactic
+Component smt
+Component proto_model
+Component smt_params
+Component substitution
+Component grobner
+Component euclid
+Component simplex
+Component fpa
+Component lp
+Component fp
+Component muz
+Component qe
+Component clp
+Component transforms
+Component hilbert
+Component dataflow
+Component tab
+Component rel
+Component bmc
+Component fd_solver
+Component ddnf
+Component spacer
+Component ufbv_tactic
+Component fpa_tactics
+Component sls_tactic
+Component subpaving_tactic
+Component subpaving
+Component interval
+Component realclosure
+Component opt
+Component extra_cmds
+Component api_dll
+Generated 'src/api/dll/install_tactic.cpp'
+Generated 'src/shell/mem_initializer.cpp'
+Generated 'src/test/mem_initializer.cpp'
+Generated 'src/api/dll/mem_initializer.cpp'
+Generated 'src/shell/gparams_register_modules.cpp'
+Generated 'src/test/gparams_register_modules.cpp'
+Generated 'src/api/dll/gparams_register_modules.cpp'
+Generated 'src/api/python/z3/z3consts.py
+Finding javac ...
+Finding jar ...
+Testing /usr/bin/javac...
+Finding jni.h...
+Generated 'src/api/java/enumerations/Z3_lbool.java'
+Generated 'src/api/java/enumerations/Z3_symbol_kind.java'
+Generated 'src/api/java/enumerations/Z3_parameter_kind.java'
+Generated 'src/api/java/enumerations/Z3_sort_kind.java'
+Generated 'src/api/java/enumerations/Z3_ast_kind.java'
+Generated 'src/api/java/enumerations/Z3_decl_kind.java'
+Generated 'src/api/java/enumerations/Z3_param_kind.java'
+Generated 'src/api/java/enumerations/Z3_ast_print_mode.java'
+Generated 'src/api/java/enumerations/Z3_error_code.java'
+Generated 'src/api/java/enumerations/Z3_goal_prec.java'
+Generated 'src/api/api_log_macros.h'
+Generated 'src/api/api_log_macros.cpp'
+Generated 'src/api/api_commands.cpp'
+Generated 'src/api/python/z3/z3core.py'
+Generated 'src/api/dotnet/Native.cs'
+Generated 'src/api/java/Native.java'
+Listing src/api/python/z3 ...
+Compiling src/api/python/z3/__init__.py ...
+Compiling src/api/python/z3/z3.py ...
+Compiling src/api/python/z3/z3consts.py ...
+Compiling src/api/python/z3/z3core.py ...
+Compiling src/api/python/z3/z3num.py ...
+Compiling src/api/python/z3/z3poly.py ...
+Compiling src/api/python/z3/z3printer.py ...
+Compiling src/api/python/z3/z3rcf.py ...
+Compiling src/api/python/z3/z3types.py ...
+Compiling src/api/python/z3/z3util.py ...
+Generated python bytecode
+Copied 'z3types.py'
+Copied 'z3core.py'
+Copied 'z3consts.py'
+Copied 'z3printer.py'
+Copied 'z3util.py'
+Copied 'z3.py'
+Copied 'z3num.py'
+Copied '__init__.py'
+Copied 'z3rcf.py'
+Copied 'z3poly.py'
+Copied '__init__.pyc'
+Copied 'z3printer.pyc'
+Copied 'z3consts.pyc'
+Copied 'z3rcf.pyc'
+Copied 'z3poly.pyc'
+Copied 'z3.pyc'
+Copied 'z3num.pyc'
+Copied 'z3types.pyc'
+Copied 'z3core.pyc'
+Copied 'z3util.pyc'
+Testing csc...
+Testing mcs...
+Testing gacutil...
+Generated 'src/api/dotnet/Enumerations.cs
+Testing ar...
+Testing g++...
+Testing gcc...
+Testing floating point support...
+Testing OpenMP...
+Host platform:  Linux
+C++ Compiler:   g++
+C Compiler  :   gcc
+Archive Tool:   ar
+Arithmetic:     internal
+OpenMP:         True
+Prefix:         /usr
+64-bit:         True
+FP math:        SSE2-GCC
+Python pkg dir: /usr/lib/python2.7/dist-packages
+Python version: 2.7
+JNI Bindings:   /usr/lib/jvm/java-8-oracle/include
+Java Compiler:  /usr/bin/javac
+C# Compiler:    mcs
+GAC utility:    gacutil
+Writing build-dist/Makefile
+Microsoft.Z3.dll will be signed using key '/home/nightly/secret/z3.snk'.
+Generating build-dist/api/dotnet/Microsoft.Z3.Sharp.pc from src/api/dotnet/Microsoft.Z3.Sharp.pc.in
+Copied Z3Py example 'mini_ic3.py' to 'build-dist/python'
+Copied Z3Py example 'all_interval_series.py' to 'build-dist/python'
+Copied Z3Py example 'visitor.py' to 'build-dist/python'
+Copied Z3Py example 'parallel.py' to 'build-dist/python'
+Copied Z3Py example 'union_sort.py' to 'build-dist/python'
+Copied Z3Py example 'rc2.py' to 'build-dist/python'
+Copied Z3Py example 'mini_quip.py' to 'build-dist/python'
+Copied Z3Py example 'socrates.py' to 'build-dist/python'
+Copied Z3Py example 'example.py' to 'build-dist/python'
+Makefile was successfully generated.
+  compilation mode: Release
+Type 'cd build-dist; make' to build Z3
+src/smt/smt_statistics.cpp
+src/util/luby.cpp
+src/util/approx_nat.cpp
+src/util/common_msgs.cpp
+src/api/dll/dll.cpp
+src/util/z3_exception.cpp
+src/util/page.cpp
+src/util/memory_manager.cpp
+src/util/approx_set.cpp
+src/util/timeit.cpp
+src/util/cooperate.cpp
+src/api/api_commands.cpp
+src/util/bit_util.cpp
+src/util/util.cpp
+src/util/timeout.cpp
+src/util/scoped_ctrl_c.cpp
+src/util/scoped_timer.cpp
+src/util/stack.cpp
+src/shell/z3_log_frontend.cpp
+src/api/api_log.cpp
+src/util/hash.cpp
+src/util/mpn.cpp
+src/util/lbool.cpp
+src/util/fixed_bit_vector.cpp
+src/solver/smt_logics.cpp
+src/math/automata/automaton.cpp
+src/util/symbol.cpp
+src/util/small_object_allocator.cpp
+src/util/bit_vector.cpp
+src/util/min_cut.cpp
+src/util/debug.cpp
+src/util/trace.cpp
+src/util/warning.cpp
+src/util/cmd_context_types.cpp
+src/util/region.cpp
+src/util/smt2_util.cpp
+src/util/permutation.cpp
+src/util/prime_generator.cpp
+src/api/api_log_macros.cpp
+src/api/z3_replayer.cpp
+src/util/mpz.cpp
+src/util/statistics.cpp
+src/util/rlimit.cpp
+src/smt/params/dyn_ack_params.cpp
+src/smt/params/theory_bv_params.cpp
+src/smt/params/theory_seq_params.cpp
+src/smt/params/theory_array_params.cpp
+src/smt/params/preprocessor_params.cpp
+src/smt/params/theory_arith_params.cpp
+src/smt/params/theory_str_params.cpp
+src/smt/params/theory_pb_params.cpp
+src/smt/params/qi_params.cpp
+src/ast/pattern/pattern_inference_params.cpp
+src/math/euclid/euclidean_solver.cpp
+src/math/realclosure/mpz_matrix.cpp
+src/math/interval/interval_mpq.cpp
+src/sat/sat_watched.cpp
+src/sat/sat_config.cpp
+src/sat/sat_bdd.cpp
+src/sat/sat_clause_set.cpp
+src/sat/sat_clause_use_list.cpp
+src/sat/sat_clause.cpp
+src/util/mpff.cpp
+src/util/mpq.cpp
+src/util/env_params.cpp
+src/util/mpfx.cpp
+src/util/gparams.cpp
+src/util/mpq_inf.cpp
+src/shell/mem_initializer.cpp
+src/smt/old_interval.cpp
+src/tactic/arith/linear_equation.cpp
+src/math/subpaving/subpaving_mpfx.cpp
+src/math/subpaving/subpaving_hwf.cpp
+src/math/realclosure/realclosure.cpp
+src/util/sexpr.cpp
+src/util/inf_rational.cpp
+src/util/hwf.cpp
+src/util/mpf.cpp
+src/util/inf_int_rational.cpp
+src/util/s_integer.cpp
+src/util/mpbq.cpp
+src/util/rational.cpp
+src/util/params.cpp
+src/api/dll/mem_initializer.cpp
+src/muz/spacer/spacer_matrix.cpp
+src/muz/rel/tbv.cpp
+src/muz/base/bind_variables.cpp
+src/smt/smt_quantifier_stat.cpp
+src/smt/proto_model/value_factory.cpp
+src/smt/params/smt_params.cpp
+src/tactic/arith/bound_propagator.cpp
+src/ast/rewriter/func_decl_replace.cpp
+src/ast/expr_map.cpp
+src/ast/act_cache.cpp
+src/ast/has_free_vars.cpp
+src/ast/for_each_ast.cpp
+src/ast/used_vars.cpp
+src/ast/display_dimacs.cpp
+src/ast/ast_lt.cpp
+src/ast/num_occurs.cpp
+src/ast/special_relations_decl_plugin.cpp
+src/math/subpaving/subpaving_mpf.cpp
+src/math/subpaving/subpaving_mpq.cpp
+src/math/subpaving/subpaving_mpff.cpp
+src/math/subpaving/subpaving.cpp
+src/math/simplex/simplex.cpp
+src/math/hilbert/hilbert_basis.cpp
+src/util/lp/lp_utils.cpp
+src/sat/sat_scc.cpp
+src/sat/dimacs.cpp
+src/sat/sat_drat.cpp
+src/sat/sat_parallel.cpp
+src/sat/sat_elim_eqs.cpp
+src/sat/sat_big.cpp
+src/sat/sat_integrity_checker.cpp
+src/sat/sat_simplifier.cpp
+src/sat/sat_elim_vars.cpp
+src/sat/sat_cleaner.cpp
+src/sat/sat_asymm_branch.cpp
+src/sat/sat_probing.cpp
+src/sat/sat_lookahead.cpp
+src/sat/sat_iff3_finder.cpp
+src/sat/sat_mus.cpp
+src/sat/sat_model_converter.cpp
+src/util/inf_s_integer.cpp
+src/smt/arith_eq_solver.cpp
+src/smt/cost_evaluator.cpp
+src/smt/smt_value_sort.cpp
+src/smt/uses_theory.cpp
+src/ackermannization/ackr_helper.cpp
+src/math/subpaving/tactic/expr2subpaving.cpp
+src/cmd_context/tactic_manager.cpp
+src/parsers/util/simple_parser.cpp
+src/parsers/util/scanner.cpp
+src/parsers/util/cost_parser.cpp
+src/ast/rewriter/mk_extract_proc.cpp
+src/ast/rewriter/datatype_rewriter.cpp
+src/ast/rewriter/distribute_forall.cpp
+src/ast/for_each_expr.cpp
+src/ast/func_decl_dependencies.cpp
+src/ast/expr_functors.cpp
+src/ast/fpa_decl_plugin.cpp
+src/ast/expr_stat.cpp
+src/ast/macro_substitution.cpp
+src/ast/format.cpp
+src/ast/ast_ll_pp.cpp
+src/ast/occurs.cpp
+src/ast/csp_decl_plugin.cpp
+src/ast/ast_util.cpp
+src/ast/reg_decl_plugins.cpp
+src/ast/pp.cpp
+src/math/simplex/model_based_opt.cpp
+src/sat/sat_solver.cpp
+src/sat/sat_unit_walk.cpp
+src/math/polynomial/polynomial_cache.cpp
+src/shell/main.cpp
+src/qe/qe_solve_plugin.cpp
+src/smt/smt_literal.cpp
+src/smt/cached_var_subst.cpp
+src/smt/elim_term_ite.cpp
+src/smt/smt_farkas_util.cpp
+src/smt/fingerprints.cpp
+src/smt/proto_model/numeral_factory.cpp
+src/ast/fpa/bv2fpa_converter.cpp
+src/ast/fpa/fpa2bv_rewriter.cpp
+src/ast/fpa/fpa2bv_converter.cpp
+src/tactic/arith/bv2real_rewriter.cpp
+src/ast/pattern/pattern_inference.cpp
+src/cmd_context/pdecl.cpp
+src/cmd_context/check_logic.cpp
+src/ast/proofs/proof_checker.cpp
+src/ast/proofs/proof_utils.cpp
+src/math/grobner/grobner.cpp
+src/parsers/util/pattern_validation.cpp
+src/tactic/replace_proof_converter.cpp
+src/tactic/equiv_proof_converter.cpp
+src/model/func_interp.cpp
+src/model/model_core.cpp
+src/model/model_pp.cpp
+src/model/model_v2_pp.cpp
+src/ast/normal_forms/defined_names.cpp
+src/ast/normal_forms/pull_quant.cpp
+src/ast/normal_forms/nnf.cpp
+src/ast/normal_forms/name_exprs.cpp
+src/ast/rewriter/hoist_rewriter.cpp
+src/ast/rewriter/push_app_ite.cpp
+src/ast/rewriter/factor_rewriter.cpp
+src/ast/rewriter/label_rewriter.cpp
+src/ast/rewriter/bool_rewriter.cpp
+src/ast/rewriter/arith_rewriter.cpp
+src/ast/rewriter/maximize_ac_sharing.cpp
+src/ast/rewriter/seq_rewriter.cpp
+src/ast/rewriter/pb_rewriter.cpp
+src/ast/rewriter/pb2bv_rewriter.cpp
+src/ast/rewriter/bv_elim.cpp
+src/ast/rewriter/fpa_rewriter.cpp
+src/ast/rewriter/dl_rewriter.cpp
+src/ast/rewriter/enum2bv_rewriter.cpp
+src/ast/rewriter/quant_hoist.cpp
+src/ast/rewriter/inj_axiom.cpp
+src/ast/rewriter/bv_trailing.cpp
+src/ast/rewriter/rewriter.cpp
+src/ast/rewriter/der.cpp
+src/ast/rewriter/expr_safe_replace.cpp
+src/ast/rewriter/array_rewriter.cpp
+src/ast/rewriter/elim_bounds.cpp
+src/ast/rewriter/bv_bounds.cpp
+src/ast/rewriter/ast_counter.cpp
+src/ast/rewriter/var_subst.cpp
+src/ast/rewriter/expr_replacer.cpp
+src/ast/rewriter/factor_equivs.cpp
+src/ast/arith_decl_plugin.cpp
+src/ast/bv_decl_plugin.cpp
+src/ast/shared_occs.cpp
+src/ast/expr2var.cpp
+src/ast/expr2polynomial.cpp
+src/ast/well_sorted.cpp
+src/ast/pb_decl_plugin.cpp
+src/ast/ast_translation.cpp
+src/ast/ast_smt_pp.cpp
+src/ast/static_features.cpp
+src/ast/dl_decl_plugin.cpp
+src/ast/recfun_decl_plugin.cpp
+src/ast/ast_pp_dot.cpp
+src/ast/ast_smt2_pp.cpp
+src/ast/expr_abstract.cpp
+src/ast/datatype_decl_plugin.cpp
+src/ast/seq_decl_plugin.cpp
+src/ast/array_decl_plugin.cpp
+src/ast/decl_collector.cpp
+src/ast/ast.cpp
+src/ast/expr_substitution.cpp
+src/util/lp/lp_settings.cpp
+src/util/lp/binary_heap_priority_queue.cpp
+src/nlsat/nlsat_types.cpp
+src/nlsat/nlsat_clause.cpp
+src/nlsat/nlsat_interval_set.cpp
+src/sat/ba_solver.cpp
+src/sat/sat_local_search.cpp
+src/math/polynomial/rpolynomial.cpp
+src/math/polynomial/polynomial.cpp
+src/math/polynomial/upolynomial.cpp
+src/api/dll/gparams_register_modules.cpp
+src/shell/gparams_register_modules.cpp
+src/muz/spacer/spacer_mev_array.cpp
+src/muz/spacer/spacer_antiunify.cpp
+src/muz/spacer/spacer_mbc.cpp
+src/muz/spacer/spacer_sem_matcher.cpp
+src/muz/rel/doc.cpp
+src/qe/qe_bool_plugin.cpp
+src/qe/qe_arith_plugin.cpp
+src/qe/qe_term_graph.cpp
+src/qe/qe_bv_plugin.cpp
+src/qe/qe_dl_plugin.cpp
+src/qe/nlarith_util.cpp
+src/qe/qe_datatype_plugin.cpp
+src/qe/qe_array_plugin.cpp
+src/qe/qe_arith.cpp
+src/smt/smt_clause.cpp
+src/smt/theory_opt.cpp
+src/smt/expr_context_simplifier.cpp
+src/smt/smt_cg_table.cpp
+src/smt/watch_list.cpp
+src/smt/smt_almost_cg_table.cpp
+src/smt/proto_model/datatype_factory.cpp
+src/smt/proto_model/struct_factory.cpp
+src/smt/proto_model/array_factory.cpp
+src/smt/proto_model/proto_model.cpp
+src/ast/rewriter/bit_blaster/bit_blaster_rewriter.cpp
+src/ast/rewriter/bit_blaster/bit_blaster.cpp
+src/ast/substitution/matcher.cpp
+src/ast/substitution/unifier.cpp
+src/ast/substitution/substitution_tree.cpp
+src/ast/substitution/substitution.cpp
+src/model/model.cpp
+src/model/model_implicant.cpp
+src/model/model_evaluator.cpp
+src/model/model_smt2_pp.cpp
+src/model/model2expr.cpp
+src/ast/rewriter/th_rewriter.cpp
+src/ast/rewriter/bv_rewriter.cpp
+src/ast/rewriter/mk_simplified_app.cpp
+src/ast/ast_pp_util.cpp
+src/ast/ast_printer.cpp
+src/util/lp/indexed_vector.cpp
+src/util/lp/binary_heap_upair_queue.cpp
+src/util/lp/dense_matrix.cpp
+src/math/polynomial/algebraic_numbers.cpp
+src/math/polynomial/sexpr2upolynomial.cpp
+src/math/polynomial/upolynomial_factorization.cpp
+src/opt/pb_sls.cpp
+src/tactic/ufbv/ufbv_rewriter.cpp
+src/muz/spacer/spacer_qe_project.cpp
+src/muz/spacer/spacer_sym_mux.cpp
+src/muz/spacer/spacer_iuc_proof.cpp
+src/muz/spacer/spacer_unsat_core_learner.cpp
+src/muz/base/dl_boogie_proof.cpp
+src/qe/qe_arrays.cpp
+src/qe/qe_datatypes.cpp
+src/qe/qe_mbp.cpp
+src/tactic/bv/bit_blaster_model_converter.cpp
+src/ackermannization/lackr_model_constructor.cpp
+src/ackermannization/ackr_model_converter.cpp
+src/ackermannization/ackermannize_bv_model_converter.cpp
+src/solver/check_sat_result.cpp
+src/tactic/horn_subsume_model_converter.cpp
+src/tactic/model_converter.cpp
+src/tactic/generic_model_converter.cpp
+src/ast/macros/macro_util.cpp
+src/ast/rewriter/bit2int.cpp
+src/nlsat/nlsat_solver.cpp
+src/nlsat/nlsat_explain.cpp
+src/nlsat/nlsat_evaluator.cpp
+src/opt/opt_pareto.cpp
+src/tactic/portfolio/solver2lookahead.cpp
+src/tactic/fpa/fpa2bv_model_converter.cpp
+src/tactic/smtlogics/qfufbv_ackr_model_converter.cpp
+src/muz/spacer/spacer_unsat_core_plugin.cpp
+src/muz/spacer/spacer_proof_utils.cpp
+src/muz/spacer/spacer_farkas_learner.cpp
+src/muz/base/hnf.cpp
+src/qe/qe_mbi.cpp
+src/tactic/bv/bvarray2uf_rewriter.cpp
+src/smt/smt_implied_equalities.cpp
+src/smt/smt_solver.cpp
+src/ackermannization/lackr_model_converter_lazy.cpp
+src/tactic/aig/aig.cpp
+src/tactic/arith/bound_manager.cpp
+src/tactic/arith/pb2bv_model_converter.cpp
+src/tactic/arith/probe_arith.cpp
+src/tactic/arith/bv2int_rewriter.cpp
+src/tactic/core/collect_occs.cpp
+src/sat/tactic/atom2bool_var.cpp
+src/cmd_context/context_params.cpp
+src/solver/mus.cpp
+src/solver/solver.cpp
+src/solver/combined_solver.cpp
+src/solver/solver_na2as.cpp
+src/solver/solver_pool.cpp
+src/tactic/proof_converter.cpp
+src/tactic/dependency_converter.cpp
+src/tactic/goal.cpp
+src/tactic/goal_util.cpp
+src/tactic/probe.cpp
+src/tactic/goal_num_occurs.cpp
+src/tactic/goal_shared_occs.cpp
+src/ast/macros/quasi_macros.cpp
+src/ast/macros/macro_manager.cpp
+src/util/lp/permutation_matrix.cpp
+src/util/lp/matrix.cpp
+src/cmd_context/extra_cmds/dbg_cmds.cpp
+src/cmd_context/extra_cmds/subpaving_cmds.cpp
+src/cmd_context/extra_cmds/polynomial_cmds.cpp
+src/api/api_special_relations.cpp
+src/api/api_pb.cpp
+src/api/api_rcf.cpp
+src/api/api_quant.cpp
+src/api/api_datatype.cpp
+src/api/api_polynomial.cpp
+src/api/api_model.cpp
+src/api/api_algebraic.cpp
+src/api/api_context.cpp
+src/api/api_bv.cpp
+src/api/api_seq.cpp
+src/api/api_ast_vector.cpp
+src/api/api_config_params.cpp
+src/api/api_goal.cpp
+src/api/api_array.cpp
+src/api/api_arith.cpp
+src/api/api_qe.cpp
+src/api/api_fpa.cpp
+src/tactic/portfolio/default_tactic.cpp
+src/tactic/fpa/qffplra_tactic.cpp
+src/tactic/fpa/fpa2bv_tactic.cpp
+src/tactic/smtlogics/qfidl_tactic.cpp
+src/tactic/smtlogics/qfnra_tactic.cpp
+src/tactic/smtlogics/qfauflia_tactic.cpp
+src/tactic/smtlogics/qflia_tactic.cpp
+src/tactic/smtlogics/qflra_tactic.cpp
+src/tactic/smtlogics/nra_tactic.cpp
+src/tactic/smtlogics/quant_tactics.cpp
+src/tactic/smtlogics/qfuf_tactic.cpp
+src/tactic/smtlogics/qfnia_tactic.cpp
+src/tactic/ufbv/ufbv_tactic.cpp
+src/tactic/ufbv/ufbv_rewriter_tactic.cpp
+src/tactic/ufbv/quasi_macros_tactic.cpp
+src/tactic/ufbv/macro_finder_tactic.cpp
+src/muz/spacer/spacer_iuc_solver.cpp
+src/muz/spacer/spacer_prop_solver.cpp
+src/muz/spacer/spacer_manager.cpp
+src/muz/spacer/spacer_legacy_mev.cpp
+src/muz/spacer/spacer_legacy_mbp.cpp
+src/tactic/fd_solver/pb2bv_solver.cpp
+src/tactic/fd_solver/bounded_int2bv_solver.cpp
+src/tactic/fd_solver/fd_solver.cpp
+src/tactic/fd_solver/enum2bv_solver.cpp
+src/sat/sat_solver/inc_sat_solver.cpp
+src/qe/qe_sat_tactic.cpp
+src/qe/qsat.cpp
+src/qe/qe_cmd.cpp
+src/qe/nlqsat.cpp
+src/qe/qe_lite.cpp
+src/qe/qe_tactic.cpp
+src/tactic/sls/sls_tactic.cpp
+src/tactic/sls/sls_engine.cpp
+src/smt/tactic/smt_tactic.cpp
+src/smt/tactic/ctx_solver_simplify_tactic.cpp
+src/tactic/bv/bv_bound_chk_tactic.cpp
+src/tactic/bv/bv_bounds_tactic.cpp
+src/tactic/bv/bvarray2uf_tactic.cpp
+src/tactic/bv/bv1_blaster_tactic.cpp
+src/tactic/bv/dt2bv_tactic.cpp
+src/tactic/bv/elim_small_bv_tactic.cpp
+src/tactic/bv/bit_blaster_tactic.cpp
+src/tactic/bv/max_bv_sharing_tactic.cpp
+src/tactic/bv/bv_size_reduction_tactic.cpp
+src/smt/smt2_extra_cmds.cpp
+src/ackermannization/ackr_bound_probe.cpp
+src/ackermannization/lackr.cpp
+src/tactic/aig/aig_tactic.cpp
+src/math/subpaving/tactic/subpaving_tactic.cpp
+src/nlsat/tactic/qfnra_nlsat_tactic.cpp
+src/nlsat/tactic/goal2nlsat.cpp
+src/nlsat/tactic/nlsat_tactic.cpp
+src/tactic/arith/degree_shift_tactic.cpp
+src/tactic/arith/purify_arith_tactic.cpp
+src/tactic/arith/lia2pb_tactic.cpp
+src/tactic/arith/recover_01_tactic.cpp
+src/tactic/arith/card2bv_tactic.cpp
+src/tactic/arith/add_bounds_tactic.cpp
+src/tactic/arith/arith_bounds_tactic.cpp
+src/tactic/arith/factor_tactic.cpp
+src/tactic/arith/propagate_ineqs_tactic.cpp
+src/tactic/arith/eq2bv_tactic.cpp
+src/tactic/arith/fix_dl_var_tactic.cpp
+src/tactic/arith/normalize_bounds_tactic.cpp
+src/tactic/arith/fm_tactic.cpp
+src/tactic/arith/pb2bv_tactic.cpp
+src/tactic/arith/lia2card_tactic.cpp
+src/tactic/arith/diff_neq_tactic.cpp
+src/tactic/arith/nla2bv_tactic.cpp
+src/tactic/core/reduce_args_tactic.cpp
+src/tactic/core/pb_preprocess_tactic.cpp
+src/tactic/core/elim_uncnstr_tactic.cpp
+src/tactic/core/der_tactic.cpp
+src/tactic/core/propagate_values_tactic.cpp
+src/tactic/core/solve_eqs_tactic.cpp
+src/tactic/core/collect_statistics_tactic.cpp
+src/tactic/core/elim_term_ite_tactic.cpp
+src/tactic/core/cofactor_term_ite_tactic.cpp
+src/tactic/core/split_clause_tactic.cpp
+src/tactic/core/nnf_tactic.cpp
+src/tactic/core/symmetry_reduce_tactic.cpp
+src/tactic/core/reduce_invertible_tactic.cpp
+src/tactic/core/simplify_tactic.cpp
+src/tactic/core/blast_term_ite_tactic.cpp
+src/tactic/core/ctx_simplify_tactic.cpp
+src/tactic/core/dom_simplify_tactic.cpp
+src/tactic/core/cofactor_elim_term_ite.cpp
+src/tactic/core/tseitin_cnf_tactic.cpp
+src/tactic/core/distribute_forall_tactic.cpp
+src/tactic/core/injectivity_tactic.cpp
+src/tactic/core/occf_tactic.cpp
+src/tactic/core/special_relations_tactic.cpp
+src/ast/pattern/expr_pattern_match.cpp
+src/parsers/smt2/marshal.cpp
+src/sat/tactic/sat_tactic.cpp
+src/sat/tactic/goal2sat.cpp
+src/cmd_context/parametric_cmd.cpp
+src/cmd_context/tactic_cmds.cpp
+src/cmd_context/basic_cmds.cpp
+src/cmd_context/cmd_context.cpp
+src/cmd_context/echo_tactic.cpp
+src/cmd_context/cmd_context_to_goal.cpp
+src/cmd_context/cmd_util.cpp
+src/cmd_context/eval_cmd.cpp
+src/cmd_context/simplify_cmd.cpp
+src/solver/tactic2solver.cpp
+src/solver/parallel_tactic.cpp
+src/solver/solver2tactic.cpp
+src/tactic/sine_filter.cpp
+src/tactic/tactical.cpp
+src/tactic/tactic.cpp
+src/ast/macros/macro_finder.cpp
+src/util/lp/eta_matrix.cpp
+src/util/lp/scaler.cpp
+src/shell/dimacs_frontend.cpp
+src/api/api_ast_map.cpp
+src/api/api_params.cpp
+src/api/api_numeral.cpp
+src/api/api_ast.cpp
+src/api/api_parsers.cpp
+src/api/api_stats.cpp
+src/api/api_solver.cpp
+src/api/api_tactic.cpp
+src/tactic/portfolio/smt_strategic_solver.cpp
+src/tactic/fpa/qffp_tactic.cpp
+src/tactic/smtlogics/qfaufbv_tactic.cpp
+src/tactic/smtlogics/qfufbv_tactic.cpp
+src/tactic/smtlogics/qfbv_tactic.cpp
+src/muz/spacer/spacer_util.cpp
+src/muz/spacer/spacer_json.cpp
+src/tactic/sls/bvsls_opt_engine.cpp
+src/smt/asserted_formulas.cpp
+src/ackermannization/ackermannize_bv_tactic.cpp
+src/parsers/smt2/smt2scanner.cpp
+src/parsers/smt2/smt2parser.cpp
+src/api/dll/install_tactic.cpp
+src/shell/install_tactic.cpp
+src/muz/spacer/spacer_callback.cpp
+src/qe/qe.cpp
+src/smt/tactic/unit_subsumption_tactic.cpp
+src/smt/smt_model_finder.cpp
+src/smt/smt_lookahead.cpp
+src/smt/smt_relevancy.cpp
+src/smt/smt_consequences.cpp
+src/smt/smt_model_generator.cpp
+src/smt/smt_context_stat.cpp
+src/smt/smt_quantifier.cpp
+src/smt/theory_dummy.cpp
+src/smt/arith_eq_adapter.cpp
+src/smt/theory_wmaxsat.cpp
+src/smt/smt_quick_checker.cpp
+src/smt/smt_theory.cpp
+src/smt/theory_datatype.cpp
+src/smt/smt_kernel.cpp
+src/smt/theory_dl.cpp
+src/smt/smt_internalizer.cpp
+src/smt/mam.cpp
+src/smt/smt_context_inv.cpp
+src/smt/smt_model_checker.cpp
+src/smt/smt_justification.cpp
+src/smt/qi_queue.cpp
+src/smt/theory_array.cpp
+src/smt/theory_bv.cpp
+src/smt/theory_array_base.cpp
+src/smt/smt_for_each_relevant_expr.cpp
+src/smt/theory_pb.cpp
+src/smt/smt_case_split_queue.cpp
+src/smt/smt_checker.cpp
+src/smt/theory_array_full.cpp
+src/smt/smt_enode.cpp
+src/smt/smt_context.cpp
+src/smt/smt_context_pp.cpp
+src/smt/theory_fpa.cpp
+src/smt/dyn_ack.cpp
+src/smt/smt_conflict_resolution.cpp
+src/util/lp/row_eta_matrix.cpp
+src/util/lp/square_sparse_matrix.cpp
+src/util/lp/square_dense_submatrix.cpp
+src/muz/fp/datalog_parser.cpp
+src/muz/ddnf/ddnf.cpp
+src/muz/clp/clp_context.cpp
+src/muz/spacer/spacer_quant_generalizer.cpp
+src/muz/spacer/spacer_generalizers.cpp
+src/muz/spacer/spacer_pdr.cpp
+src/muz/spacer/spacer_sat_answer.cpp
+src/muz/transforms/dl_mk_backwards.cpp
+src/muz/transforms/dl_mk_loop_counter.cpp
+src/muz/transforms/dl_mk_magic_sets.cpp
+src/muz/transforms/dl_mk_magic_symbolic.cpp
+src/muz/transforms/dl_mk_bit_blast.cpp
+src/muz/transforms/dl_mk_filter_rules.cpp
+src/muz/transforms/dl_mk_scale.cpp
+src/muz/transforms/dl_mk_karr_invariants.cpp
+src/muz/transforms/dl_mk_coi_filter.cpp
+src/muz/transforms/dl_mk_quantifier_abstraction.cpp
+src/muz/transforms/dl_mk_array_eq_rewrite.cpp
+src/muz/transforms/dl_mk_separate_negated_tails.cpp
+src/muz/transforms/dl_mk_unbound_compressor.cpp
+src/muz/transforms/dl_mk_array_instantiation.cpp
+src/muz/transforms/dl_mk_quantifier_instantiation.cpp
+src/muz/transforms/dl_mk_elim_term_ite.cpp
+src/muz/dataflow/dataflow.cpp
+src/muz/base/rule_properties.cpp
+src/muz/base/dl_util.cpp
+src/muz/base/dl_rule_set.cpp
+src/muz/base/dl_costs.cpp
+src/muz/base/dl_rule.cpp
+src/muz/base/dl_context.cpp
+src/muz/base/dl_rule_transformer.cpp
+src/muz/base/dl_rule_subsumption_index.cpp
+src/smt/theory_utvpi.cpp
+src/smt/theory_diff_logic.cpp
+src/smt/theory_recfun.cpp
+src/smt/theory_special_relations.cpp
+src/smt/theory_jobscheduler.cpp
+src/util/lp/lu.cpp
+src/opt/maxlex.cpp
+src/opt/optsmt.cpp
+src/opt/opt_parse.cpp
+src/opt/opt_context.cpp
+src/opt/sortmax.cpp
+src/opt/wmax.cpp
+src/opt/maxres.cpp
+src/muz/fp/horn_tactic.cpp
+src/muz/tab/tab_context.cpp
+src/muz/spacer/spacer_context.cpp
+src/muz/spacer/spacer_legacy_frames.cpp
+src/muz/rel/dl_external_relation.cpp
+src/muz/rel/dl_sparse_table.cpp
+src/muz/transforms/dl_mk_array_blast.cpp
+src/muz/transforms/dl_mk_subsumption_checker.cpp
+src/muz/transforms/dl_mk_interp_tail_simplifier.cpp
+src/muz/transforms/dl_mk_rule_inliner.cpp
+src/muz/transforms/dl_mk_coalesce.cpp
+src/muz/transforms/dl_transforms.cpp
+src/muz/transforms/dl_mk_unfold.cpp
+src/muz/transforms/dl_mk_slice.cpp
+src/smt/theory_array_bapa.cpp
+src/smt/smt_arith_value.cpp
+src/smt/smt_setup.cpp
+src/util/lp/core_solver_pretty_printer.cpp
+src/util/lp/lp_core_solver_base.cpp
+src/shell/opt_frontend.cpp
+src/api/api_datalog.cpp
+src/api/api_opt.cpp
+src/opt/maxsmt.cpp
+src/opt/opt_cmds.cpp
+src/opt/opt_solver.cpp
+src/muz/fp/dl_register_engine.cpp
+src/muz/bmc/dl_bmc_engine.cpp
+src/muz/spacer/spacer_dl_interface.cpp
+src/muz/rel/dl_table_relation.cpp
+src/muz/rel/dl_mk_similarity_compressor.cpp
+src/muz/rel/dl_mk_simple_joins.cpp
+src/muz/rel/dl_interval_relation.cpp
+src/muz/rel/udoc_relation.cpp
+src/muz/rel/dl_sieve_relation.cpp
+src/muz/rel/dl_lazy_table.cpp
+src/muz/rel/dl_product_relation.cpp
+src/muz/rel/dl_table.cpp
+src/muz/rel/dl_base.cpp
+src/muz/rel/dl_check_table.cpp
+src/muz/rel/dl_instruction.cpp
+src/muz/rel/aig_exporter.cpp
+src/muz/rel/check_relation.cpp
+src/muz/rel/karr_relation.cpp
+src/muz/transforms/dl_mk_synchronize.cpp
+src/smt/theory_arith.cpp
+src/smt/theory_seq.cpp
+src/smt/theory_str.cpp
+src/smt/theory_dense_diff_logic.cpp
+src/util/lp/lp_solver.cpp
+src/util/lp/lp_dual_core_solver.cpp
+src/shell/smtlib_frontend.cpp
+src/muz/fp/dl_cmds.cpp
+src/muz/rel/dl_relation_manager.cpp
+src/muz/rel/dl_mk_explanations.cpp
+src/muz/rel/dl_bound_relation.cpp
+src/muz/rel/dl_finite_product_relation.cpp
+src/muz/rel/dl_compiler.cpp
+src/smt/theory_lra.cpp
+src/util/lp/lp_dual_simplex.cpp
+src/util/lp/lp_primal_core_solver.cpp
+src/util/lp/nra_solver.cpp
+src/util/lp/static_matrix.cpp
+src/util/lp/lar_solver.cpp
+src/util/lp/int_solver.cpp
+src/util/lp/lar_core_solver.cpp
+src/util/lp/gomory.cpp
+src/util/lp/lp_bound_propagator.cpp
+src/shell/datalog_frontend.cpp
+src/muz/rel/rel_context.cpp
+src/util/lp/lp_primal_simplex.cpp
+src/util/lp/random_updater.cpp
+src/shell/lp_frontend.cpp
+g++ -o libz3.so -shared api/dll/mem_initializer.o api/dll/gparams_register_modules.o api/dll/install_tactic.o api/dll/dll.o api/api_ast_map.o api/api_params.o api/api_log_macros.o api/api_numeral.o api/api_ast.o api/api_parsers.o api/api_stats.o api/api_solver.o api/api_tactic.o api/api_special_relations.o api/api_pb.o api/api_rcf.o api/api_quant.o api/api_datatype.o api/api_datalog.o api/api_polynomial.o api/api_model.o api/api_algebraic.o api/api_context.o api/z3_replayer.o api/api_bv.o api/api_seq.o api/api_ast_vector.o api/api_config_params.o api/api_goal.o api/api_opt.o api/api_log.o api/api_array.o api/api_arith.o api/api_qe.o api/api_commands.o api/api_fpa.o cmd_context/extra_cmds/extra_cmds.a opt/opt.a tactic/portfolio/portfolio.a tactic/fpa/fpa_tactics.a tactic/smtlogics/smtlogic_tactics.a tactic/ufbv/ufbv_tactic.a muz/fp/fp.a muz/bmc/bmc.a muz/ddnf/ddnf.a muz/tab/tab.a muz/clp/clp.a muz/spacer/spacer.a muz/rel/rel.a muz/transforms/transforms.a muz/dataflow/dataflow.a muz/base/muz.a tactic/fd_solver/fd_solver.a sat/sat_solver/sat_solver.a qe/qe.a tactic/sls/sls_tactic.a smt/tactic/smt_tactic.a tactic/bv/bv_tactics.a smt/smt.a smt/proto_model/proto_model.a smt/params/smt_params.a ast/rewriter/bit_blaster/bit_blaster.a ast/fpa/fpa.a ackermannization/ackermannization.a tactic/aig/aig_tactic.a math/subpaving/tactic/subpaving_tactic.a nlsat/tactic/nlsat_tactic.a tactic/arith/arith_tactics.a tactic/core/core_tactics.a ast/pattern/pattern.a parsers/smt2/smt2parser.a sat/tactic/sat_tactic.a cmd_context/cmd_context.a solver/solver.a ast/proofs/proofs.a math/euclid/euclid.a math/grobner/grobner.a parsers/util/parser_util.a ast/substitution/substitution.a tactic/tactic.a model/model.a ast/normal_forms/normal_forms.a ast/macros/macros.a ast/rewriter/rewriter.a ast/ast.a math/subpaving/subpaving.a math/realclosure/realclosure.a math/interval/interval.a math/automata/automata.a math/simplex/simplex.a math/hilbert/hilbert.a util/lp/lp.a nlsat/nlsat.a sat/sat.a math/polynomial/polynomial.a util/util.a -lpthread  -fopenmp -Wl,-soname,libz3.so
+ln -f -s ../libz3.so python
+g++ -D_MP_INTERNAL -DZ3GITHASH=25c93410b1ec -DNDEBUG -D_EXTERNAL_RELEASE -D_USE_THREAD_LOCAL  -std=c++11 -fvisibility=hidden -c -mfpmath=sse -msse -msse2 -fopenmp -O3 -D_LINUX_ -fPIC -o api/java/Native.o -I"/usr/lib/jvm/java-8-oracle/include" -I"/usr/lib/jvm/java-8-oracle/include/linux" -I../src/api ../src/api/java/Native.cpp
+g++  -o z3  shell/dimacs_frontend.o shell/mem_initializer.o shell/gparams_register_modules.o shell/install_tactic.o shell/lp_frontend.o shell/datalog_frontend.o shell/smtlib_frontend.o shell/opt_frontend.o shell/z3_log_frontend.o shell/main.o cmd_context/extra_cmds/extra_cmds.a api/api.a opt/opt.a tactic/portfolio/portfolio.a tactic/fpa/fpa_tactics.a tactic/smtlogics/smtlogic_tactics.a tactic/ufbv/ufbv_tactic.a muz/fp/fp.a muz/bmc/bmc.a muz/ddnf/ddnf.a muz/tab/tab.a muz/clp/clp.a muz/spacer/spacer.a muz/rel/rel.a muz/transforms/transforms.a muz/dataflow/dataflow.a muz/base/muz.a tactic/fd_solver/fd_solver.a sat/sat_solver/sat_solver.a qe/qe.a tactic/sls/sls_tactic.a smt/tactic/smt_tactic.a tactic/bv/bv_tactics.a smt/smt.a smt/proto_model/proto_model.a smt/params/smt_params.a ast/rewriter/bit_blaster/bit_blaster.a ast/fpa/fpa.a ackermannization/ackermannization.a tactic/aig/aig_tactic.a math/subpaving/tactic/subpaving_tactic.a nlsat/tactic/nlsat_tactic.a tactic/arith/arith_tactics.a tactic/core/core_tactics.a ast/pattern/pattern.a parsers/smt2/smt2parser.a sat/tactic/sat_tactic.a cmd_context/cmd_context.a solver/solver.a ast/proofs/proofs.a math/euclid/euclid.a math/grobner/grobner.a parsers/util/parser_util.a ast/substitution/substitution.a tactic/tactic.a model/model.a ast/normal_forms/normal_forms.a ast/macros/macros.a ast/rewriter/rewriter.a ast/ast.a math/subpaving/subpaving.a math/realclosure/realclosure.a math/interval/interval.a math/automata/automata.a math/simplex/simplex.a math/hilbert/hilbert.a util/lp/lp.a nlsat/nlsat.a sat/sat.a math/polynomial/polynomial.a util/util.a -lpthread  -fopenmp
+g++ -o libz3java.so -shared api/java/Native.o libz3.so
+"/usr/bin/javac" ../src/api/java/enumerations/*.java -d api/java/classes
+"/usr/bin/javac" -cp api/java/classes ../src/api/java/*.java -d api/java/classes
+"/usr/bin/jar" cfm com.microsoft.z3.jar ../src/api/java/manifest -C api/java/classes .
+Z3 was successfully built.
+Z3Py scripts can already be executed in the 'build-dist/python' directory.
+Z3Py scripts stored in arbitrary directories can be executed if the 'build-dist/python' directory is added to the PYTHONPATH environment variable and the 'build-dist' directory is added to the LD_LIBRARY_PATH environment variable.
+Use the following command to install Z3 at prefix /usr.
+    sudo make install
+New component: 'util'
+New component: 'polynomial'
+New component: 'sat'
+New component: 'nlsat'
+New component: 'lp'
+New component: 'hilbert'
+New component: 'simplex'
+New component: 'automata'
+New component: 'interval'
+New component: 'realclosure'
+New component: 'subpaving'
+New component: 'ast'
+New component: 'rewriter'
+New component: 'macros'
+New component: 'normal_forms'
+New component: 'model'
+New component: 'tactic'
+New component: 'substitution'
+New component: 'parser_util'
+New component: 'grobner'
+New component: 'euclid'
+New component: 'proofs'
+New component: 'solver'
+New component: 'cmd_context'
+New component: 'sat_tactic'
+New component: 'smt2parser'
+New component: 'pattern'
+New component: 'core_tactics'
+New component: 'arith_tactics'
+New component: 'nlsat_tactic'
+New component: 'subpaving_tactic'
+New component: 'aig_tactic'
+New component: 'ackermannization'
+New component: 'fpa'
+New component: 'bit_blaster'
+New component: 'smt_params'
+New component: 'proto_model'
+New component: 'smt'
+New component: 'bv_tactics'
+New component: 'fuzzing'
+New component: 'smt_tactic'
+New component: 'sls_tactic'
+New component: 'qe'
+New component: 'sat_solver'
+New component: 'fd_solver'
+New component: 'muz'
+New component: 'dataflow'
+New component: 'transforms'
+New component: 'rel'
+New component: 'spacer'
+New component: 'clp'
+New component: 'tab'
+New component: 'ddnf'
+New component: 'bmc'
+New component: 'fp'
+New component: 'ufbv_tactic'
+New component: 'smtlogic_tactics'
+New component: 'fpa_tactics'
+New component: 'portfolio'
+New component: 'opt'
+New component: 'api'
+New component: 'extra_cmds'
+New component: 'shell'
+New component: 'test'
+New component: 'api_dll'
+New component: 'dotnet'
+New component: 'dotnetcore'
+New component: 'java'
+New component: 'ml'
+New component: 'cpp'
+Python bindings directory was detected.
+New component: 'python'
+New component: 'python_install'
+New component: 'js'
+New component: 'cpp_example'
+New component: 'z3_tptp'
+New component: 'c_example'
+New component: 'maxsat'
+New component: 'dotnet_example'
+New component: 'java_example'
+New component: 'ml_example'
+New component: 'py_example'
+Generated distribution folder at 'dist/z3-4.8.5.25c93410b1ec-x64-ubuntu-14.04'
+Generated 'z3-4.8.5.25c93410b1ec-x64-ubuntu-14.04.zip'
+Build succeeded.
+ssh -o ConnectTimeout=60 nightly@localhost -p 1025 cd z3/dist ; ls -1 *.zip > ../../build_z3.df
+scp -o ConnectTimeout=60 -P 1025 nightly@localhost:build_z3.df temp.df
+Distribution file bin/nightly/z3-4.8.5.25c93410b1ec-x64-ubuntu-14.04.zip is new; copying.
+scp -o ConnectTimeout=60 -P 1025 nightly@localhost:z3/dist/z3-4.8.5.25c93410b1ec-x64-ubuntu-14.04.zip distros/z3-4.8.5.25c93410b1ec-x64-ubuntu-14.04.zip
